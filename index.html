@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX IRON // Next-Gen Luxury Athletic Club & Performance Lab</title>
+  <meta name="description" content="Experience peak fitness at Apex Iron. Featuring state-of-the-art indoor bio-mechanic machinery, panoramic rooftop outdoor arenas, and recovery labs.">
+  <meta name="keywords" content="luxury gym, fitness club, indoor gym, rooftop outdoor gym, eleiko, technogym, bodybuilding, calisthenics">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons (Font Awesome + Lucide SVGs fallback) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container" id="navbar">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">APEX<span class="highlight">IRON</span></span>
+          <span class="brand-sub">ATHLETIC CLUB</span>
+        </div>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" id="navAbout">Philosophy</a></li>
+          <li><a href="#facilities" class="nav-link" id="navFacilities">Facilities</a></li>
+          <li><a href="#equipment" class="nav-link" id="navEquipment">Equipment Arsenal</a></li>
+          <li><a href="#trainers" class="nav-link" id="navTrainers">Elite Trainers</a></li>
+          <li><a href="#memberships" class="nav-link" id="navMemberships">Memberships</a></li>
+          <li><a href="#location" class="nav-link" id="navLocation">Location</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <div class="live-badge" id="liveCapacityToggle" role="button" tabindex="0" title="Click to view zone breakdown">
+          <span class="pulse-dot"></span>
+          <span class="live-text">Live: <strong>44% Capacity</strong></span>
+          <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem; margin-left: 4px;"></i>
+
+          <!-- Capacity Dropdown Preview -->
+          <div class="capacity-popover" id="capacityPopover">
+            <div class="cap-header">
+              <span>REAL-TIME SENSOR FEED</span>
+              <span class="cap-status">🟢 OPTIMAL</span>
+            </div>
+            <div class="cap-row">
+              <span>Indoor Heavy Vault</span>
+              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 38%;"></div></div>
+              <strong>38%</strong>
+            </div>
+            <div class="cap-row">
+              <span>Rooftop Skyline Turf</span>
+              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 52%;"></div></div>
+              <strong>52%</strong>
+            </div>
+            <div class="cap-row">
+              <span>Cryo Recovery Lab</span>
+              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 25%;"></div></div>
+              <strong>25%</strong>
+            </div>
+            <div class="cap-footer">
+              <i class="fa-solid fa-circle-check"></i> Zero wait times for power racks & platforms
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-glow" id="openPassModalBtn">
+          <span>Claim VIP Pass</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-wrapper">
+        <img src="assets/hero_bg.jpg" alt="Apex Iron Luxury Gym Interior" class="hero-bg-img" id="heroBgImg">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge reveal-elem">
+          <span class="badge-tag">REVOLUTIONARY FITNESS ECOSYSTEM</span>
+          <span class="badge-separator">|</span>
+          <span class="badge-stars">
+            ★ ★ ★ ★ ★
+            <span>VOTED #1 LUXURY CLUB</span>
+          </span>
+        </div>
+
+        <h1 class="hero-title reveal-elem">
+          ENGINEERED FOR <br>
+          <span class="gradient-text text-glow">PEAK HUMAN</span> <br>
+          PERFORMANCE.
+        </h1>
+
+        <p class="hero-description reveal-elem">
+          Step into a hyper-aesthetic sanctuary where scientific biomechanics meet architectural mastery. 
+          Featuring our 35,000 sq.ft Olympic indoor arena and the city's premier rooftop skyline calisthenics park.
+        </p>
+
+        <div class="hero-cta-group reveal-elem">
+          <button class="btn btn-hero-primary" id="heroBookTourBtn">
+            <span class="btn-sparkle"><i class="fa-solid fa-fire-flame-curved"></i></span>
+            <span>Book VIP Sanctuary Pass</span>
+          </button>
+          <a href="#facilities" class="btn btn-hero-secondary" id="heroExploreBtn">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Dual Zones</span>
+          </a>
+        </div>
+
+        <!-- Floating Quick Stats Grid -->
+        <div class="hero-stats-grid reveal-elem">
+          <div class="hero-stat-card glass-panel">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-cubes"></i></div>
+            <div class="stat-data">
+              <div class="stat-num-row">
+                <span class="stat-number" data-count="35000">35,000</span>
+                <span class="stat-unit">SQ FT</span>
+              </div>
+              <span class="stat-label">Indoor & Rooftop Dual Arena</span>
+            </div>
+          </div>
+          <div class="hero-stat-card glass-panel">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="stat-data">
+              <div class="stat-num-row">
+                <span class="stat-number" data-count="240">240</span>
+                <span class="stat-unit">+</span>
+              </div>
+              <span class="stat-label">Custom Biomechanic Units</span>
+            </div>
+          </div>
+          <div class="hero-stat-card glass-panel">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-sun"></i></div>
+            <div class="stat-data">
+              <div class="stat-num-row">
+                <span class="stat-number" data-count="360">360</span>
+                <span class="stat-unit">°</span>
+              </div>
+              <span class="stat-label">Skyline Rooftop Panoramic</span>
+            </div>
+          </div>
+          <div class="hero-stat-card glass-panel">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-award"></i></div>
+            <div class="stat-data">
+              <div class="stat-num-row">
+                <span class="stat-number" data-count="18">18</span>
+                <span class="stat-unit">Coaches</span>
+              </div>
+              <span class="stat-label">Master Performance Specialists</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <a href="#about" aria-label="Scroll Down">
+          <span class="mouse-icon">
+            <span class="wheel"></span>
+          </span>
+          <span class="scroll-text">DISCOVER THE ARSENAL</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT / PHILOSOPHY SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-atom"></i> THE APEX PHILOSOPHY</span>
+          <h2 class="section-title">BUILT FOR THOSE WHO <span class="gradient-text">REFUSE THE ORDINARY</span></h2>
+          <p class="section-desc">
+            We discarded the sterile, fluorescent box gym mold. Apex Iron was forged from the ground up as a sensory, high-stimulus athletic theater crafted for maximum neurological focus and aesthetic beauty.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card reveal-elem">
+            <div class="card-glow"></div>
+            <div class="card-icon-banner">
+              <i class="fa-solid fa-dna"></i>
+            </div>
+            <h3>Surgical Biomechanics</h3>
+            <p>Every single machine is laser-calibrated to match the natural muscular resistance curve, reducing joint shear while maximizing hypertrophy stimulus.</p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Custom-welded Arsenal Strength & Prime</li>
+              <li><i class="fa-solid fa-circle-check"></i> Eleiko IPF Competition calibrated plates</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-card highlight-card reveal-elem">
+            <div class="card-glow"></div>
+            <div class="card-icon-banner">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="popular-tag">SIGNATURE EXPERIENCE</div>
+            <h3>Dual Ecosystem Harmony</h3>
+            <p>Transition seamlessly from dark, moody indoor strength caverns to our open-air sun-drenched rooftop calisthenics & sprint deck.</p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> 40-Meter all-weather sprint turf</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sunset Calisthenics & functional rigs</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-card reveal-elem">
+            <div class="card-glow"></div>
+            <div class="card-icon-banner">
+              <i class="fa-solid fa-temperature-arrow-down"></i>
+            </div>
+            <h3>Biohacking & Longevity</h3>
+            <p>True athletic performance requires rapid cellular regeneration. Our integrated wellness lab brings medical-grade recovery to your daily routine.</p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> -110°C Whole-body Cryo Chambers</li>
+              <li><i class="fa-solid fa-circle-check"></i> Infrared Red Light & Contrast Plunges</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITIES: INDOOR & OUTDOOR DUAL-ZONE SHOWCASE -->
+    <section class="section facilities-section" id="facilities">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> THE DUAL REALMS</span>
+          <h2 class="section-title">INDOOR SANCTUARY <span class="gradient-text">VS.</span> SKYLINE ROOFTOP</h2>
+          <p class="section-desc">
+            Explore our architectural duality. Switch between zones below to view the dedicated spaces engineered for different training modalities.
+          </p>
+        </div>
+
+        <!-- Zone Selector Switch -->
+        <div class="zone-switcher reveal-elem">
+          <button class="zone-btn active" id="btnZoneAll" data-target="all">
+            <i class="fa-solid fa-border-all"></i> All Facilities
+          </button>
+          <button class="zone-btn" id="btnZoneIndoor" data-target="indoor">
+            <i class="fa-solid fa-building"></i> Indoor Sanctuary
+          </button>
+          <button class="zone-btn" id="btnZoneOutdoor" data-target="outdoor">
+            <i class="fa-solid fa-sun"></i> Skyline Outdoor Arena
+          </button>
+        </div>
+
+        <!-- Dual Showcase Cards -->
+        <div class="facilities-showcase">
+          <!-- Indoor Showcase Item -->
+          <div class="facility-card facility-indoor reveal-elem" data-category="indoor">
+            <div class="facility-image-wrap">
+              <img src="assets/indoor_gym.jpg" alt="Apex Iron Indoor Sanctuary" class="facility-img">
+              <div class="image-badge"><i class="fa-solid fa-shield-halved"></i> INDOOR SANCTUARY</div>
+              <!-- Interactive Hotspots -->
+              <div class="hotspot" style="top: 60%; left: 15%;" data-tooltip="Custom Urethane Dumbbells up to 75kg">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="hotspot" style="top: 48%; left: 52%;" data-tooltip="Technogym Pure Strength ISO-Lateral Machines">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="hotspot" style="top: 40%; left: 88%;" data-tooltip="Olympic Power Racks with Band Pegs & Chains">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+            <div class="facility-info glass-panel">
+              <div class="facility-meta">
+                <span class="zone-tag indoor-tag"><i class="fa-solid fa-cube"></i> Climate Controlled • 20,000 SQ FT</span>
+                <span class="capacity-tag"><i class="fa-solid fa-bolt"></i> High Energy</span>
+              </div>
+              <h3>The Heavy Iron & Hypertrophy Vault</h3>
+              <p>Designed with matte black acoustics, ambient recessed golden lighting, and anti-glare mirrors. Zero distractions, ultra-crisp audio acoustics powered by our Void Acoustics sound system.</p>
+              
+              <div class="facility-specs-grid">
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> 8 Full Olympic Power Cages</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> Dumbbells 2kg to 75kg</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> 14 Multi-Cable Dual Stations</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> Dedicated Deadlift Platforms</div>
+              </div>
+
+              <div class="facility-action">
+                <button class="btn btn-outline facility-gallery-btn" data-gallery="indoor">
+                  <i class="fa-regular fa-images"></i> View Indoor Equipment Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outdoor Showcase Item -->
+          <div class="facility-card facility-outdoor reveal-elem" data-category="outdoor">
+            <div class="facility-image-wrap">
+              <img src="assets/outdoor_gym.jpg" alt="Apex Iron Skyline Outdoor Arena" class="facility-img">
+              <div class="image-badge outdoor-badge"><i class="fa-solid fa-sun"></i> SKYLINE ROOFTOP ARENA</div>
+              <!-- Interactive Hotspots -->
+              <div class="hotspot" style="top: 45%; left: 75%;" data-tooltip="Custom Rig with Flying Monkey Bars & Rings">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="hotspot" style="top: 65%; left: 12%;" data-tooltip="All-Weather Rubber Coated Dumbbell Racks">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="hotspot" style="top: 55%; left: 50%;" data-tooltip="Heavy Battle Ropes & Sled Prowler Track">
+                <span class="hotspot-ping"></span>
+                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+            <div class="facility-info glass-panel">
+              <div class="facility-meta">
+                <span class="zone-tag outdoor-tag"><i class="fa-solid fa-wind"></i> Open-Air Rooftop • 15,000 SQ FT</span>
+                <span class="capacity-tag"><i class="fa-solid fa-cloud-sun"></i> Sunset Views</span>
+              </div>
+              <h3>Skyline Calisthenics & Conditioning Arena</h3>
+              <p>Train with open skies above and panoramic 360-degree city views. Equipped with professional shock-absorbing turf, custom monkey bars, gymnastics rings, and outdoor weather-treated free weights.</p>
+              
+              <div class="facility-specs-grid">
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> 40m Heavy Prowler Sprint Track</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> Rogue Calisthenics Rig & Rings</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> Strongman Yokes & Farmer Walk Log</div>
+                <div class="spec-pill"><i class="fa-solid fa-check"></i> Sunrise & Dusk Outdoor HIIT Classes</div>
+              </div>
+
+              <div class="facility-action">
+                <button class="btn btn-outline facility-gallery-btn" data-gallery="outdoor">
+                  <i class="fa-regular fa-images"></i> View Outdoor Equipment Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT ARSENAL SECTION -->
+    <section class="section equipment-section" id="equipment">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-gears"></i> HARDWARE EXCELLENCE</span>
+          <h2 class="section-title">THE EQUIPMENT <span class="gradient-text">ARSENAL</span></h2>
+          <p class="section-desc">
+            We don't settle for standard catalog gym gear. Every piece is curated from world-renowned performance engineering titans including Prime Fitness, Arsenal Strength, Eleiko, and Atlantis.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="equipment-filters reveal-elem" id="equipFilters">
+          <button class="filter-pill active" data-filter="all">All Hardware (240+)</button>
+          <button class="filter-pill" data-filter="strength">Heavy Strength & ISO</button>
+          <button class="filter-pill" data-filter="free-weights">Free Weights & Barbells</button>
+          <button class="filter-pill" data-filter="cardio">Smart Cardio & Slat</button>
+          <button class="filter-pill" data-filter="calisthenics">Outdoor & Rigs</button>
+          <button class="filter-pill" data-filter="recovery">Recovery & Cryo</button>
+        </div>
+
+        <!-- Equipment Grid -->
+        <div class="equipment-grid" id="equipmentGrid">
+          
+          <!-- Card 1 -->
+          <div class="equip-card glass-card reveal-elem" data-category="strength">
+            <div class="equip-badge">ISOLATERAL</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Arsenal Strength Hack Squat" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">ARSENAL STRENGTH // USA</div>
+              <h4 class="equip-name">Linear Hack Squat (45° Incline)</h4>
+              <p class="equip-desc">Laser-cut oversized diamond plate footplate with dual-weight peg resistance curve for quad isolation.</p>
+              <div class="equip-tags">
+                <span>Max Load: 600kg</span>
+                <span>Biomechanic Pivot</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="hacksquat">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="equip-card glass-card reveal-elem" data-category="free-weights">
+            <div class="equip-badge">IPF CERTIFIED</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Eleiko Competition Powerlifting" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">ELEIKO // SWEDEN</div>
+              <h4 class="equip-name">Competition Powerlifting Bar & Calibrated Discs</h4>
+              <p class="equip-desc">Precision 29mm Swedish steel bar with aggressive knurling and machined cast iron calibrated plates (0.25kg-25kg).</p>
+              <div class="equip-tags">
+                <span>215,000 PSI Steel</span>
+                <span>Zero Slop Fit</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="eleiko">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="equip-card glass-card reveal-elem" data-category="cardio">
+            <div class="equip-badge">ZERO MOTOR</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" alt="Woodway Slat-Belt Treadmill" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">WOODWAY // GERMANY</div>
+              <h4 class="equip-name">Curve Slat-Belt Performance Treadmill</h4>
+              <p class="equip-desc">Zero-motor curved rubber slats powered 100% by user kinetic power. Burns 30% more calories with natural foot mechanics.</p>
+              <div class="equip-tags">
+                <span>Natural Gait</span>
+                <span>Live Wattage Display</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="woodway">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="equip-card glass-card reveal-elem" data-category="strength">
+            <div class="equip-badge">SMART CAM</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Prime Fitness SmartStrength Chest Press" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">PRIME FITNESS // USA</div>
+              <h4 class="equip-name">SmartStrength Seated Chest Press</h4>
+              <p class="equip-desc">Variable resistance cam allowing loading to be focused on beginning, middle, or peak contraction of the pectoral movement.</p>
+              <div class="equip-tags">
+                <span>Torque Customizer</span>
+                <span>Independent Arms</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="primechest">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="equip-card glass-card reveal-elem" data-category="calisthenics">
+            <div class="equip-badge">ROOFTOP RIG</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" alt="Rogue Custom Skyline Rig" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">ROGUE FITNESS // MONSTER</div>
+              <h4 class="equip-name">Custom Skyline Rig & Calisthenics Hub</h4>
+              <p class="equip-desc">Weatherized textured steel construction with multi-height pullup bars, gymnastic ring anchors, and salmon ladders.</p>
+              <div class="equip-tags">
+                <span>All-Weather Zinc</span>
+                <span>Gymnastics Spec</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="roguemonster">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="equip-card glass-card reveal-elem" data-category="recovery">
+            <div class="equip-badge">CRYO BIOHACK</div>
+            <div class="equip-img-holder">
+              <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cryo Science Electric Chamber" class="equip-real-img" loading="lazy">
+              <div class="equip-img-gradient"></div>
+            </div>
+            <div class="equip-content">
+              <div class="equip-brand">CRYO SCIENCE // ARCTIC</div>
+              <h4 class="equip-name">-110°C Electric Cryo Chamber</h4>
+              <p class="equip-desc">Sub-zero nitrogen-free whole-body chamber designed for rapid muscle inflammation reduction and endorphin release.</p>
+              <div class="equip-tags">
+                <span>Electric True Sub-Zero</span>
+                <span>3-Min Fast Cycle</span>
+              </div>
+              <button class="btn-equip-detail" data-equip="cryo">
+                <span>View Engineering Specs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="arsenal-cta reveal-elem">
+          <div class="arsenal-box glass-panel">
+            <div class="arsenal-text">
+              <h3>Looking for a specific piece of equipment?</h3>
+              <p>Download our complete verified 2026 Hardware Spec Sheet (Includes all 240+ weight machines, pin & plate loaded specs).</p>
+            </div>
+            <button class="btn btn-primary" id="downloadSpecSheetBtn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Full Equipment PDF</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D VIRTUAL TOUR BANNER -->
+    <section class="section virtual-tour-section" id="tour">
+      <div class="container">
+        <div class="tour-card glass-card reveal-elem">
+          <div class="tour-content">
+            <span class="section-subtitle"><i class="fa-solid fa-vr-cardboard"></i> IMMERSIVE PREVIEW</span>
+            <h2>Step Inside The Apex Sanctuary In 360° Realtime</h2>
+            <p>Can't visit right this second? Explore our interactive high-definition virtual tour. Inspect equipment tolerances, check live locker room cleanliness, and view the outdoor sunset deck from any device.</p>
+            <div class="tour-features">
+              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> 4K Ultra-Res Walkthrough</div>
+              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> Machine Dimension Measure</div>
+              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> VR Headset Ready</div>
+            </div>
+            <button class="btn btn-primary btn-glow" id="start3dTourBtn">
+              <i class="fa-solid fa-play"></i>
+              <span>Launch Interactive 3D Tour</span>
+            </button>
+          </div>
+          <div class="tour-visual">
+            <div class="radar-box">
+              <div class="radar-circle c1"></div>
+              <div class="radar-circle c2"></div>
+              <div class="radar-sweep"></div>
+              <div class="radar-blip b1" title="Main Lifting Bay"></div>
+              <div class="radar-blip b2" title="Rooftop Deck"></div>
+              <div class="radar-blip b3" title="Cryo Suite"></div>
+              <span class="radar-label"><i class="fa-solid fa-satellite-dish"></i> 3D SCANNER ACTIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELITE TRAINERS SECTION -->
+    <section class="section trainers-section" id="trainers">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-user-ninja"></i> THE APEX DIRECTORS</span>
+          <h2 class="section-title">GUIDED BY <span class="gradient-text">ELITE SPECIALISTS</span></h2>
+          <p class="section-desc">
+            No cookie-cutter routines. Our coaching roster holds collegiate degrees in human kinetics, sports biomechanics, and international podium records.
+          </p>
+        </div>
+
+        <div class="trainers-grid">
+          <!-- Trainer 1 -->
+          <div class="trainer-card glass-card reveal-elem">
+            <div class="trainer-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" class="trainer-img-real" loading="lazy">
+              <div class="trainer-img-overlay"></div>
+              <span class="coach-badge">HEAD OF STRENGTH</span>
+            </div>
+            <div class="trainer-details">
+              <h4>Marcus 'Valkyrie' Vance</h4>
+              <p class="trainer-role">M.Sc. Sports Biomechanics • CSCS</p>
+              <p class="trainer-bio">Specializing in heavy powerlifting kinematics, neural load management, and competition peaking strategies.</p>
+              <div class="trainer-stats">
+                <div><strong>12+</strong><span>Yrs Coaching</span></div>
+                <div><strong>18</strong><span>Pro Athletes</span></div>
+                <div><strong>780kg</strong><span>Total</span></div>
+              </div>
+              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Marcus Vance">Request Consultation</button>
+            </div>
+          </div>
+
+          <!-- Trainer 2 -->
+          <div class="trainer-card glass-card reveal-elem">
+            <div class="trainer-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" class="trainer-img-real" loading="lazy">
+              <div class="trainer-img-overlay"></div>
+              <span class="coach-badge">ROOFTOP & CALISTHENICS</span>
+            </div>
+            <div class="trainer-details">
+              <h4>Elena Rostova</h4>
+              <p class="trainer-role">Former Olympic Gymnast • Kinesiologist</p>
+              <p class="trainer-bio">Master of bodyweight leverage, gymnastic strength development, mobility restoration, and functional sprint mechanics.</p>
+              <div class="trainer-stats">
+                <div><strong>10+</strong><span>Yrs Coaching</span></div>
+                <div><strong>150+</strong><span>Transformations</span></div>
+                <div><strong>Oly</strong><span>Medalist Prep</span></div>
+              </div>
+              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Elena Rostova">Request Consultation</button>
+            </div>
+          </div>
+
+          <!-- Trainer 3 -->
+          <div class="trainer-card glass-card reveal-elem">
+            <div class="trainer-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Darius Thorne" class="trainer-img-real" loading="lazy">
+              <div class="trainer-img-overlay"></div>
+              <span class="coach-badge">HYPERTROPHY & NUTRITION</span>
+            </div>
+            <div class="trainer-details">
+              <h4>Darius Thorne</h4>
+              <p class="trainer-role">IFBB Pro Bodybuilder • Clinical Dietitian</p>
+              <p class="trainer-bio">Specializing in metabolic periodization, structural balance training, and injury-free muscle sculpting.</p>
+              <div class="trainer-stats">
+                <div><strong>14+</strong><span>Yrs Coaching</span></div>
+                <div><strong>200+</strong><span>Stage Preps</span></div>
+                <div><strong>100%</strong><span>Precision</span></div>
+              </div>
+              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Darius Thorne">Request Consultation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP TIERS SECTION -->
+    <section class="section memberships-section" id="memberships">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-id-card"></i> ACCESS PRIVILEGES</span>
+          <h2 class="section-title">MEMBERSHIP <span class="gradient-text">TIERS</span></h2>
+          <p class="section-desc">
+            Capped membership capacity to guarantee zero wait times for equipment, pristine cleanliness, and an uninterrupted focus state.
+          </p>
+
+          <!-- Billing Switch -->
+          <div class="pricing-toggle-wrap">
+            <span class="toggle-label" id="monthlyLabel">Monthly</span>
+            <label class="switch" aria-label="Toggle annual or monthly pricing">
+              <input type="checkbox" id="pricingToggle">
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label" id="annualLabel">Annual <span class="save-badge">Save 20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1 -->
+          <div class="pricing-card glass-card reveal-elem">
+            <div class="tier-name">IRON STANDARD</div>
+            <div class="tier-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="129" data-annual="99">129</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="tier-desc">Full indoor sanctuary access during all regular hours.</p>
+            <ul class="tier-perks">
+              <li><i class="fa-solid fa-check"></i> 24/7 Indoor Heavy Iron Access</li>
+              <li><i class="fa-solid fa-check"></i> Standard Locker & Steam Room</li>
+              <li><i class="fa-solid fa-check"></i> Apex Mobile App & Workout Logging</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Skyline Rooftop Arena</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Cryo & Infrared Recovery Suite</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-tier-btn" data-tier="Iron Standard">Choose Standard</button>
+          </div>
+
+          <!-- Tier 2: FEATURED -->
+          <div class="pricing-card glass-card featured-tier reveal-elem">
+            <div class="popular-ribbon">MOST POPULAR</div>
+            <div class="tier-name">ALL-ACCESS ELITE</div>
+            <div class="tier-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="199" data-annual="159">199</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="tier-desc">Unrestricted access to both Indoor Sanctuary & Skyline Rooftop.</p>
+            <ul class="tier-perks">
+              <li><i class="fa-solid fa-check"></i> 24/7 Indoor & Skyline Rooftop Access</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Outdoor HIIT & Calisthenics Classes</li>
+              <li><i class="fa-solid fa-check"></i> Premium Towel Service & Hydro-Massage</li>
+              <li><i class="fa-solid fa-check"></i> 4x Monthly Cryo / Contrast Plunge Sessions</li>
+              <li><i class="fa-solid fa-check"></i> 2 Free VIP Guest Passes per month</li>
+            </ul>
+            <button class="btn btn-primary btn-glow btn-block select-tier-btn" data-tier="All-Access Elite">Claim Elite Access</button>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="pricing-card glass-card reveal-elem">
+            <div class="tier-name">BLACK FOUNDER'S CLUB</div>
+            <div class="tier-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="349" data-annual="279">349</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="tier-desc">The ultimate private luxury concierge experience with dedicated coach.</p>
+            <ul class="tier-perks">
+              <li><i class="fa-solid fa-check"></i> All-Access Dual Realm 24/7/365</li>
+              <li><i class="fa-solid fa-check"></i> 2x Weekly 1-on-1 Master Coaching</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Cryo, Sauna & Hyperbaric Oxygen</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated Reserved Executive Locker</li>
+              <li><i class="fa-solid fa-check"></i> Custom Nutrition & Biometric Bloodwork Review</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-tier-btn" data-tier="Black Founders">Apply For Founder</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS / TESTIMONIALS -->
+    <section class="section reviews-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-quote-left"></i> ATHLETE FEEDBACK</span>
+          <h2 class="section-title">THE VERDICT FROM <span class="gradient-text">OUR COMMUNITY</span></h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card glass-panel reveal-elem">
+            <div class="review-stars">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="review-text">"As a competitive powerlifter, I haven't found a single gym in the state that compares. The calibrated Eleiko bars and Arsenal Hack Squat are flawless. The rooftop sunset sessions are pure therapy."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">ZK</div>
+              <div>
+                <strong>Zackary King</strong>
+                <span>National Powerlifter • Member 2 Yrs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-panel reveal-elem">
+            <div class="review-stars">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="review-text">"The aesthetic lighting and music curation put you into a locked-in mental state instantly. Plus, jumping into the Cryo chamber after high-volume leg day completely eliminated my DOMS."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SN</div>
+              <div>
+                <strong>Sophia Nguyen</strong>
+                <span>Marathon Athlete & Entrepreneur</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-panel reveal-elem">
+            <div class="review-stars">
+              ★ ★ ★ ★ ★
+            </div>
+            <p class="review-text">"Never waiting for a squat rack or dumbbell is worth twice the membership fee alone. The staff cleans constantly, and the community is super driven and respectful."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">JM</div>
+              <div>
+                <strong>Julian Mercer</strong>
+                <span>Hyrox Competitor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & HOURS SECTION -->
+    <section class="section location-section" id="location">
+      <div class="container">
+        <div class="location-box glass-card reveal-elem">
+          <div class="location-info">
+            <span class="section-subtitle"><i class="fa-solid fa-location-dot"></i> HEADQUARTERS</span>
+            <h2>Visit Apex Iron Sanctuary</h2>
+            <p>Conveniently located in the high-energy Metro District with valet parking and direct elevator access to our rooftop skyline deck.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fa-solid fa-map-pin"></i>
+                <div>
+                  <strong>Address</strong>
+                  <p>742 Performance Way, Skyline District, Suite 500</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <strong>Hours of Operation</strong>
+                  <p>Members: 24/7/365 Keyless Smart Access<br>Staffed & Guest Hours: Mon - Sun, 6:00 AM - 10:00 PM</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Direct Concierge</strong>
+                  <p>+1 (800) 555-APEX • info@apexironclub.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-interactive">
+            <div class="map-simulation glass-panel">
+              <div class="map-pin-pulse">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <div class="map-tag">
+                <strong>APEX IRON CLUB</strong>
+                <span>Rooftop Level 5 & 6</span>
+              </div>
+              <div class="map-actions">
+                <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                  <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle"><i class="fa-solid fa-circle-question"></i> COMMON INQUIRIES</span>
+          <h2 class="section-title">FREQUENTLY ASKED <span class="gradient-text">QUESTIONS</span></h2>
+        </div>
+
+        <div class="faq-accordion reveal-elem">
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Is there a cap on total memberships to prevent crowding?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We strictly cap active memberships at 500 members to ensure optimal training space, immediate equipment availability, and uninterrupted focus during peak hours.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>What happens if it rains when I want to use the outdoor rooftop gym?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our outdoor rooftop features specialized marine-grade weatherproofing and heavy-duty retractable storm canopies over the main rig and dumbbell turf. In severe weather, duplicate equipment is readily available in our 20,000 sq ft indoor sanctuary.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Can I test out the facilities before committing to a membership?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. You can request a complimentary 1-Day VIP Experience Pass which grants full access to both indoor and outdoor zones, plus a guided equipment walk with one of our master trainers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Are locker rooms and recovery amenities included in standard membership?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>All members receive luxury rainfall shower access, steam rooms, private day lockers, and Dyson grooming bars. Cryotherapy and infrared saunas are included with Elite & Founder tiers or can be added on per-session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- VIP PASS / CONSULTATION MODAL -->
+  <div class="modal-backdrop" id="passModal">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-ticket"></i></div>
+        <h3>Claim Your 1-Day VIP Pass</h3>
+        <p>Experience the indoor vault and rooftop skyline arena on us. Zero obligation.</p>
+      </div>
+
+      <form id="passForm" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required placeholder="e.g. Alexander Cole">
+          </div>
+          <div class="form-group">
+            <label for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" required placeholder="alex@domain.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phoneNum">Phone Number</label>
+            <input type="tel" id="phoneNum" required placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="primaryGoal">Primary Training Goal</label>
+            <select id="primaryGoal">
+              <option value="hypertrophy">Hypertrophy & Bodybuilding</option>
+              <option value="strength">Powerlifting & Pure Strength</option>
+              <option value="calisthenics">Rooftop Calisthenics & Conditioning</option>
+              <option value="recovery">Longevity & Biohack Recovery</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Interested Facility</label>
+          <div class="zone-radio-group">
+            <label class="radio-card">
+              <input type="radio" name="facilityInterest" value="both" checked>
+              <span>Dual Zones (Indoor + Rooftop)</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="facilityInterest" value="indoor">
+              <span>Indoor Only</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="facilityInterest" value="rooftop">
+              <span>Rooftop Only</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-glow btn-block" id="submitPassBtn">
+          <span>Confirm VIP Invitation</span>
+          <i class="fa-solid fa-check"></i>
+        </button>
+
+        <p class="modal-disclaimer"><i class="fa-solid fa-lock"></i> Your data is private. Strictly limited to 1 pass per athlete per calendar year.</p>
+      </form>
+
+      <div class="modal-success-state" id="modalSuccessState">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>VIP Invitation Confirmed!</h3>
+        <p>We've sent your digital QR pass to your email. Show it at the front desk concierge when you arrive.</p>
+        <button class="btn btn-primary" id="closeSuccessBtn">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EQUIPMENT DETAIL SPEC MODAL -->
+  <div class="modal-backdrop" id="equipDetailModal">
+    <div class="modal-dialog glass-card equip-modal-dialog">
+      <button class="modal-close" id="closeEquipModalBtn" aria-label="Close Modal">&times;</button>
+      <div id="equipModalContent">
+        <!-- Dynamically injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3D VIRTUAL TOUR MODAL -->
+  <div class="modal-backdrop" id="tourModal">
+    <div class="modal-dialog glass-card tour-modal-dialog">
+      <button class="modal-close" id="closeTourModalBtn" aria-label="Close Tour">&times;</button>
+      <div class="tour-modal-header">
+        <span class="live-dot-tour"></span>
+        <h3>Apex 360° Real-Time Sanctuary Feed</h3>
+      </div>
+      <div class="tour-viewport-container" id="tourViewport">
+        <div class="tour-view active-view" id="tourIndoorView">
+          <img src="assets/indoor_gym.jpg" alt="360 Indoor View" class="tour-panorama-img">
+          <div class="tour-overlay-hud">
+            <span class="hud-tag">ZONE A: HEAVY HYPERTROPHY VAULT</span>
+            <span class="hud-temp"><i class="fa-solid fa-temperature-three-quarters"></i> 68°F • Optimal Air Flow</span>
+          </div>
+        </div>
+        <div class="tour-view" id="tourOutdoorView">
+          <img src="assets/outdoor_gym.jpg" alt="360 Outdoor View" class="tour-panorama-img">
+          <div class="tour-overlay-hud">
+            <span class="hud-tag">ZONE B: SKYLINE CALISTHENICS ROOFTOP</span>
+            <span class="hud-temp"><i class="fa-solid fa-sun"></i> Sunset Deck Open</span>
+          </div>
+        </div>
+      </div>
+      <div class="tour-modal-controls">
+        <button class="btn btn-sm btn-outline tour-switch-btn active" data-view="indoor">
+          <i class="fa-solid fa-building"></i> Switch to Indoor Vault
+        </button>
+        <button class="btn btn-sm btn-outline tour-switch-btn" data-view="outdoor">
+          <i class="fa-solid fa-sun"></i> Switch to Skyline Rooftop
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">APEX<span class="highlight">IRON</span></span>
+            <span class="brand-sub">ATHLETIC CLUB</span>
+          </div>
+        </a>
+        <p class="footer-tagline">
+          The pinnacle of modern human performance architecture. Where cutting-edge biomechanics meet high-aesthetic atmospheric training.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Spotify Gym Playlist"><i class="fa-brands fa-spotify"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="#about">Our Philosophy</a></li>
+          <li><a href="#facilities">Indoor Sanctuary</a></li>
+          <li><a href="#facilities">Skyline Rooftop</a></li>
+          <li><a href="#equipment">Equipment Arsenal</a></li>
+          <li><a href="#trainers">Elite Coaches</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>MEMBERSHIP</h4>
+        <ul>
+          <li><a href="#memberships">Tiers & Pricing</a></li>
+          <li><a href="#" id="footerClaimPass">1-Day VIP Pass</a></li>
+          <li><a href="#memberships">Corporate Pass</a></li>
+          <li><a href="#tour">3D Virtual Tour</a></li>
+          <li><a href="#location">Guest Guidelines</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>PERFORMANCE INTEL</h4>
+        <p>Subscribe for bi-weekly biomechanics breakdowns, equipment updates, and guest trainer clinics.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required id="newsletterEmail">
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <span class="newsletter-status" id="newsletterStatus"></span>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 APEX IRON ATHLETIC CLUB. ALL RIGHTS RESERVED. DESIGNED FOR PEAK ATHLETES.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <span>•</span>
+        <a href="#">Terms of Service</a>
+        <span>•</span>
+        <a href="#">Safety & Sanitation</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
