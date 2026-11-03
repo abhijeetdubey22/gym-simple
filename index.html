@@ -1,1082 +1,1018 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APEX IRON // Next-Gen Luxury Athletic Club & Performance Lab</title>
-  <meta name="description" content="Experience peak fitness at Apex Iron. Featuring state-of-the-art indoor bio-mechanic machinery, panoramic rooftop outdoor arenas, and recovery labs.">
-  <meta name="keywords" content="luxury gym, fitness club, indoor gym, rooftop outdoor gym, eleiko, technogym, bodybuilding, calisthenics">
-  
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Dragon Slayer Gym 2 | Naigaon East</title>
+  <meta name="description" content="Naigaon East's premier 2-floor fitness club. Certified trainers, AC workout floor, heavy weights up to 50kg, and dedicated ladies batch.">
+  <meta name="theme-color" content="#090b0e">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons (Font Awesome + Lucide SVGs fallback) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Mobile-first base styles */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #090b0e;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(18, 22, 29, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    /* Hide scrollbars for app-like horizontal scrolls */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Safe padding for modern iPhone / Android gesture bars */
+    .safe-bottom {
+      padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+    }
+    /* Bottom Sheet Modal Animation on Mobile */
+    @media (max-width: 639px) {
+      .modal-sheet {
+        transform: translateY(100%);
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .modal-sheet.open {
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body>
-  <!-- Ambient background glow effects -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
+<body class="antialiased pb-24 md:pb-0 select-none sm:select-auto">
 
-  <!-- Custom Cursor -->
-  <div class="custom-cursor" id="customCursor"></div>
-  <div class="custom-cursor-follower" id="cursorFollower"></div>
+  <!-- TOP PROMO BANNER (COMPACT ON MOBILE) -->
+  <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-black text-[11px] sm:text-xs font-bold text-center py-2 px-3 flex items-center justify-center gap-1.5 shadow-sm">
+    <span>🔥 OPENING OFFER: Free 1-Day Trial + 25% OFF Annual Plans!</span>
+    <a href="#plans" class="underline font-extrabold ml-1">Claim &rarr;</a>
+  </div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar-wrapper">
-    <nav class="navbar container" id="navbar">
-      <a href="#hero" class="brand-logo" id="brandLogo">
-        <div class="logo-icon">
-          <i class="fa-solid fa-bolt-lightning"></i>
+  <!-- MOBILE-FIRST APP HEADER -->
+  <header class="sticky top-0 z-40 bg-[#090b0e]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-base sm:text-lg shadow-sm">
+          <i class="fa-solid fa-dragon"></i>
         </div>
-        <div class="logo-text">
-          <span class="brand-name">APEX<span class="highlight">IRON</span></span>
-          <span class="brand-sub">ATHLETIC CLUB</span>
+        <div>
+          <span class="heading-font text-base sm:text-xl font-bold tracking-tight text-white block leading-none">
+            DRAGON <span class="text-amber-500">SLAYER</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 • Naigaon East</span>
         </div>
       </a>
 
-      <div class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link" id="navAbout">Philosophy</a></li>
-          <li><a href="#facilities" class="nav-link" id="navFacilities">Facilities</a></li>
-          <li><a href="#equipment" class="nav-link" id="navEquipment">Equipment Arsenal</a></li>
-          <li><a href="#trainers" class="nav-link" id="navTrainers">Elite Trainers</a></li>
-          <li><a href="#memberships" class="nav-link" id="navMemberships">Memberships</a></li>
-          <li><a href="#location" class="nav-link" id="navLocation">Location</a></li>
-        </ul>
-      </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
+        <a href="#stories" class="hover:text-amber-400 transition">Highlights</a>
+        <a href="#equipment" class="hover:text-amber-400 transition flex items-center gap-1">
+          <span>Equipment</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">Tap Specs</span>
+        </a>
+        <a href="#plans" class="hover:text-amber-400 transition">Plans & Pricing</a>
+        <a href="#timings" class="hover:text-amber-400 transition">Timings</a>
+        <a href="#reviews" class="hover:text-amber-400 transition">Reviews</a>
+        <a href="#contact" class="hover:text-amber-400 transition">Location</a>
+      </nav>
 
-      <div class="nav-actions">
-        <div class="live-badge" id="liveCapacityToggle" role="button" tabindex="0" title="Click to view zone breakdown">
-          <span class="pulse-dot"></span>
-          <span class="live-text">Live: <strong>44% Capacity</strong></span>
-          <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem; margin-left: 4px;"></i>
-
-          <!-- Capacity Dropdown Preview -->
-          <div class="capacity-popover" id="capacityPopover">
-            <div class="cap-header">
-              <span>REAL-TIME SENSOR FEED</span>
-              <span class="cap-status">🟢 OPTIMAL</span>
-            </div>
-            <div class="cap-row">
-              <span>Indoor Heavy Vault</span>
-              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 38%;"></div></div>
-              <strong>38%</strong>
-            </div>
-            <div class="cap-row">
-              <span>Rooftop Skyline Turf</span>
-              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 52%;"></div></div>
-              <strong>52%</strong>
-            </div>
-            <div class="cap-row">
-              <span>Cryo Recovery Lab</span>
-              <div class="cap-bar-wrap"><div class="cap-bar" style="width: 25%;"></div></div>
-              <strong>25%</strong>
-            </div>
-            <div class="cap-footer">
-              <i class="fa-solid fa-circle-check"></i> Zero wait times for power racks & platforms
-            </div>
-          </div>
-        </div>
-
-        <button class="btn btn-primary btn-glow" id="openPassModalBtn">
-          <span>Claim VIP Pass</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+      <!-- Action buttons -->
+      <div class="flex items-center gap-2">
+        <a href="tel:917709339959" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-xs font-semibold transition">
+          <i class="fa-solid fa-phone text-amber-400"></i>
+          <span>7709339959</span>
+        </a>
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20inquire%20about%20Dragon%20Slayer%20Gym%202" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition shadow-md shadow-emerald-900/30">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden xs:inline">WhatsApp</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menuToggleBtn" class="md:hidden w-9 h-9 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-    </nav>
+    </div>
+
+    <!-- MOBILE SLIDE-DOWN DRAWER -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-[#0e1218] border-b border-white/10 px-4 py-3 space-y-2.5 text-xs font-medium">
+      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-white/10">
+        <a href="#stories" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-amber-400"></i> Highlights
+        </a>
+        <a href="#equipment" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-dumbbell text-amber-400"></i> Equipment
+        </a>
+        <a href="#plans" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-indian-rupee-sign text-amber-400"></i> Plans
+        </a>
+        <a href="#timings" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-clock text-amber-400"></i> Timings
+        </a>
+        <a href="#booking" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check text-amber-400"></i> Free Trial
+        </a>
+        <a href="#contact" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-amber-400"></i> Location
+        </a>
+      </div>
+      <div class="flex items-center gap-2 pt-1">
+        <a href="tel:917709339959" class="flex-1 py-2 text-center rounded-lg bg-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-phone text-amber-400"></i> Call Gym
+        </a>
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-2 text-center rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="hero">
-      <div class="hero-bg-wrapper">
-        <img src="assets/hero_bg.jpg" alt="Apex Iron Luxury Gym Interior" class="hero-bg-img" id="heroBgImg">
-        <div class="hero-overlay"></div>
-      </div>
+  <!-- INSTAGRAM-STYLE STORY HIGHLIGHTS (NATIVE MOBILE TOUCH) -->
+  <section id="stories" class="py-3 px-3.5 bg-zinc-950/60 border-b border-white/5 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3.5 overflow-x-auto no-scrollbar py-1 text-center">
+        <!-- Story 1: 2 Floors -->
+        <a href="#facilities" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-red-500 to-amber-300 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">2 Floors</span>
+        </a>
 
-      <div class="container hero-content">
-        <div class="hero-badge reveal-elem">
-          <span class="badge-tag">REVOLUTIONARY FITNESS ECOSYSTEM</span>
-          <span class="badge-separator">|</span>
-          <span class="badge-stars">
-            ★ ★ ★ ★ ★
-            <span>VOTED #1 LUXURY CLUB</span>
-          </span>
+        <!-- Story 2: Machines / Arsenal -->
+        <a href="#equipment" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Arsenal</span>
+        </a>
+
+        <!-- Story 3: Ladies Batch -->
+        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-pink-500 via-purple-500 to-rose-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-pink-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-venus"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Ladies Batch</span>
+        </a>
+
+        <!-- Story 4: ₹ Plans -->
+        <a href="#plans" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-emerald-500 via-teal-500 to-amber-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-emerald-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-tag"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Plans (₹)</span>
+        </a>
+
+        <!-- Story 5: Batches -->
+        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-blue-500 via-indigo-500 to-amber-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-blue-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Timings</span>
+        </a>
+
+        <!-- Story 6: Location -->
+        <a href="#contact" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 to-red-600 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Location</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SECTION (MOBILE FOCUSED) -->
+  <section class="relative pt-6 pb-12 sm:pt-12 sm:pb-20 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[600px] h-[260px] sm:h-[380px] bg-amber-500/15 blur-[90px] sm:blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-left sm:text-center max-w-2xl mx-auto">
+        <!-- Location Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/90 border border-zinc-700 text-amber-400 text-[11px] font-semibold mb-3.5 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Naigaon East's Biggest 2-Floor Gym</span>
         </div>
 
-        <h1 class="hero-title reveal-elem">
-          ENGINEERED FOR <br>
-          <span class="gradient-text text-glow">PEAK HUMAN</span> <br>
-          PERFORMANCE.
+        <h1 class="heading-font text-2xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-3">
+          FORGE YOUR BODY AT <br>
+          <span class="gold-gradient-text">DRAGON SLAYER GYM 2</span>
         </h1>
 
-        <p class="hero-description reveal-elem">
-          Step into a hyper-aesthetic sanctuary where scientific biomechanics meet architectural mastery. 
-          Featuring our 35,000 sq.ft Olympic indoor arena and the city's premier rooftop skyline calisthenics park.
+        <p class="text-zinc-300 text-xs sm:text-base leading-relaxed mb-6">
+          Heavy bio-mechanic machines, dumbbells up to 50KG, certified personal trainers, full AC floors, and exclusive female batches.
         </p>
 
-        <div class="hero-cta-group reveal-elem">
-          <button class="btn btn-hero-primary" id="heroBookTourBtn">
-            <span class="btn-sparkle"><i class="fa-solid fa-fire-flame-curved"></i></span>
-            <span>Book VIP Sanctuary Pass</span>
-          </button>
-          <a href="#facilities" class="btn btn-hero-secondary" id="heroExploreBtn">
-            <i class="fa-solid fa-compass"></i>
-            <span>Explore Dual Zones</span>
+        <!-- Mobile Primary Call-To-Actions (Large Touch Targets) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 mb-8">
+          <a href="#equipment" class="py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs sm:text-sm tracking-wide transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-dumbbell"></i>
+            <span>Tap to View Equipment Arsenal</span>
+          </a>
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-3.5 px-5 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+            <span>Book Free 1-Day Trial</span>
           </a>
         </div>
 
-        <!-- Floating Quick Stats Grid -->
-        <div class="hero-stats-grid reveal-elem">
-          <div class="hero-stat-card glass-panel">
-            <div class="stat-icon-wrap"><i class="fa-solid fa-cubes"></i></div>
-            <div class="stat-data">
-              <div class="stat-num-row">
-                <span class="stat-number" data-count="35000">35,000</span>
-                <span class="stat-unit">SQ FT</span>
-              </div>
-              <span class="stat-label">Indoor & Rooftop Dual Arena</span>
+        <!-- 3 Quick Mobile Stats -->
+        <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-zinc-900/80 border border-white/5 text-center">
+          <div>
+            <div class="text-base sm:text-2xl font-extrabold text-white heading-font">2 FLOORS</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Heavy + Cardio</div>
+          </div>
+          <div class="border-x border-white/10">
+            <div class="text-base sm:text-2xl font-extrabold text-amber-400 heading-font">50+ UNITS</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Tap for Specs</div>
+          </div>
+          <div>
+            <div class="text-base sm:text-2xl font-extrabold text-emerald-400 heading-font">★ 4.9 / 5</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Naigaon Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE EQUIPMENT ARSENAL (TAP TO INSPECT) -->
+  <section id="equipment" class="py-12 bg-zinc-950/80 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center sm:text-left mb-5">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+          <i class="fa-solid fa-bolt"></i> Interactive Feature
+        </span>
+        <h2 class="heading-font text-xl sm:text-3xl font-bold text-white mt-0.5">Equipment Arsenal</h2>
+        <p class="text-xs text-zinc-400 mt-1">Tap any machine below to inspect weight limits, target muscles, and biomechanics.</p>
+      </div>
+
+      <!-- Mobile Scrollable Category Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 mb-5" id="filterTabs">
+        <button data-cat="all" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-500 text-black shadow-sm transition">All Units (8)</button>
+        <button data-cat="chest" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Chest & Arms</button>
+        <button data-cat="legs" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Legs & Squats</button>
+        <button data-cat="back" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Back & Core</button>
+        <button data-cat="cardio" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Cardio & Slat</button>
+      </div>
+
+      <!-- Equipment Cards Grid (2-Column on Mobile, 4-Column on Desktop) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4" id="equipGrid">
+        <!-- Machine 1: Incline Chest Press -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="incline_press">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=500&q=80" alt="Iso Incline Chest Press" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Upper Chest</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
             </div>
           </div>
-          <div class="hero-stat-card glass-panel">
-            <div class="stat-icon-wrap"><i class="fa-solid fa-dumbbell"></i></div>
-            <div class="stat-data">
-              <div class="stat-num-row">
-                <span class="stat-number" data-count="240">240</span>
-                <span class="stat-unit">+</span>
-              </div>
-              <span class="stat-label">Custom Biomechanic Units</span>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Incline Chest Press</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">350 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
             </div>
           </div>
-          <div class="hero-stat-card glass-panel">
-            <div class="stat-icon-wrap"><i class="fa-solid fa-sun"></i></div>
-            <div class="stat-data">
-              <div class="stat-num-row">
-                <span class="stat-number" data-count="360">360</span>
-                <span class="stat-unit">°</span>
-              </div>
-              <span class="stat-label">Skyline Rooftop Panoramic</span>
+        </div>
+
+        <!-- Machine 2: Hack Squat -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="hack_squat">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="45° Linear Hack Squat" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Quads</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
             </div>
           </div>
-          <div class="hero-stat-card glass-panel">
-            <div class="stat-icon-wrap"><i class="fa-solid fa-award"></i></div>
-            <div class="stat-data">
-              <div class="stat-num-row">
-                <span class="stat-number" data-count="18">18</span>
-                <span class="stat-unit">Coaches</span>
-              </div>
-              <span class="stat-label">Master Performance Specialists</span>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">45° Heavy Hack Squat</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">600 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 3: Power Squat Rack -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="power_rack">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Olympic Power Squat Rack" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Powerlifting</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Olympic Power Cage</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">500 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 4: Lat Pulldown & Row -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="back" data-id="lat_pulldown">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=500&q=80" alt="Dual Lat Pulldown" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Lats & Back</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Lat Pulldown & Row</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Stack: <strong class="text-white">120 KG x2</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 5: Heavy Dumbbells up to 50KG -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="dumbbells">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=500&q=80" alt="Pro Dumbbell Set" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Free Weights</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Hex Dumbbells (2.5 – 50KG)</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Pairs: <strong class="text-white">20 Pairs</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 6: Cable Crossover -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="cable_crossover">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Cable Crossover" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Flyes & Arms</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Cable Crossover</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Stack: <strong class="text-white">100 KG x2</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 7: Curved Slat Treadmill -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="cardio" data-id="slat_treadmill">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80" alt="Slat Treadmill" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Cardio</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Curved Slat Treadmill</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Drive: <strong class="text-white">Kinetic</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 8: Smith Machine -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="smith_machine">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Counterbalanced Smith" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Safe Solo</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Pro Smith Machine</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">400 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="scroll-indicator">
-        <a href="#about" aria-label="Scroll Down">
-          <span class="mouse-icon">
-            <span class="wheel"></span>
-          </span>
-          <span class="scroll-text">DISCOVER THE ARSENAL</span>
-        </a>
-      </div>
-    </section>
+  <!-- MEMBERSHIP PLANS & PRICING (MOBILE TABBED / SWIPE VIEW) -->
+  <section id="plans" class="py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Zero Admission Fee</span>
+        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Membership Plans</h2>
+        <p class="text-xs text-zinc-400 mt-1">Includes access to both floors, AC workout zone, and general floor training.</p>
 
-    <!-- ABOUT / PHILOSOPHY SECTION -->
-    <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-atom"></i> THE APEX PHILOSOPHY</span>
-          <h2 class="section-title">BUILT FOR THOSE WHO <span class="gradient-text">REFUSE THE ORDINARY</span></h2>
-          <p class="section-desc">
-            We discarded the sterile, fluorescent box gym mold. Apex Iron was forged from the ground up as a sensory, high-stimulus athletic theater crafted for maximum neurological focus and aesthetic beauty.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card glass-card reveal-elem">
-            <div class="card-glow"></div>
-            <div class="card-icon-banner">
-              <i class="fa-solid fa-dna"></i>
-            </div>
-            <h3>Surgical Biomechanics</h3>
-            <p>Every single machine is laser-calibrated to match the natural muscular resistance curve, reducing joint shear while maximizing hypertrophy stimulus.</p>
-            <ul class="feature-bullets">
-              <li><i class="fa-solid fa-circle-check"></i> Custom-welded Arsenal Strength & Prime</li>
-              <li><i class="fa-solid fa-circle-check"></i> Eleiko IPF Competition calibrated plates</li>
-            </ul>
-          </div>
-
-          <div class="about-card glass-card highlight-card reveal-elem">
-            <div class="card-glow"></div>
-            <div class="card-icon-banner">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="popular-tag">SIGNATURE EXPERIENCE</div>
-            <h3>Dual Ecosystem Harmony</h3>
-            <p>Transition seamlessly from dark, moody indoor strength caverns to our open-air sun-drenched rooftop calisthenics & sprint deck.</p>
-            <ul class="feature-bullets">
-              <li><i class="fa-solid fa-circle-check"></i> 40-Meter all-weather sprint turf</li>
-              <li><i class="fa-solid fa-circle-check"></i> Sunset Calisthenics & functional rigs</li>
-            </ul>
-          </div>
-
-          <div class="about-card glass-card reveal-elem">
-            <div class="card-glow"></div>
-            <div class="card-icon-banner">
-              <i class="fa-solid fa-temperature-arrow-down"></i>
-            </div>
-            <h3>Biohacking & Longevity</h3>
-            <p>True athletic performance requires rapid cellular regeneration. Our integrated wellness lab brings medical-grade recovery to your daily routine.</p>
-            <ul class="feature-bullets">
-              <li><i class="fa-solid fa-circle-check"></i> -110°C Whole-body Cryo Chambers</li>
-              <li><i class="fa-solid fa-circle-check"></i> Infrared Red Light & Contrast Plunges</li>
-            </ul>
-          </div>
+        <!-- Mobile Plan Selector Segmented Buttons -->
+        <div class="inline-flex md:hidden items-center p-1 bg-zinc-900 rounded-xl border border-white/10 mt-4 text-xs font-bold" id="mobilePlanTabs">
+          <button data-plan="1month" class="plan-tab-btn py-2 px-3 rounded-lg text-zinc-400">1 Month</button>
+          <button data-plan="3months" class="plan-tab-btn py-2 px-3 rounded-lg bg-amber-500 text-black shadow">3 Months 🔥</button>
+          <button data-plan="1year" class="plan-tab-btn py-2 px-3 rounded-lg text-zinc-400">1 Year</button>
         </div>
       </div>
-    </section>
 
-    <!-- FACILITIES: INDOOR & OUTDOOR DUAL-ZONE SHOWCASE -->
-    <section class="section facilities-section" id="facilities">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> THE DUAL REALMS</span>
-          <h2 class="section-title">INDOOR SANCTUARY <span class="gradient-text">VS.</span> SKYLINE ROOFTOP</h2>
-          <p class="section-desc">
-            Explore our architectural duality. Switch between zones below to view the dedicated spaces engineered for different training modalities.
-          </p>
-        </div>
-
-        <!-- Zone Selector Switch -->
-        <div class="zone-switcher reveal-elem">
-          <button class="zone-btn active" id="btnZoneAll" data-target="all">
-            <i class="fa-solid fa-border-all"></i> All Facilities
-          </button>
-          <button class="zone-btn" id="btnZoneIndoor" data-target="indoor">
-            <i class="fa-solid fa-building"></i> Indoor Sanctuary
-          </button>
-          <button class="zone-btn" id="btnZoneOutdoor" data-target="outdoor">
-            <i class="fa-solid fa-sun"></i> Skyline Outdoor Arena
-          </button>
-        </div>
-
-        <!-- Dual Showcase Cards -->
-        <div class="facilities-showcase">
-          <!-- Indoor Showcase Item -->
-          <div class="facility-card facility-indoor reveal-elem" data-category="indoor">
-            <div class="facility-image-wrap">
-              <img src="assets/indoor_gym.jpg" alt="Apex Iron Indoor Sanctuary" class="facility-img">
-              <div class="image-badge"><i class="fa-solid fa-shield-halved"></i> INDOOR SANCTUARY</div>
-              <!-- Interactive Hotspots -->
-              <div class="hotspot" style="top: 60%; left: 15%;" data-tooltip="Custom Urethane Dumbbells up to 75kg">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-              <div class="hotspot" style="top: 48%; left: 52%;" data-tooltip="Technogym Pure Strength ISO-Lateral Machines">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-              <div class="hotspot" style="top: 40%; left: 88%;" data-tooltip="Olympic Power Racks with Band Pegs & Chains">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-            </div>
-            <div class="facility-info glass-panel">
-              <div class="facility-meta">
-                <span class="zone-tag indoor-tag"><i class="fa-solid fa-cube"></i> Climate Controlled • 20,000 SQ FT</span>
-                <span class="capacity-tag"><i class="fa-solid fa-bolt"></i> High Energy</span>
-              </div>
-              <h3>The Heavy Iron & Hypertrophy Vault</h3>
-              <p>Designed with matte black acoustics, ambient recessed golden lighting, and anti-glare mirrors. Zero distractions, ultra-crisp audio acoustics powered by our Void Acoustics sound system.</p>
-              
-              <div class="facility-specs-grid">
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> 8 Full Olympic Power Cages</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> Dumbbells 2kg to 75kg</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> 14 Multi-Cable Dual Stations</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> Dedicated Deadlift Platforms</div>
-              </div>
-
-              <div class="facility-action">
-                <button class="btn btn-outline facility-gallery-btn" data-gallery="indoor">
-                  <i class="fa-regular fa-images"></i> View Indoor Equipment Specs
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Outdoor Showcase Item -->
-          <div class="facility-card facility-outdoor reveal-elem" data-category="outdoor">
-            <div class="facility-image-wrap">
-              <img src="assets/outdoor_gym.jpg" alt="Apex Iron Skyline Outdoor Arena" class="facility-img">
-              <div class="image-badge outdoor-badge"><i class="fa-solid fa-sun"></i> SKYLINE ROOFTOP ARENA</div>
-              <!-- Interactive Hotspots -->
-              <div class="hotspot" style="top: 45%; left: 75%;" data-tooltip="Custom Rig with Flying Monkey Bars & Rings">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-              <div class="hotspot" style="top: 65%; left: 12%;" data-tooltip="All-Weather Rubber Coated Dumbbell Racks">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-              <div class="hotspot" style="top: 55%; left: 50%;" data-tooltip="Heavy Battle Ropes & Sled Prowler Track">
-                <span class="hotspot-ping"></span>
-                <span class="hotspot-dot"><i class="fa-solid fa-plus"></i></span>
-              </div>
-            </div>
-            <div class="facility-info glass-panel">
-              <div class="facility-meta">
-                <span class="zone-tag outdoor-tag"><i class="fa-solid fa-wind"></i> Open-Air Rooftop • 15,000 SQ FT</span>
-                <span class="capacity-tag"><i class="fa-solid fa-cloud-sun"></i> Sunset Views</span>
-              </div>
-              <h3>Skyline Calisthenics & Conditioning Arena</h3>
-              <p>Train with open skies above and panoramic 360-degree city views. Equipped with professional shock-absorbing turf, custom monkey bars, gymnastics rings, and outdoor weather-treated free weights.</p>
-              
-              <div class="facility-specs-grid">
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> 40m Heavy Prowler Sprint Track</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> Rogue Calisthenics Rig & Rings</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> Strongman Yokes & Farmer Walk Log</div>
-                <div class="spec-pill"><i class="fa-solid fa-check"></i> Sunrise & Dusk Outdoor HIIT Classes</div>
-              </div>
-
-              <div class="facility-action">
-                <button class="btn btn-outline facility-gallery-btn" data-gallery="outdoor">
-                  <i class="fa-regular fa-images"></i> View Outdoor Equipment Specs
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EQUIPMENT ARSENAL SECTION -->
-    <section class="section equipment-section" id="equipment">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-gears"></i> HARDWARE EXCELLENCE</span>
-          <h2 class="section-title">THE EQUIPMENT <span class="gradient-text">ARSENAL</span></h2>
-          <p class="section-desc">
-            We don't settle for standard catalog gym gear. Every piece is curated from world-renowned performance engineering titans including Prime Fitness, Arsenal Strength, Eleiko, and Atlantis.
-          </p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="equipment-filters reveal-elem" id="equipFilters">
-          <button class="filter-pill active" data-filter="all">All Hardware (240+)</button>
-          <button class="filter-pill" data-filter="strength">Heavy Strength & ISO</button>
-          <button class="filter-pill" data-filter="free-weights">Free Weights & Barbells</button>
-          <button class="filter-pill" data-filter="cardio">Smart Cardio & Slat</button>
-          <button class="filter-pill" data-filter="calisthenics">Outdoor & Rigs</button>
-          <button class="filter-pill" data-filter="recovery">Recovery & Cryo</button>
-        </div>
-
-        <!-- Equipment Grid -->
-        <div class="equipment-grid" id="equipmentGrid">
-          
-          <!-- Card 1 -->
-          <div class="equip-card glass-card reveal-elem" data-category="strength">
-            <div class="equip-badge">ISOLATERAL</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Arsenal Strength Hack Squat" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">ARSENAL STRENGTH // USA</div>
-              <h4 class="equip-name">Linear Hack Squat (45° Incline)</h4>
-              <p class="equip-desc">Laser-cut oversized diamond plate footplate with dual-weight peg resistance curve for quad isolation.</p>
-              <div class="equip-tags">
-                <span>Max Load: 600kg</span>
-                <span>Biomechanic Pivot</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="hacksquat">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="equip-card glass-card reveal-elem" data-category="free-weights">
-            <div class="equip-badge">IPF CERTIFIED</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Eleiko Competition Powerlifting" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">ELEIKO // SWEDEN</div>
-              <h4 class="equip-name">Competition Powerlifting Bar & Calibrated Discs</h4>
-              <p class="equip-desc">Precision 29mm Swedish steel bar with aggressive knurling and machined cast iron calibrated plates (0.25kg-25kg).</p>
-              <div class="equip-tags">
-                <span>215,000 PSI Steel</span>
-                <span>Zero Slop Fit</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="eleiko">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="equip-card glass-card reveal-elem" data-category="cardio">
-            <div class="equip-badge">ZERO MOTOR</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" alt="Woodway Slat-Belt Treadmill" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">WOODWAY // GERMANY</div>
-              <h4 class="equip-name">Curve Slat-Belt Performance Treadmill</h4>
-              <p class="equip-desc">Zero-motor curved rubber slats powered 100% by user kinetic power. Burns 30% more calories with natural foot mechanics.</p>
-              <div class="equip-tags">
-                <span>Natural Gait</span>
-                <span>Live Wattage Display</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="woodway">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="equip-card glass-card reveal-elem" data-category="strength">
-            <div class="equip-badge">SMART CAM</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Prime Fitness SmartStrength Chest Press" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">PRIME FITNESS // USA</div>
-              <h4 class="equip-name">SmartStrength Seated Chest Press</h4>
-              <p class="equip-desc">Variable resistance cam allowing loading to be focused on beginning, middle, or peak contraction of the pectoral movement.</p>
-              <div class="equip-tags">
-                <span>Torque Customizer</span>
-                <span>Independent Arms</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="primechest">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="equip-card glass-card reveal-elem" data-category="calisthenics">
-            <div class="equip-badge">ROOFTOP RIG</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" alt="Rogue Custom Skyline Rig" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">ROGUE FITNESS // MONSTER</div>
-              <h4 class="equip-name">Custom Skyline Rig & Calisthenics Hub</h4>
-              <p class="equip-desc">Weatherized textured steel construction with multi-height pullup bars, gymnastic ring anchors, and salmon ladders.</p>
-              <div class="equip-tags">
-                <span>All-Weather Zinc</span>
-                <span>Gymnastics Spec</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="roguemonster">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="equip-card glass-card reveal-elem" data-category="recovery">
-            <div class="equip-badge">CRYO BIOHACK</div>
-            <div class="equip-img-holder">
-              <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cryo Science Electric Chamber" class="equip-real-img" loading="lazy">
-              <div class="equip-img-gradient"></div>
-            </div>
-            <div class="equip-content">
-              <div class="equip-brand">CRYO SCIENCE // ARCTIC</div>
-              <h4 class="equip-name">-110°C Electric Cryo Chamber</h4>
-              <p class="equip-desc">Sub-zero nitrogen-free whole-body chamber designed for rapid muscle inflammation reduction and endorphin release.</p>
-              <div class="equip-tags">
-                <span>Electric True Sub-Zero</span>
-                <span>3-Min Fast Cycle</span>
-              </div>
-              <button class="btn-equip-detail" data-equip="cryo">
-                <span>View Engineering Specs</span>
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="arsenal-cta reveal-elem">
-          <div class="arsenal-box glass-panel">
-            <div class="arsenal-text">
-              <h3>Looking for a specific piece of equipment?</h3>
-              <p>Download our complete verified 2026 Hardware Spec Sheet (Includes all 240+ weight machines, pin & plate loaded specs).</p>
-            </div>
-            <button class="btn btn-primary" id="downloadSpecSheetBtn">
-              <i class="fa-solid fa-file-arrow-down"></i>
-              <span>Download Full Equipment PDF</span>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE 3D VIRTUAL TOUR BANNER -->
-    <section class="section virtual-tour-section" id="tour">
-      <div class="container">
-        <div class="tour-card glass-card reveal-elem">
-          <div class="tour-content">
-            <span class="section-subtitle"><i class="fa-solid fa-vr-cardboard"></i> IMMERSIVE PREVIEW</span>
-            <h2>Step Inside The Apex Sanctuary In 360° Realtime</h2>
-            <p>Can't visit right this second? Explore our interactive high-definition virtual tour. Inspect equipment tolerances, check live locker room cleanliness, and view the outdoor sunset deck from any device.</p>
-            <div class="tour-features">
-              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> 4K Ultra-Res Walkthrough</div>
-              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> Machine Dimension Measure</div>
-              <div class="tf-item"><i class="fa-solid fa-circle-check"></i> VR Headset Ready</div>
-            </div>
-            <button class="btn btn-primary btn-glow" id="start3dTourBtn">
-              <i class="fa-solid fa-play"></i>
-              <span>Launch Interactive 3D Tour</span>
-            </button>
-          </div>
-          <div class="tour-visual">
-            <div class="radar-box">
-              <div class="radar-circle c1"></div>
-              <div class="radar-circle c2"></div>
-              <div class="radar-sweep"></div>
-              <div class="radar-blip b1" title="Main Lifting Bay"></div>
-              <div class="radar-blip b2" title="Rooftop Deck"></div>
-              <div class="radar-blip b3" title="Cryo Suite"></div>
-              <span class="radar-label"><i class="fa-solid fa-satellite-dish"></i> 3D SCANNER ACTIVE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ELITE TRAINERS SECTION -->
-    <section class="section trainers-section" id="trainers">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-user-ninja"></i> THE APEX DIRECTORS</span>
-          <h2 class="section-title">GUIDED BY <span class="gradient-text">ELITE SPECIALISTS</span></h2>
-          <p class="section-desc">
-            No cookie-cutter routines. Our coaching roster holds collegiate degrees in human kinetics, sports biomechanics, and international podium records.
-          </p>
-        </div>
-
-        <div class="trainers-grid">
-          <!-- Trainer 1 -->
-          <div class="trainer-card glass-card reveal-elem">
-            <div class="trainer-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" class="trainer-img-real" loading="lazy">
-              <div class="trainer-img-overlay"></div>
-              <span class="coach-badge">HEAD OF STRENGTH</span>
-            </div>
-            <div class="trainer-details">
-              <h4>Marcus 'Valkyrie' Vance</h4>
-              <p class="trainer-role">M.Sc. Sports Biomechanics • CSCS</p>
-              <p class="trainer-bio">Specializing in heavy powerlifting kinematics, neural load management, and competition peaking strategies.</p>
-              <div class="trainer-stats">
-                <div><strong>12+</strong><span>Yrs Coaching</span></div>
-                <div><strong>18</strong><span>Pro Athletes</span></div>
-                <div><strong>780kg</strong><span>Total</span></div>
-              </div>
-              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Marcus Vance">Request Consultation</button>
-            </div>
-          </div>
-
-          <!-- Trainer 2 -->
-          <div class="trainer-card glass-card reveal-elem">
-            <div class="trainer-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" class="trainer-img-real" loading="lazy">
-              <div class="trainer-img-overlay"></div>
-              <span class="coach-badge">ROOFTOP & CALISTHENICS</span>
-            </div>
-            <div class="trainer-details">
-              <h4>Elena Rostova</h4>
-              <p class="trainer-role">Former Olympic Gymnast • Kinesiologist</p>
-              <p class="trainer-bio">Master of bodyweight leverage, gymnastic strength development, mobility restoration, and functional sprint mechanics.</p>
-              <div class="trainer-stats">
-                <div><strong>10+</strong><span>Yrs Coaching</span></div>
-                <div><strong>150+</strong><span>Transformations</span></div>
-                <div><strong>Oly</strong><span>Medalist Prep</span></div>
-              </div>
-              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Elena Rostova">Request Consultation</button>
-            </div>
-          </div>
-
-          <!-- Trainer 3 -->
-          <div class="trainer-card glass-card reveal-elem">
-            <div class="trainer-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Darius Thorne" class="trainer-img-real" loading="lazy">
-              <div class="trainer-img-overlay"></div>
-              <span class="coach-badge">HYPERTROPHY & NUTRITION</span>
-            </div>
-            <div class="trainer-details">
-              <h4>Darius Thorne</h4>
-              <p class="trainer-role">IFBB Pro Bodybuilder • Clinical Dietitian</p>
-              <p class="trainer-bio">Specializing in metabolic periodization, structural balance training, and injury-free muscle sculpting.</p>
-              <div class="trainer-stats">
-                <div><strong>14+</strong><span>Yrs Coaching</span></div>
-                <div><strong>200+</strong><span>Stage Preps</span></div>
-                <div><strong>100%</strong><span>Precision</span></div>
-              </div>
-              <button class="btn btn-outline btn-sm book-coach-btn" data-coach="Darius Thorne">Request Consultation</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MEMBERSHIP TIERS SECTION -->
-    <section class="section memberships-section" id="memberships">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-id-card"></i> ACCESS PRIVILEGES</span>
-          <h2 class="section-title">MEMBERSHIP <span class="gradient-text">TIERS</span></h2>
-          <p class="section-desc">
-            Capped membership capacity to guarantee zero wait times for equipment, pristine cleanliness, and an uninterrupted focus state.
-          </p>
-
-          <!-- Billing Switch -->
-          <div class="pricing-toggle-wrap">
-            <span class="toggle-label" id="monthlyLabel">Monthly</span>
-            <label class="switch" aria-label="Toggle annual or monthly pricing">
-              <input type="checkbox" id="pricingToggle">
-              <span class="slider round"></span>
-            </label>
-            <span class="toggle-label" id="annualLabel">Annual <span class="save-badge">Save 20%</span></span>
-          </div>
-        </div>
-
-        <div class="pricing-grid">
-          <!-- Tier 1 -->
-          <div class="pricing-card glass-card reveal-elem">
-            <div class="tier-name">IRON STANDARD</div>
-            <div class="tier-price">
-              <span class="currency">$</span>
-              <span class="price-val" data-monthly="129" data-annual="99">129</span>
-              <span class="period">/month</span>
-            </div>
-            <p class="tier-desc">Full indoor sanctuary access during all regular hours.</p>
-            <ul class="tier-perks">
-              <li><i class="fa-solid fa-check"></i> 24/7 Indoor Heavy Iron Access</li>
-              <li><i class="fa-solid fa-check"></i> Standard Locker & Steam Room</li>
-              <li><i class="fa-solid fa-check"></i> Apex Mobile App & Workout Logging</li>
-              <li class="disabled"><i class="fa-solid fa-xmark"></i> Skyline Rooftop Arena</li>
-              <li class="disabled"><i class="fa-solid fa-xmark"></i> Cryo & Infrared Recovery Suite</li>
-            </ul>
-            <button class="btn btn-outline btn-block select-tier-btn" data-tier="Iron Standard">Choose Standard</button>
-          </div>
-
-          <!-- Tier 2: FEATURED -->
-          <div class="pricing-card glass-card featured-tier reveal-elem">
-            <div class="popular-ribbon">MOST POPULAR</div>
-            <div class="tier-name">ALL-ACCESS ELITE</div>
-            <div class="tier-price">
-              <span class="currency">$</span>
-              <span class="price-val" data-monthly="199" data-annual="159">199</span>
-              <span class="period">/month</span>
-            </div>
-            <p class="tier-desc">Unrestricted access to both Indoor Sanctuary & Skyline Rooftop.</p>
-            <ul class="tier-perks">
-              <li><i class="fa-solid fa-check"></i> 24/7 Indoor & Skyline Rooftop Access</li>
-              <li><i class="fa-solid fa-check"></i> Unlimited Outdoor HIIT & Calisthenics Classes</li>
-              <li><i class="fa-solid fa-check"></i> Premium Towel Service & Hydro-Massage</li>
-              <li><i class="fa-solid fa-check"></i> 4x Monthly Cryo / Contrast Plunge Sessions</li>
-              <li><i class="fa-solid fa-check"></i> 2 Free VIP Guest Passes per month</li>
-            </ul>
-            <button class="btn btn-primary btn-glow btn-block select-tier-btn" data-tier="All-Access Elite">Claim Elite Access</button>
-          </div>
-
-          <!-- Tier 3 -->
-          <div class="pricing-card glass-card reveal-elem">
-            <div class="tier-name">BLACK FOUNDER'S CLUB</div>
-            <div class="tier-price">
-              <span class="currency">$</span>
-              <span class="price-val" data-monthly="349" data-annual="279">349</span>
-              <span class="period">/month</span>
-            </div>
-            <p class="tier-desc">The ultimate private luxury concierge experience with dedicated coach.</p>
-            <ul class="tier-perks">
-              <li><i class="fa-solid fa-check"></i> All-Access Dual Realm 24/7/365</li>
-              <li><i class="fa-solid fa-check"></i> 2x Weekly 1-on-1 Master Coaching</li>
-              <li><i class="fa-solid fa-check"></i> Unlimited Cryo, Sauna & Hyperbaric Oxygen</li>
-              <li><i class="fa-solid fa-check"></i> Dedicated Reserved Executive Locker</li>
-              <li><i class="fa-solid fa-check"></i> Custom Nutrition & Biometric Bloodwork Review</li>
-            </ul>
-            <button class="btn btn-outline btn-block select-tier-btn" data-tier="Black Founders">Apply For Founder</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS / TESTIMONIALS -->
-    <section class="section reviews-section">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-quote-left"></i> ATHLETE FEEDBACK</span>
-          <h2 class="section-title">THE VERDICT FROM <span class="gradient-text">OUR COMMUNITY</span></h2>
-        </div>
-
-        <div class="reviews-grid">
-          <div class="review-card glass-panel reveal-elem">
-            <div class="review-stars">
-              ★ ★ ★ ★ ★
-            </div>
-            <p class="review-text">"As a competitive powerlifter, I haven't found a single gym in the state that compares. The calibrated Eleiko bars and Arsenal Hack Squat are flawless. The rooftop sunset sessions are pure therapy."</p>
-            <div class="reviewer-info">
-              <div class="reviewer-avatar">ZK</div>
-              <div>
-                <strong>Zackary King</strong>
-                <span>National Powerlifter • Member 2 Yrs</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card glass-panel reveal-elem">
-            <div class="review-stars">
-              ★ ★ ★ ★ ★
-            </div>
-            <p class="review-text">"The aesthetic lighting and music curation put you into a locked-in mental state instantly. Plus, jumping into the Cryo chamber after high-volume leg day completely eliminated my DOMS."</p>
-            <div class="reviewer-info">
-              <div class="reviewer-avatar">SN</div>
-              <div>
-                <strong>Sophia Nguyen</strong>
-                <span>Marathon Athlete & Entrepreneur</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card glass-panel reveal-elem">
-            <div class="review-stars">
-              ★ ★ ★ ★ ★
-            </div>
-            <p class="review-text">"Never waiting for a squat rack or dumbbell is worth twice the membership fee alone. The staff cleans constantly, and the community is super driven and respectful."</p>
-            <div class="reviewer-info">
-              <div class="reviewer-avatar">JM</div>
-              <div>
-                <strong>Julian Mercer</strong>
-                <span>Hyrox Competitor</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATION & HOURS SECTION -->
-    <section class="section location-section" id="location">
-      <div class="container">
-        <div class="location-box glass-card reveal-elem">
-          <div class="location-info">
-            <span class="section-subtitle"><i class="fa-solid fa-location-dot"></i> HEADQUARTERS</span>
-            <h2>Visit Apex Iron Sanctuary</h2>
-            <p>Conveniently located in the high-energy Metro District with valet parking and direct elevator access to our rooftop skyline deck.</p>
+      <!-- Plan Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" id="plansContainer">
+        <!-- 1 MONTH PLAN -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1month">
+          <div>
+            <div class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Starter Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">1 Month Membership</h3>
             
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fa-solid fa-map-pin"></i>
-                <div>
-                  <strong>Address</strong>
-                  <p>742 Performance Way, Skyline District, Suite 500</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fa-solid fa-clock"></i>
-                <div>
-                  <strong>Hours of Operation</strong>
-                  <p>Members: 24/7/365 Keyless Smart Access<br>Staffed & Guest Hours: Mon - Sun, 6:00 AM - 10:00 PM</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <div>
-                  <strong>Direct Concierge</strong>
-                  <p>+1 (800) 555-APEX • info@apexironclub.com</p>
-                </div>
-              </div>
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹1,200</span>
+              <span class="text-xs text-zinc-400">/ 1 Month</span>
             </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Complete 2-Floor Gym Access</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Heavy Free Weights + Cardio</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>General Floor Coach Guidance</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Locker & Shower Facility</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="location-interactive">
-            <div class="map-simulation glass-panel">
-              <div class="map-pin-pulse">
-                <i class="fa-solid fa-bolt-lightning"></i>
-              </div>
-              <div class="map-tag">
-                <strong>APEX IRON CLUB</strong>
-                <span>Rooftop Level 5 & 6</span>
-              </div>
-              <div class="map-actions">
-                <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                  <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="section faq-section">
-      <div class="container">
-        <div class="section-header reveal-elem">
-          <span class="section-subtitle"><i class="fa-solid fa-circle-question"></i> COMMON INQUIRIES</span>
-          <h2 class="section-title">FREQUENTLY ASKED <span class="gradient-text">QUESTIONS</span></h2>
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%201-Month%20Plan%20(Rs.%201200)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
+            Join 1 Month Plan
+          </a>
         </div>
 
-        <div class="faq-accordion reveal-elem">
-          <div class="faq-item glass-panel">
-            <button class="faq-question">
-              <span>Is there a cap on total memberships to prevent crowding?</span>
-              <i class="fa-solid fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. We strictly cap active memberships at 500 members to ensure optimal training space, immediate equipment availability, and uninterrupted focus during peak hours.</p>
+        <!-- 3 MONTHS (MOST POPULAR) -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-amber-500/50 shadow-2xl shadow-amber-500/10 md:-translate-y-2" id="card-3months">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-red-500 text-black font-extrabold text-[10px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
+            🔥 Most Popular Choice
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider mt-1">Quarterly Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Transformation Pack</h3>
+            
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-amber-400 heading-font">₹3,000</span>
+              <span class="text-xs text-zinc-400">/ 3 Months <span class="text-emerald-400 font-bold">(Save ₹600)</span></span>
             </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-200 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>All 1-Month Plan Features</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span class="font-bold text-white">Free Custom Workout & Diet Chart</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Bi-Weekly Body Measurement</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>CrossFit & Functional Rig Access</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="faq-item glass-panel">
-            <button class="faq-question">
-              <span>What happens if it rains when I want to use the outdoor rooftop gym?</span>
-              <i class="fa-solid fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Our outdoor rooftop features specialized marine-grade weatherproofing and heavy-duty retractable storm canopies over the main rig and dumbbell turf. In severe weather, duplicate equipment is readily available in our 20,000 sq ft indoor sanctuary.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-panel">
-            <button class="faq-question">
-              <span>Can I test out the facilities before committing to a membership?</span>
-              <i class="fa-solid fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Absolutely. You can request a complimentary 1-Day VIP Experience Pass which grants full access to both indoor and outdoor zones, plus a guided equipment walk with one of our master trainers.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-panel">
-            <button class="faq-question">
-              <span>Are locker rooms and recovery amenities included in standard membership?</span>
-              <i class="fa-solid fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>All members receive luxury rainfall shower access, steam rooms, private day lockers, and Dyson grooming bars. Cryotherapy and infrared saunas are included with Elite & Founder tiers or can be added on per-session.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- VIP PASS / CONSULTATION MODAL -->
-  <div class="modal-backdrop" id="passModal">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close" id="closeModalBtn" aria-label="Close Modal">&times;</button>
-      
-      <div class="modal-header">
-        <div class="modal-icon"><i class="fa-solid fa-ticket"></i></div>
-        <h3>Claim Your 1-Day VIP Pass</h3>
-        <p>Experience the indoor vault and rooftop skyline arena on us. Zero obligation.</p>
-      </div>
-
-      <form id="passForm" class="modal-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" required placeholder="e.g. Alexander Cole">
-          </div>
-          <div class="form-group">
-            <label for="emailAddr">Email Address</label>
-            <input type="email" id="emailAddr" required placeholder="alex@domain.com">
-          </div>
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%203-Month%20Plan%20(Rs.%203000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+            Get Pro Membership
+          </a>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phoneNum">Phone Number</label>
-            <input type="tel" id="phoneNum" required placeholder="+1 (555) 000-0000">
+        <!-- 1 YEAR (BEST VALUE) -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1year">
+          <div>
+            <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Annual Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Yearly Beast Pass</h3>
+            
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹8,999</span>
+              <span class="text-xs text-zinc-400">/ 12 Months <span class="text-emerald-400 font-bold">(Just ₹750/mo)</span></span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Unlimited 365 Days Access</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Custom Nutrition & Supplement Guide</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Free 1-Month Freeze on Holidays</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Free Personal Gym Bag & Shaker</span>
+              </li>
+            </ul>
           </div>
-          <div class="form-group">
-            <label for="primaryGoal">Primary Training Goal</label>
-            <select id="primaryGoal">
-              <option value="hypertrophy">Hypertrophy & Bodybuilding</option>
-              <option value="strength">Powerlifting & Pure Strength</option>
-              <option value="calisthenics">Rooftop Calisthenics & Conditioning</option>
-              <option value="recovery">Longevity & Biohack Recovery</option>
-            </select>
-          </div>
+
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%20Annual%20Plan%20(Rs.%208999)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
+            Join Yearly Plan
+          </a>
         </div>
-
-        <div class="form-group">
-          <label>Interested Facility</label>
-          <div class="zone-radio-group">
-            <label class="radio-card">
-              <input type="radio" name="facilityInterest" value="both" checked>
-              <span>Dual Zones (Indoor + Rooftop)</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="facilityInterest" value="indoor">
-              <span>Indoor Only</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="facilityInterest" value="rooftop">
-              <span>Rooftop Only</span>
-            </label>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-glow btn-block" id="submitPassBtn">
-          <span>Confirm VIP Invitation</span>
-          <i class="fa-solid fa-check"></i>
-        </button>
-
-        <p class="modal-disclaimer"><i class="fa-solid fa-lock"></i> Your data is private. Strictly limited to 1 pass per athlete per calendar year.</p>
-      </form>
-
-      <div class="modal-success-state" id="modalSuccessState">
-        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-        <h3>VIP Invitation Confirmed!</h3>
-        <p>We've sent your digital QR pass to your email. Show it at the front desk concierge when you arrive.</p>
-        <button class="btn btn-primary" id="closeSuccessBtn">Done</button>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- EQUIPMENT DETAIL SPEC MODAL -->
-  <div class="modal-backdrop" id="equipDetailModal">
-    <div class="modal-dialog glass-card equip-modal-dialog">
-      <button class="modal-close" id="closeEquipModalBtn" aria-label="Close Modal">&times;</button>
-      <div id="equipModalContent">
-        <!-- Dynamically injected via JavaScript -->
+  <!-- TIMINGS & BATCHES (MOBILE COMPACT CARDS) -->
+  <section id="timings" class="py-12 bg-zinc-950/70 border-y border-white/5">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Workout Schedule</span>
+        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Gym Timings & Batches</h2>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden divide-y divide-white/10 text-xs sm:text-sm">
+        <!-- Morning -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
+            <div>
+              <span class="font-bold text-white block">Morning Batch</span>
+              <span class="text-[10px] text-zinc-400">Mon to Sat</span>
+            </div>
+          </div>
+          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM – 11:00 AM</span>
+        </div>
+
+        <!-- Ladies Special -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2 bg-pink-500/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-venus"></i></span>
+            <div>
+              <span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span>
+              <span class="text-[10px] text-pink-300">Female Trainer & Private Floor</span>
+            </div>
+          </div>
+          <span class="font-bold text-pink-300 bg-pink-500/20 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">11:30 AM – 1:00 PM</span>
+        </div>
+
+        <!-- Evening -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-moon"></i></span>
+            <div>
+              <span class="font-bold text-white block">Evening Peak Batch</span>
+              <span class="text-[10px] text-zinc-400">Mon to Sat</span>
+            </div>
+          </div>
+          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM – 10:30 PM</span>
+        </div>
+
+        <!-- Sunday -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-day"></i></span>
+            <div>
+              <span class="font-bold text-white block">Sunday Special</span>
+              <span class="text-[10px] text-zinc-400">Evening Closed</span>
+            </div>
+          </div>
+          <span class="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">7:00 AM – 1:00 PM</span>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- 3D VIRTUAL TOUR MODAL -->
-  <div class="modal-backdrop" id="tourModal">
-    <div class="modal-dialog glass-card tour-modal-dialog">
-      <button class="modal-close" id="closeTourModalBtn" aria-label="Close Tour">&times;</button>
-      <div class="tour-modal-header">
-        <span class="live-dot-tour"></span>
-        <h3>Apex 360° Real-Time Sanctuary Feed</h3>
-      </div>
-      <div class="tour-viewport-container" id="tourViewport">
-        <div class="tour-view active-view" id="tourIndoorView">
-          <img src="assets/indoor_gym.jpg" alt="360 Indoor View" class="tour-panorama-img">
-          <div class="tour-overlay-hud">
-            <span class="hud-tag">ZONE A: HEAVY HYPERTROPHY VAULT</span>
-            <span class="hud-temp"><i class="fa-solid fa-temperature-three-quarters"></i> 68°F • Optimal Air Flow</span>
-          </div>
+  <!-- QUICK TRIAL BOOKING VIA WHATSAPP (THUMB-FRIENDLY) -->
+  <section id="booking" class="py-12">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="glass-card rounded-2xl p-5 sm:p-7 border-amber-500/30 shadow-2xl">
+        <div class="text-center mb-5">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Fast Admission</span>
+          <h2 class="heading-font text-xl sm:text-2xl font-bold text-white mt-0.5">Book Free 1-Day Trial</h2>
+          <p class="text-xs text-zinc-400 mt-1">Connect directly with the gym owner on WhatsApp in 10 seconds.</p>
         </div>
-        <div class="tour-view" id="tourOutdoorView">
-          <img src="assets/outdoor_gym.jpg" alt="360 Outdoor View" class="tour-panorama-img">
-          <div class="tour-overlay-hud">
-            <span class="hud-tag">ZONE B: SKYLINE CALISTHENICS ROOFTOP</span>
-            <span class="hud-temp"><i class="fa-solid fa-sun"></i> Sunset Deck Open</span>
+
+        <form id="mobileAdmissionForm" class="space-y-3 text-xs">
+          <div>
+            <label class="block font-medium text-zinc-400 mb-1">Your Name</label>
+            <input type="text" id="mName" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
           </div>
-        </div>
-      </div>
-      <div class="tour-modal-controls">
-        <button class="btn btn-sm btn-outline tour-switch-btn active" data-view="indoor">
-          <i class="fa-solid fa-building"></i> Switch to Indoor Vault
-        </button>
-        <button class="btn btn-sm btn-outline tour-switch-btn" data-view="outdoor">
-          <i class="fa-solid fa-sun"></i> Switch to Skyline Rooftop
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <a href="#hero" class="brand-logo">
-          <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-          <div class="logo-text">
-            <span class="brand-name">APEX<span class="highlight">IRON</span></span>
-            <span class="brand-sub">ATHLETIC CLUB</span>
+          <div>
+            <label class="block font-medium text-zinc-400 mb-1">WhatsApp Number</label>
+            <input type="tel" id="mPhone" required placeholder="e.g. 98XXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
           </div>
-        </a>
-        <p class="footer-tagline">
-          The pinnacle of modern human performance architecture. Where cutting-edge biomechanics meet high-aesthetic atmospheric training.
-        </p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#" aria-label="Spotify Gym Playlist"><i class="fa-brands fa-spotify"></i></a>
-        </div>
-      </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-medium text-zinc-400 mb-1">Goal</label>
+              <select id="mGoal" class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+                <option value="Fat Loss & Toning">Fat Loss</option>
+                <option value="Muscle Building">Muscle Gain</option>
+                <option value="Powerlifting">Powerlifting</option>
+                <option value="General Fitness">General</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-medium text-zinc-400 mb-1">Batch</label>
+              <select id="mBatch" class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+                <option value="Morning Batch">Morning</option>
+                <option value="Ladies Batch">Ladies</option>
+                <option value="Evening Batch">Evening</option>
+              </select>
+            </div>
+          </div>
 
-      <div class="footer-links-group">
-        <h4>EXPLORE</h4>
-        <ul>
-          <li><a href="#about">Our Philosophy</a></li>
-          <li><a href="#facilities">Indoor Sanctuary</a></li>
-          <li><a href="#facilities">Skyline Rooftop</a></li>
-          <li><a href="#equipment">Equipment Arsenal</a></li>
-          <li><a href="#trainers">Elite Coaches</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links-group">
-        <h4>MEMBERSHIP</h4>
-        <ul>
-          <li><a href="#memberships">Tiers & Pricing</a></li>
-          <li><a href="#" id="footerClaimPass">1-Day VIP Pass</a></li>
-          <li><a href="#memberships">Corporate Pass</a></li>
-          <li><a href="#tour">3D Virtual Tour</a></li>
-          <li><a href="#location">Guest Guidelines</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>PERFORMANCE INTEL</h4>
-        <p>Subscribe for bi-weekly biomechanics breakdowns, equipment updates, and guest trainer clinics.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Enter your email" required id="newsletterEmail">
-          <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+          <button type="submit" class="w-full mt-3 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-900/40">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Send Details on WhatsApp</span>
+          </button>
         </form>
-        <span class="newsletter-status" id="newsletterStatus"></span>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom container">
-      <p>&copy; 2026 APEX IRON ATHLETIC CLUB. ALL RIGHTS RESERVED. DESIGNED FOR PEAK ATHLETES.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <span>•</span>
-        <a href="#">Terms of Service</a>
-        <span>•</span>
-        <a href="#">Safety & Sanitation</a>
+  <!-- MEMBER REVIEWS (HORIZONTAL SWIPE ON MOBILE) -->
+  <section id="reviews" class="py-12 bg-zinc-950/70 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Member Feedback</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">★ 4.9 on Google Reviews</h2>
+      </div>
+
+      <div class="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto no-scrollbar pb-2">
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Hands down best gym in Naigaon. 2 floors mean zero waiting for bench or dumbbells. AC is always on and trainers are friendly."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Rohan S. • Naigaon East</div>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-pink-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"The ladies batch (11:30 AM) is very safe and comfortable. The female trainer personally guides and corrects form."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Pooja K. • Ladies Batch</div>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Dumbbells go all the way to 50KG, and the linear hack squat is amazing. Serious place for serious lifters."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Aniket M. • Powerlifter</div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toastContainer"></div>
+  <!-- LOCATION & CONTACT (1-TAP BUTTONS) -->
+  <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Visit Us</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Dragon Slayer Gym 2</h2>
+        <p class="text-xs text-zinc-400 mt-1">Station Road, Near Railway Platform, Naigaon East, Maharashtra 401208</p>
+      </div>
 
-  <!-- Javascript -->
-  <script src="script.js"></script>
+      <div class="grid grid-cols-2 gap-2.5 max-w-sm mx-auto mb-6">
+        <a href="tel:917709339959" class="py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition">
+          <i class="fa-solid fa-phone text-amber-400"></i>
+          <span>7709339959</span>
+        </a>
+        <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 rounded-xl bg-amber-500 text-black font-extrabold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm">
+          <i class="fa-solid fa-location-arrow"></i>
+          <span>Google Maps</span>
+        </a>
+      </div>
+
+      <div class="text-center text-[11px] text-zinc-500 pt-6 border-t border-white/10">
+        © 2026 Dragon Slayer Gym 2 • Naigaon East
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE BOTTOM SHEET MODAL (TAP-TO-INSPECT EQUIPMENT) -->
+  <div id="equipModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center sm:p-4">
+    <div class="modal-sheet bg-[#12161d] border-t sm:border border-white/20 rounded-t-3xl sm:rounded-2xl max-w-lg w-full max-h-[85vh] sm:max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl relative" id="modalCard">
+      <!-- Mobile Pull Bar Handle -->
+      <div class="w-12 h-1.5 bg-zinc-700 rounded-full mx-auto my-2.5 sm:hidden"></div>
+
+      <!-- Close Button -->
+      <button id="modalCloseBtn" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-amber-500 hover:text-black transition">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div class="relative aspect-video bg-zinc-950">
+        <img id="modalImg" src="" alt="Equipment" class="w-full h-full object-cover">
+        <div class="absolute bottom-2.5 left-3 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[11px] text-amber-400 font-bold border border-white/10" id="modalCategory">
+          Category
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-5">
+        <h3 class="heading-font text-base sm:text-xl font-bold text-white mb-1.5" id="modalTitle">Machine Name</h3>
+        <p class="text-xs text-zinc-300 leading-relaxed mb-4" id="modalDesc">Specs description</p>
+
+        <!-- Spec Pills -->
+        <div class="grid grid-cols-2 gap-2 text-xs mb-4 bg-zinc-900/80 p-3 rounded-xl border border-white/10">
+          <div>
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Target Muscle</span>
+            <span class="font-bold text-white" id="modalTarget">Muscle</span>
+          </div>
+          <div>
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Load Capacity</span>
+            <span class="font-bold text-amber-400" id="modalCapacity">350 KG</span>
+          </div>
+          <div class="col-span-2 pt-2 border-t border-white/5">
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Best For</span>
+            <span class="font-medium text-zinc-300" id="modalBestFor">Hypertrophy</span>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Action -->
+        <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-900/30">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Ask About This Machine on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXED MOBILE BOTTOM QUICK-DOCK (PHONE FIRST) -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b0e]/95 backdrop-blur-md border-t border-white/10 px-3 py-2.5 flex items-center gap-2 md:hidden safe-bottom">
+    <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 text-center active:scale-95 transition">
+      <i class="fa-solid fa-phone text-amber-400"></i>
+      <span>Call Gym</span>
+    </a>
+    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 text-center shadow-lg shadow-emerald-900/40 active:scale-95 transition">
+      <i class="fa-brands fa-whatsapp text-base"></i>
+      <span>WhatsApp Chat</span>
+    </a>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (DESKTOP ONLY) -->
+  <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white items-center justify-center text-2xl shadow-xl shadow-emerald-900/50 hover:scale-105 transition">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPT -->
+  <script>
+    // Equipment Data
+    const equipData = {
+      incline_press: {
+        title: "Iso-Lateral Incline Chest Press",
+        category: "Chest & Arms",
+        img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
+        desc: "Converging isolateral independent arms mimic natural dumbbell path without requiring a spotter. Isolates upper clavicular pectorals.",
+        target: "Upper Pectorals (Clavicular Head) & Front Delts",
+        capacity: "350 KG Plate Horn Capacity",
+        bestFor: "Building Upper Chest Mass & Shoulder Safe Pressing"
+      },
+      hack_squat: {
+        title: "45° Linear Heavy Hack Squat",
+        category: "Legs & Squats",
+        img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+        desc: "Diamond tread footplate with linear recirculating bearings. Enforces clean knee flexion without sheer lower back stress.",
+        target: "Quadriceps (Teardrop) & Glutes",
+        capacity: "600 KG Plate Capacity",
+        bestFor: "Heavy Quad Isolation Without Spinal Compression"
+      },
+      power_rack: {
+        title: "Olympic Power Squat Cage & Platform",
+        category: "Legs & Powerlifting",
+        img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+        desc: "11-gauge steel cage with adjustable safety pins and solid bumper plates for squats, bench press, and deadlifts.",
+        target: "Full Body (Squats, Bench Press, Shrugs)",
+        capacity: "500 KG Weight Limit",
+        bestFor: "Heavy Powerlifting & Safe Solo Failure"
+      },
+      lat_pulldown: {
+        title: "Dual Lat Pulldown & Seated Cable Row",
+        category: "Back & Core",
+        img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80",
+        desc: "Independent dual weight stacks with high/low pulleys and MAG grip attachments for maximum back width and thickness.",
+        target: "Latissimus Dorsi, Rhomboids & Biceps",
+        capacity: "Dual 120 KG Weight Stacks",
+        bestFor: "Developing V-Taper Back and Mid-Back Thickness"
+      },
+      dumbbells: {
+        title: "Pro Rubber Hex Dumbbells (2.5KG – 50KG)",
+        category: "Free Weights & Isolation",
+        img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80",
+        desc: "20-pair heavy set with precision knurled chrome handles. Hexagonal heads encased in virgin shock-absorbent rubber.",
+        target: "Chest, Biceps, Triceps, Delts, Lunges",
+        capacity: "2.5 KG to 50 KG in 2.5kg pairs",
+        bestFor: "All Isolation and Dumbbell Press Variations"
+      },
+      cable_crossover: {
+        title: "Adjustable Dual Cable Crossover Station",
+        category: "Chest & Arms",
+        img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80",
+        desc: "18-position height adjustment pulleys with aircraft cables. Delivers continuous tension throughout the entire movement.",
+        target: "Chest Flyes, Triceps, Lateral Delts",
+        capacity: "Dual 100 KG Stacks",
+        bestFor: "Continuous Muscle Tension & Muscle Definition"
+      },
+      slat_treadmill: {
+        title: "Curved Non-Motorized Slat Treadmill",
+        category: "Cardio & Conditioning",
+        img: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80",
+        desc: "100% human kinetic drive. The curved rubber slats absorb heel strike impact and burn up to 30% more calories.",
+        target: "Cardiovascular Stamina & Fat Loss",
+        capacity: "Self-Propelled Kinetic Speed",
+        bestFor: "HIIT Sprints & Zero Knee-Impact Cardio"
+      },
+      smith_machine: {
+        title: "Counter-Balanced Pro Smith Machine",
+        category: "Multi-Purpose & Safe Lifting",
+        img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80",
+        desc: "Counterbalanced vertical guide rods with 14 safety lockout notches for solo bench pressing, lunges, and upright rows.",
+        target: "Quads, Chest, Traps, Calves",
+        capacity: "400 KG Capacity",
+        bestFor: "Safe Solo Workouts With No Spotter Needed"
+      }
+    };
+
+    // Mobile Drawer Toggle
+    const menuBtn = document.getElementById('menuToggleBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (menuBtn && mobileDrawer) {
+      menuBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+      });
+    }
+
+    // Modal Bottom-Sheet Logic
+    const modal = document.getElementById('equipModal');
+    const modalCard = document.getElementById('modalCard');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalImg = document.getElementById('modalImg');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalTarget = document.getElementById('modalTarget');
+    const modalCapacity = document.getElementById('modalCapacity');
+    const modalBestFor = document.getElementById('modalBestFor');
+    const modalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
+
+    document.querySelectorAll('.equip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.dataset.id;
+        const item = equipData[id];
+        if (!item) return;
+
+        modalTitle.textContent = item.title;
+        modalCategory.textContent = item.category;
+        modalImg.src = item.img;
+        modalDesc.textContent = item.desc;
+        modalTarget.textContent = item.target;
+        modalCapacity.textContent = item.capacity;
+        modalBestFor.textContent = item.bestFor;
+
+        const msg = encodeURIComponent(`Hello Sir, I saw the ${item.title} on Dragon Slayer Gym 2 website and want to know more.`);
+        modalWhatsAppBtn.href = `https://wa.me/917709339959?text=${msg}`;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => modalCard.classList.add('open'), 10);
+      });
+    });
+
+    function closeModal() {
+      modalCard.classList.remove('open');
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Category Filter Pills
+    const catBtns = document.querySelectorAll('.cat-btn');
+    const equipCards = document.querySelectorAll('.equip-card');
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        catBtns.forEach(b => {
+          b.classList.remove('bg-amber-500', 'text-black');
+          b.classList.add('bg-zinc-900', 'text-zinc-300');
+        });
+        btn.classList.add('bg-amber-500', 'text-black');
+        btn.classList.remove('bg-zinc-900', 'text-zinc-300');
+
+        equipCards.forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Mobile Plan Tabs (1 Month, 3 Months, 1 Year)
+    const planTabBtns = document.querySelectorAll('.plan-tab-btn');
+    const planCards = document.querySelectorAll('.plan-card');
+    if (window.innerWidth < 768) {
+      // By default show 3 Months (card-3months) on mobile
+      planCards.forEach(c => {
+        if (c.id !== 'card-3months') c.classList.add('hidden');
+      });
+    }
+
+    planTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const plan = btn.dataset.plan;
+        planTabBtns.forEach(b => {
+          b.classList.remove('bg-amber-500', 'text-black', 'shadow');
+          b.classList.add('text-zinc-400');
+        });
+        btn.classList.add('bg-amber-500', 'text-black', 'shadow');
+        btn.classList.remove('text-zinc-400');
+
+        planCards.forEach(c => {
+          if (c.id === `card-${plan}`) {
+            c.classList.remove('hidden');
+          } else {
+            c.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        planCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+
+    // Mobile WhatsApp Admission Form
+    const mForm = document.getElementById('mobileAdmissionForm');
+    if (mForm) {
+      mForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('mName').value.trim();
+        const phone = document.getElementById('mPhone').value.trim();
+        const goal = document.getElementById('mGoal').value;
+        const batch = document.getElementById('mBatch').value;
+
+        const text = `Hello Sir, my name is ${name}. I want to book a free 1-Day Trial at Dragon Slayer Gym 2.\n- WhatsApp: ${phone}\n- Goal: ${goal}\n- Batch: ${batch}`;
+        window.open(`https://wa.me/917709339959?text=${encodeURIComponent(text)}`, '_blank');
+      });
+    }
+  </script>
 </body>
 </html>

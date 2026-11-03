@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Dragon Slayer Gym 2 | Naigaon East</title>
+  <meta name="description" content="Naigaon East's premier 2-floor fitness club. Certified trainers, AC workout floor, heavy weights up to 50kg, and dedicated ladies batch.">
+  <meta name="theme-color" content="#090b0e">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Mobile-first base styles */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #090b0e;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(18, 22, 29, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    /* Hide scrollbars for app-like horizontal scrolls */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Safe padding for modern iPhone / Android gesture bars */
+    .safe-bottom {
+      padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+    }
+    /* Bottom Sheet Modal Animation on Mobile */
+    @media (max-width: 639px) {
+      .modal-sheet {
+        transform: translateY(100%);
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .modal-sheet.open {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="antialiased pb-24 md:pb-0 select-none sm:select-auto">
+
+  <!-- TOP PROMO BANNER (COMPACT ON MOBILE) -->
+  <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-black text-[11px] sm:text-xs font-bold text-center py-2 px-3 flex items-center justify-center gap-1.5 shadow-sm">
+    <span>🔥 OPENING OFFER: Free 1-Day Trial + 25% OFF Annual Plans!</span>
+    <a href="#plans" class="underline font-extrabold ml-1">Claim &rarr;</a>
+  </div>
+
+  <!-- MOBILE-FIRST APP HEADER -->
+  <header class="sticky top-0 z-40 bg-[#090b0e]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-base sm:text-lg shadow-sm">
+          <i class="fa-solid fa-dragon"></i>
+        </div>
+        <div>
+          <span class="heading-font text-base sm:text-xl font-bold tracking-tight text-white block leading-none">
+            DRAGON <span class="text-amber-500">SLAYER</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 • Naigaon East</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
+        <a href="#stories" class="hover:text-amber-400 transition">Highlights</a>
+        <a href="#equipment" class="hover:text-amber-400 transition flex items-center gap-1">
+          <span>Equipment</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">Tap Specs</span>
+        </a>
+        <a href="#plans" class="hover:text-amber-400 transition">Plans & Pricing</a>
+        <a href="#timings" class="hover:text-amber-400 transition">Timings</a>
+        <a href="#reviews" class="hover:text-amber-400 transition">Reviews</a>
+        <a href="#contact" class="hover:text-amber-400 transition">Location</a>
+      </nav>
+
+      <!-- Action buttons -->
+      <div class="flex items-center gap-2">
+        <a href="tel:917709339959" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-xs font-semibold transition">
+          <i class="fa-solid fa-phone text-amber-400"></i>
+          <span>7709339959</span>
+        </a>
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20inquire%20about%20Dragon%20Slayer%20Gym%202" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition shadow-md shadow-emerald-900/30">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden xs:inline">WhatsApp</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menuToggleBtn" class="md:hidden w-9 h-9 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE SLIDE-DOWN DRAWER -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-[#0e1218] border-b border-white/10 px-4 py-3 space-y-2.5 text-xs font-medium">
+      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-white/10">
+        <a href="#stories" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-amber-400"></i> Highlights
+        </a>
+        <a href="#equipment" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-dumbbell text-amber-400"></i> Equipment
+        </a>
+        <a href="#plans" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-indian-rupee-sign text-amber-400"></i> Plans
+        </a>
+        <a href="#timings" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-clock text-amber-400"></i> Timings
+        </a>
+        <a href="#booking" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check text-amber-400"></i> Free Trial
+        </a>
+        <a href="#contact" class="mobile-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-amber-400"></i> Location
+        </a>
+      </div>
+      <div class="flex items-center gap-2 pt-1">
+        <a href="tel:917709339959" class="flex-1 py-2 text-center rounded-lg bg-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-phone text-amber-400"></i> Call Gym
+        </a>
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-2 text-center rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INSTAGRAM-STYLE STORY HIGHLIGHTS (NATIVE MOBILE TOUCH) -->
+  <section id="stories" class="py-3 px-3.5 bg-zinc-950/60 border-b border-white/5 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3.5 overflow-x-auto no-scrollbar py-1 text-center">
+        <!-- Story 1: 2 Floors -->
+        <a href="#facilities" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-red-500 to-amber-300 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">2 Floors</span>
+        </a>
+
+        <!-- Story 2: Machines / Arsenal -->
+        <a href="#equipment" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Arsenal</span>
+        </a>
+
+        <!-- Story 3: Ladies Batch -->
+        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-pink-500 via-purple-500 to-rose-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-pink-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-venus"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Ladies Batch</span>
+        </a>
+
+        <!-- Story 4: ₹ Plans -->
+        <a href="#plans" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-emerald-500 via-teal-500 to-amber-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-emerald-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-tag"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Plans (₹)</span>
+        </a>
+
+        <!-- Story 5: Batches -->
+        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-blue-500 via-indigo-500 to-amber-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-blue-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Timings</span>
+        </a>
+
+        <!-- Story 6: Location -->
+        <a href="#contact" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 to-red-600 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-300">Location</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SECTION (MOBILE FOCUSED) -->
+  <section class="relative pt-6 pb-12 sm:pt-12 sm:pb-20 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[600px] h-[260px] sm:h-[380px] bg-amber-500/15 blur-[90px] sm:blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-left sm:text-center max-w-2xl mx-auto">
+        <!-- Location Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/90 border border-zinc-700 text-amber-400 text-[11px] font-semibold mb-3.5 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Naigaon East's Biggest 2-Floor Gym</span>
+        </div>
+
+        <h1 class="heading-font text-2xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-3">
+          FORGE YOUR BODY AT <br>
+          <span class="gold-gradient-text">DRAGON SLAYER GYM 2</span>
+        </h1>
+
+        <p class="text-zinc-300 text-xs sm:text-base leading-relaxed mb-6">
+          Heavy bio-mechanic machines, dumbbells up to 50KG, certified personal trainers, full AC floors, and exclusive female batches.
+        </p>
+
+        <!-- Mobile Primary Call-To-Actions (Large Touch Targets) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 mb-8">
+          <a href="#equipment" class="py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs sm:text-sm tracking-wide transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-dumbbell"></i>
+            <span>Tap to View Equipment Arsenal</span>
+          </a>
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-3.5 px-5 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+            <span>Book Free 1-Day Trial</span>
+          </a>
+        </div>
+
+        <!-- 3 Quick Mobile Stats -->
+        <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-zinc-900/80 border border-white/5 text-center">
+          <div>
+            <div class="text-base sm:text-2xl font-extrabold text-white heading-font">2 FLOORS</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Heavy + Cardio</div>
+          </div>
+          <div class="border-x border-white/10">
+            <div class="text-base sm:text-2xl font-extrabold text-amber-400 heading-font">50+ UNITS</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Tap for Specs</div>
+          </div>
+          <div>
+            <div class="text-base sm:text-2xl font-extrabold text-emerald-400 heading-font">★ 4.9 / 5</div>
+            <div class="text-[10px] sm:text-xs text-zinc-400">Naigaon Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE EQUIPMENT ARSENAL (TAP TO INSPECT) -->
+  <section id="equipment" class="py-12 bg-zinc-950/80 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center sm:text-left mb-5">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+          <i class="fa-solid fa-bolt"></i> Interactive Feature
+        </span>
+        <h2 class="heading-font text-xl sm:text-3xl font-bold text-white mt-0.5">Equipment Arsenal</h2>
+        <p class="text-xs text-zinc-400 mt-1">Tap any machine below to inspect weight limits, target muscles, and biomechanics.</p>
+      </div>
+
+      <!-- Mobile Scrollable Category Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 mb-5" id="filterTabs">
+        <button data-cat="all" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-500 text-black shadow-sm transition">All Units (8)</button>
+        <button data-cat="chest" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Chest & Arms</button>
+        <button data-cat="legs" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Legs & Squats</button>
+        <button data-cat="back" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Back & Core</button>
+        <button data-cat="cardio" class="cat-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 text-zinc-300 border border-white/5 hover:text-white transition">Cardio & Slat</button>
+      </div>
+
+      <!-- Equipment Cards Grid (2-Column on Mobile, 4-Column on Desktop) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4" id="equipGrid">
+        <!-- Machine 1: Incline Chest Press -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="incline_press">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=500&q=80" alt="Iso Incline Chest Press" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Upper Chest</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Incline Chest Press</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">350 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 2: Hack Squat -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="hack_squat">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="45° Linear Hack Squat" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Quads</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">45° Heavy Hack Squat</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">600 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 3: Power Squat Rack -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="power_rack">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Olympic Power Squat Rack" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Powerlifting</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Olympic Power Cage</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">500 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 4: Lat Pulldown & Row -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="back" data-id="lat_pulldown">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=500&q=80" alt="Dual Lat Pulldown" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Lats & Back</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Lat Pulldown & Row</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Stack: <strong class="text-white">120 KG x2</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 5: Heavy Dumbbells up to 50KG -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="dumbbells">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=500&q=80" alt="Pro Dumbbell Set" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Free Weights</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Hex Dumbbells (2.5 – 50KG)</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Pairs: <strong class="text-white">20 Pairs</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 6: Cable Crossover -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="chest" data-id="cable_crossover">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Cable Crossover" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Flyes & Arms</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Cable Crossover</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Stack: <strong class="text-white">100 KG x2</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 7: Curved Slat Treadmill -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="cardio" data-id="slat_treadmill">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80" alt="Slat Treadmill" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Cardio</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Curved Slat Treadmill</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Drive: <strong class="text-white">Kinetic</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine 8: Smith Machine -->
+        <div class="equip-card glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition duration-200" data-cat="legs" data-id="smith_machine">
+          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Counterbalanced Smith" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Safe Solo</span>
+            <div class="absolute bottom-2 right-2 bg-amber-500 text-black font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+              Tap Specs
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Pro Smith Machine</h3>
+            <div class="text-[10px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+              <span>Max: <strong class="text-white">400 KG</strong></span>
+              <span class="text-amber-400 font-semibold">&rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP PLANS & PRICING (MOBILE TABBED / SWIPE VIEW) -->
+  <section id="plans" class="py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Zero Admission Fee</span>
+        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Membership Plans</h2>
+        <p class="text-xs text-zinc-400 mt-1">Includes access to both floors, AC workout zone, and general floor training.</p>
+
+        <!-- Mobile Plan Selector Segmented Buttons -->
+        <div class="inline-flex md:hidden items-center p-1 bg-zinc-900 rounded-xl border border-white/10 mt-4 text-xs font-bold" id="mobilePlanTabs">
+          <button data-plan="1month" class="plan-tab-btn py-2 px-3 rounded-lg text-zinc-400">1 Month</button>
+          <button data-plan="3months" class="plan-tab-btn py-2 px-3 rounded-lg bg-amber-500 text-black shadow">3 Months 🔥</button>
+          <button data-plan="1year" class="plan-tab-btn py-2 px-3 rounded-lg text-zinc-400">1 Year</button>
+        </div>
+      </div>
+
+      <!-- Plan Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" id="plansContainer">
+        <!-- 1 MONTH PLAN -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1month">
+          <div>
+            <div class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Starter Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">1 Month Membership</h3>
+            
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹1,200</span>
+              <span class="text-xs text-zinc-400">/ 1 Month</span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Complete 2-Floor Gym Access</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Heavy Free Weights + Cardio</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>General Floor Coach Guidance</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Locker & Shower Facility</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%201-Month%20Plan%20(Rs.%201200)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
+            Join 1 Month Plan
+          </a>
+        </div>
+
+        <!-- 3 MONTHS (MOST POPULAR) -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-amber-500/50 shadow-2xl shadow-amber-500/10 md:-translate-y-2" id="card-3months">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-red-500 text-black font-extrabold text-[10px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
+            🔥 Most Popular Choice
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider mt-1">Quarterly Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Transformation Pack</h3>
+            
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-amber-400 heading-font">₹3,000</span>
+              <span class="text-xs text-zinc-400">/ 3 Months <span class="text-emerald-400 font-bold">(Save ₹600)</span></span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-200 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>All 1-Month Plan Features</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span class="font-bold text-white">Free Custom Workout & Diet Chart</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Bi-Weekly Body Measurement</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>CrossFit & Functional Rig Access</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%203-Month%20Plan%20(Rs.%203000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+            Get Pro Membership
+          </a>
+        </div>
+
+        <!-- 1 YEAR (BEST VALUE) -->
+        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1year">
+          <div>
+            <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Annual Pass</div>
+            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Yearly Beast Pass</h3>
+            
+            <div class="my-3 sm:my-4">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹8,999</span>
+              <span class="text-xs text-zinc-400">/ 12 Months <span class="text-emerald-400 font-bold">(Just ₹750/mo)</span></span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Unlimited 365 Days Access</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Custom Nutrition & Supplement Guide</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Free 1-Month Freeze on Holidays</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span>Free Personal Gym Bag & Shaker</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%20Annual%20Plan%20(Rs.%208999)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
+            Join Yearly Plan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMINGS & BATCHES (MOBILE COMPACT CARDS) -->
+  <section id="timings" class="py-12 bg-zinc-950/70 border-y border-white/5">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Workout Schedule</span>
+        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Gym Timings & Batches</h2>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden divide-y divide-white/10 text-xs sm:text-sm">
+        <!-- Morning -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
+            <div>
+              <span class="font-bold text-white block">Morning Batch</span>
+              <span class="text-[10px] text-zinc-400">Mon to Sat</span>
+            </div>
+          </div>
+          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM – 11:00 AM</span>
+        </div>
+
+        <!-- Ladies Special -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2 bg-pink-500/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-venus"></i></span>
+            <div>
+              <span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span>
+              <span class="text-[10px] text-pink-300">Female Trainer & Private Floor</span>
+            </div>
+          </div>
+          <span class="font-bold text-pink-300 bg-pink-500/20 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">11:30 AM – 1:00 PM</span>
+        </div>
+
+        <!-- Evening -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-moon"></i></span>
+            <div>
+              <span class="font-bold text-white block">Evening Peak Batch</span>
+              <span class="text-[10px] text-zinc-400">Mon to Sat</span>
+            </div>
+          </div>
+          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM – 10:30 PM</span>
+        </div>
+
+        <!-- Sunday -->
+        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-day"></i></span>
+            <div>
+              <span class="font-bold text-white block">Sunday Special</span>
+              <span class="text-[10px] text-zinc-400">Evening Closed</span>
+            </div>
+          </div>
+          <span class="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">7:00 AM – 1:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK TRIAL BOOKING VIA WHATSAPP (THUMB-FRIENDLY) -->
+  <section id="booking" class="py-12">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="glass-card rounded-2xl p-5 sm:p-7 border-amber-500/30 shadow-2xl">
+        <div class="text-center mb-5">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Fast Admission</span>
+          <h2 class="heading-font text-xl sm:text-2xl font-bold text-white mt-0.5">Book Free 1-Day Trial</h2>
+          <p class="text-xs text-zinc-400 mt-1">Connect directly with the gym owner on WhatsApp in 10 seconds.</p>
+        </div>
+
+        <form id="mobileAdmissionForm" class="space-y-3 text-xs">
+          <div>
+            <label class="block font-medium text-zinc-400 mb-1">Your Name</label>
+            <input type="text" id="mName" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-medium text-zinc-400 mb-1">WhatsApp Number</label>
+            <input type="tel" id="mPhone" required placeholder="e.g. 98XXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-medium text-zinc-400 mb-1">Goal</label>
+              <select id="mGoal" class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+                <option value="Fat Loss & Toning">Fat Loss</option>
+                <option value="Muscle Building">Muscle Gain</option>
+                <option value="Powerlifting">Powerlifting</option>
+                <option value="General Fitness">General</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-medium text-zinc-400 mb-1">Batch</label>
+              <select id="mBatch" class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:border-amber-400 focus:outline-none">
+                <option value="Morning Batch">Morning</option>
+                <option value="Ladies Batch">Ladies</option>
+                <option value="Evening Batch">Evening</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full mt-3 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-900/40">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Send Details on WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBER REVIEWS (HORIZONTAL SWIPE ON MOBILE) -->
+  <section id="reviews" class="py-12 bg-zinc-950/70 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Member Feedback</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">★ 4.9 on Google Reviews</h2>
+      </div>
+
+      <div class="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto no-scrollbar pb-2">
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Hands down best gym in Naigaon. 2 floors mean zero waiting for bench or dumbbells. AC is always on and trainers are friendly."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Rohan S. • Naigaon East</div>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-pink-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"The ladies batch (11:30 AM) is very safe and comfortable. The female trainer personally guides and corrects form."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Pooja K. • Ladies Batch</div>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
+          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Dumbbells go all the way to 50KG, and the linear hack squat is amazing. Serious place for serious lifters."</p>
+          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Aniket M. • Powerlifter</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT (1-TAP BUTTONS) -->
+  <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Visit Us</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Dragon Slayer Gym 2</h2>
+        <p class="text-xs text-zinc-400 mt-1">Station Road, Near Railway Platform, Naigaon East, Maharashtra 401208</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2.5 max-w-sm mx-auto mb-6">
+        <a href="tel:917709339959" class="py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition">
+          <i class="fa-solid fa-phone text-amber-400"></i>
+          <span>7709339959</span>
+        </a>
+        <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 rounded-xl bg-amber-500 text-black font-extrabold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm">
+          <i class="fa-solid fa-location-arrow"></i>
+          <span>Google Maps</span>
+        </a>
+      </div>
+
+      <div class="text-center text-[11px] text-zinc-500 pt-6 border-t border-white/10">
+        © 2026 Dragon Slayer Gym 2 • Naigaon East
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE BOTTOM SHEET MODAL (TAP-TO-INSPECT EQUIPMENT) -->
+  <div id="equipModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center sm:p-4">
+    <div class="modal-sheet bg-[#12161d] border-t sm:border border-white/20 rounded-t-3xl sm:rounded-2xl max-w-lg w-full max-h-[85vh] sm:max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl relative" id="modalCard">
+      <!-- Mobile Pull Bar Handle -->
+      <div class="w-12 h-1.5 bg-zinc-700 rounded-full mx-auto my-2.5 sm:hidden"></div>
+
+      <!-- Close Button -->
+      <button id="modalCloseBtn" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-amber-500 hover:text-black transition">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div class="relative aspect-video bg-zinc-950">
+        <img id="modalImg" src="" alt="Equipment" class="w-full h-full object-cover">
+        <div class="absolute bottom-2.5 left-3 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[11px] text-amber-400 font-bold border border-white/10" id="modalCategory">
+          Category
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-5">
+        <h3 class="heading-font text-base sm:text-xl font-bold text-white mb-1.5" id="modalTitle">Machine Name</h3>
+        <p class="text-xs text-zinc-300 leading-relaxed mb-4" id="modalDesc">Specs description</p>
+
+        <!-- Spec Pills -->
+        <div class="grid grid-cols-2 gap-2 text-xs mb-4 bg-zinc-900/80 p-3 rounded-xl border border-white/10">
+          <div>
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Target Muscle</span>
+            <span class="font-bold text-white" id="modalTarget">Muscle</span>
+          </div>
+          <div>
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Load Capacity</span>
+            <span class="font-bold text-amber-400" id="modalCapacity">350 KG</span>
+          </div>
+          <div class="col-span-2 pt-2 border-t border-white/5">
+            <span class="text-zinc-500 block text-[10px] uppercase font-bold">Best For</span>
+            <span class="font-medium text-zinc-300" id="modalBestFor">Hypertrophy</span>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Action -->
+        <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-900/30">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Ask About This Machine on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXED MOBILE BOTTOM QUICK-DOCK (PHONE FIRST) -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b0e]/95 backdrop-blur-md border-t border-white/10 px-3 py-2.5 flex items-center gap-2 md:hidden safe-bottom">
+    <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 text-center active:scale-95 transition">
+      <i class="fa-solid fa-phone text-amber-400"></i>
+      <span>Call Gym</span>
+    </a>
+    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 text-center shadow-lg shadow-emerald-900/40 active:scale-95 transition">
+      <i class="fa-brands fa-whatsapp text-base"></i>
+      <span>WhatsApp Chat</span>
+    </a>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (DESKTOP ONLY) -->
+  <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white items-center justify-center text-2xl shadow-xl shadow-emerald-900/50 hover:scale-105 transition">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPT -->
+  <script>
+    // Equipment Data
+    const equipData = {
+      incline_press: {
+        title: "Iso-Lateral Incline Chest Press",
+        category: "Chest & Arms",
+        img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
+        desc: "Converging isolateral independent arms mimic natural dumbbell path without requiring a spotter. Isolates upper clavicular pectorals.",
+        target: "Upper Pectorals (Clavicular Head) & Front Delts",
+        capacity: "350 KG Plate Horn Capacity",
+        bestFor: "Building Upper Chest Mass & Shoulder Safe Pressing"
+      },
+      hack_squat: {
+        title: "45° Linear Heavy Hack Squat",
+        category: "Legs & Squats",
+        img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+        desc: "Diamond tread footplate with linear recirculating bearings. Enforces clean knee flexion without sheer lower back stress.",
+        target: "Quadriceps (Teardrop) & Glutes",
+        capacity: "600 KG Plate Capacity",
+        bestFor: "Heavy Quad Isolation Without Spinal Compression"
+      },
+      power_rack: {
+        title: "Olympic Power Squat Cage & Platform",
+        category: "Legs & Powerlifting",
+        img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+        desc: "11-gauge steel cage with adjustable safety pins and solid bumper plates for squats, bench press, and deadlifts.",
+        target: "Full Body (Squats, Bench Press, Shrugs)",
+        capacity: "500 KG Weight Limit",
+        bestFor: "Heavy Powerlifting & Safe Solo Failure"
+      },
+      lat_pulldown: {
+        title: "Dual Lat Pulldown & Seated Cable Row",
+        category: "Back & Core",
+        img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80",
+        desc: "Independent dual weight stacks with high/low pulleys and MAG grip attachments for maximum back width and thickness.",
+        target: "Latissimus Dorsi, Rhomboids & Biceps",
+        capacity: "Dual 120 KG Weight Stacks",
+        bestFor: "Developing V-Taper Back and Mid-Back Thickness"
+      },
+      dumbbells: {
+        title: "Pro Rubber Hex Dumbbells (2.5KG – 50KG)",
+        category: "Free Weights & Isolation",
+        img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80",
+        desc: "20-pair heavy set with precision knurled chrome handles. Hexagonal heads encased in virgin shock-absorbent rubber.",
+        target: "Chest, Biceps, Triceps, Delts, Lunges",
+        capacity: "2.5 KG to 50 KG in 2.5kg pairs",
+        bestFor: "All Isolation and Dumbbell Press Variations"
+      },
+      cable_crossover: {
+        title: "Adjustable Dual Cable Crossover Station",
+        category: "Chest & Arms",
+        img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80",
+        desc: "18-position height adjustment pulleys with aircraft cables. Delivers continuous tension throughout the entire movement.",
+        target: "Chest Flyes, Triceps, Lateral Delts",
+        capacity: "Dual 100 KG Stacks",
+        bestFor: "Continuous Muscle Tension & Muscle Definition"
+      },
+      slat_treadmill: {
+        title: "Curved Non-Motorized Slat Treadmill",
+        category: "Cardio & Conditioning",
+        img: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80",
+        desc: "100% human kinetic drive. The curved rubber slats absorb heel strike impact and burn up to 30% more calories.",
+        target: "Cardiovascular Stamina & Fat Loss",
+        capacity: "Self-Propelled Kinetic Speed",
+        bestFor: "HIIT Sprints & Zero Knee-Impact Cardio"
+      },
+      smith_machine: {
+        title: "Counter-Balanced Pro Smith Machine",
+        category: "Multi-Purpose & Safe Lifting",
+        img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80",
+        desc: "Counterbalanced vertical guide rods with 14 safety lockout notches for solo bench pressing, lunges, and upright rows.",
+        target: "Quads, Chest, Traps, Calves",
+        capacity: "400 KG Capacity",
+        bestFor: "Safe Solo Workouts With No Spotter Needed"
+      }
+    };
+
+    // Mobile Drawer Toggle
+    const menuBtn = document.getElementById('menuToggleBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (menuBtn && mobileDrawer) {
+      menuBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+      });
+    }
+
+    // Modal Bottom-Sheet Logic
+    const modal = document.getElementById('equipModal');
+    const modalCard = document.getElementById('modalCard');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalImg = document.getElementById('modalImg');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalTarget = document.getElementById('modalTarget');
+    const modalCapacity = document.getElementById('modalCapacity');
+    const modalBestFor = document.getElementById('modalBestFor');
+    const modalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
+
+    document.querySelectorAll('.equip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.dataset.id;
+        const item = equipData[id];
+        if (!item) return;
+
+        modalTitle.textContent = item.title;
+        modalCategory.textContent = item.category;
+        modalImg.src = item.img;
+        modalDesc.textContent = item.desc;
+        modalTarget.textContent = item.target;
+        modalCapacity.textContent = item.capacity;
+        modalBestFor.textContent = item.bestFor;
+
+        const msg = encodeURIComponent(`Hello Sir, I saw the ${item.title} on Dragon Slayer Gym 2 website and want to know more.`);
+        modalWhatsAppBtn.href = `https://wa.me/917709339959?text=${msg}`;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => modalCard.classList.add('open'), 10);
+      });
+    });
+
+    function closeModal() {
+      modalCard.classList.remove('open');
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Category Filter Pills
+    const catBtns = document.querySelectorAll('.cat-btn');
+    const equipCards = document.querySelectorAll('.equip-card');
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        catBtns.forEach(b => {
+          b.classList.remove('bg-amber-500', 'text-black');
+          b.classList.add('bg-zinc-900', 'text-zinc-300');
+        });
+        btn.classList.add('bg-amber-500', 'text-black');
+        btn.classList.remove('bg-zinc-900', 'text-zinc-300');
+
+        equipCards.forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Mobile Plan Tabs (1 Month, 3 Months, 1 Year)
+    const planTabBtns = document.querySelectorAll('.plan-tab-btn');
+    const planCards = document.querySelectorAll('.plan-card');
+    if (window.innerWidth < 768) {
+      // By default show 3 Months (card-3months) on mobile
+      planCards.forEach(c => {
+        if (c.id !== 'card-3months') c.classList.add('hidden');
+      });
+    }
+
+    planTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const plan = btn.dataset.plan;
+        planTabBtns.forEach(b => {
+          b.classList.remove('bg-amber-500', 'text-black', 'shadow');
+          b.classList.add('text-zinc-400');
+        });
+        btn.classList.add('bg-amber-500', 'text-black', 'shadow');
+        btn.classList.remove('text-zinc-400');
+
+        planCards.forEach(c => {
+          if (c.id === `card-${plan}`) {
+            c.classList.remove('hidden');
+          } else {
+            c.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        planCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+
+    // Mobile WhatsApp Admission Form
+    const mForm = document.getElementById('mobileAdmissionForm');
+    if (mForm) {
+      mForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('mName').value.trim();
+        const phone = document.getElementById('mPhone').value.trim();
+        const goal = document.getElementById('mGoal').value;
+        const batch = document.getElementById('mBatch').value;
+
+        const text = `Hello Sir, my name is ${name}. I want to book a free 1-Day Trial at Dragon Slayer Gym 2.\n- WhatsApp: ${phone}\n- Goal: ${goal}\n- Batch: ${batch}`;
+        window.open(`https://wa.me/917709339959?text=${encodeURIComponent(text)}`, '_blank');
+      });
+    }
+  </script>
+</body>
+</html>
