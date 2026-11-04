@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Dragon Slayer Gym 2 | Naigaon East</title>
   <meta name="description" content="Dragon Slayer Gym 2 in Naigaon East. Premium equipment, certified trainers, AC workout floor, and affordable membership plans.">
   <meta name="theme-color" content="#0b0d11">
@@ -88,7 +88,7 @@
           <span class="hidden xs:inline">WhatsApp</span>
         </a>
         <!-- Mobile Toggle -->
-        <button id="menuToggleStarter" class="md:hidden w-9 h-9 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm" aria-label="Toggle Menu">
+        <button id="menuToggleStarter" class="md:hidden w-9 h-9 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm" aria-label="Toggle Menu" aria-expanded="false" aria-controls="drawerStarter">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -106,8 +106,11 @@
         <a href="#timings" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
           <i class="fa-solid fa-clock text-amber-400"></i> Timings
         </a>
-        <a href="#contact" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
-          <i class="fa-solid fa-location-dot text-amber-400"></i> Location
+        <a href="#gallery" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
+          <i class="fa-solid fa-camera text-amber-400"></i> Tour
+        </a>
+        <a href="#contact" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 col-span-2">
+          <i class="fa-solid fa-location-dot text-amber-400"></i> Location & Contact
         </a>
       </div>
       <div class="flex items-center gap-2 pt-1">
@@ -335,6 +338,44 @@
     </div>
   </section>
 
+  <!-- FACILITY TOUR & GALLERY -->
+  <section id="gallery" class="py-12 border-t border-white/5 bg-zinc-950/60">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-6">
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Facility Tour</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Explore Dragon Slayer Gym 2</h2>
+        <p class="text-xs text-zinc-400 mt-1">2 spacious floors equipped with commercial bio-mechanic machines & heavy dumbbells.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Heavy Free Weights" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
+            <span class="text-[11px] font-bold text-white">Heavy Free Weights</span>
+          </div>
+        </div>
+        <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Cardio & Conditioning Floor" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
+            <span class="text-[11px] font-bold text-white">Cardio & Slat Floor</span>
+          </div>
+        </div>
+        <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Olympic Power Racks" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
+            <span class="text-[11px] font-bold text-white">Olympic Power Racks</span>
+          </div>
+        </div>
+        <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Hex Dumbbells up to 50KG" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
+            <span class="text-[11px] font-bold text-white">Dumbbells (Up to 50KG)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- LOCATION & CONTACT -->
   <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
     <div class="max-w-4xl mx-auto px-4">
@@ -374,22 +415,48 @@
   </div>
 
   <script>
-    // Mobile Drawer
+    // Mobile Drawer with click-outside and aria-expanded
     const toggle = document.getElementById('menuToggleStarter');
     const drawer = document.getElementById('drawerStarter');
     if (toggle && drawer) {
-      toggle.addEventListener('click', () => drawer.classList.toggle('hidden'));
-      document.querySelectorAll('.starter-nav-link').forEach(l => l.addEventListener('click', () => drawer.classList.add('hidden')));
-    }
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = drawer.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', (!isHidden).toString());
+      });
 
-    // Mobile Plan Switcher
-    const sBtns = document.querySelectorAll('.s-plan-btn');
-    const sCards = document.querySelectorAll('.s-plan-card');
-    if (window.innerWidth < 768) {
-      sCards.forEach(c => {
-        if (c.id !== 'scard-s3m') c.classList.add('hidden');
+      document.addEventListener('click', (e) => {
+        if (!drawer.contains(e.target) && !toggle.contains(e.target) && !drawer.classList.contains('hidden')) {
+          drawer.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.querySelectorAll('.starter-nav-link').forEach(l => {
+        l.addEventListener('click', () => {
+          drawer.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
       });
     }
+
+    // Mobile Plan Switcher with robust resize handling
+    const sBtns = document.querySelectorAll('.s-plan-btn');
+    const sCards = document.querySelectorAll('.s-plan-card');
+
+    function syncPlanCards() {
+      if (window.innerWidth >= 768) {
+        sCards.forEach(c => c.classList.remove('hidden'));
+      } else {
+        const activeBtn = document.querySelector('.s-plan-btn.bg-amber-500');
+        const p = activeBtn ? activeBtn.dataset.plan : 's3m';
+        sCards.forEach(c => {
+          if (c.id === `scard-${p}`) c.classList.remove('hidden');
+          else c.classList.add('hidden');
+        });
+      }
+    }
+
     sBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const p = btn.dataset.plan;
@@ -399,19 +466,12 @@
         });
         btn.classList.add('bg-amber-500', 'text-black', 'shadow');
         btn.classList.remove('text-zinc-400');
-
-        sCards.forEach(c => {
-          if (c.id === `scard-${p}`) c.classList.remove('hidden');
-          else c.classList.add('hidden');
-        });
+        syncPlanCards();
       });
     });
 
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        sCards.forEach(c => c.classList.remove('hidden'));
-      }
-    });
+    window.addEventListener('resize', syncPlanCards);
+    syncPlanCards();
   </script>
 </body>
 </html>
