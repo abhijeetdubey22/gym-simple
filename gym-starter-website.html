@@ -88,7 +88,7 @@
           <span class="hidden xs:inline">WhatsApp</span>
         </a>
         <!-- Mobile Toggle -->
-        <button id="menuToggleStarter" class="md:hidden w-11 h-11 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-base" aria-label="Toggle Menu" aria-expanded="false" aria-controls="drawerStarter">
+        <button id="menuToggleStarter" class="md:hidden w-11 h-11 rounded-xl bg-zinc-900/90 border border-white/10 text-zinc-200 hover:text-amber-400 active:scale-95 flex items-center justify-center text-base transition-all shadow-sm" aria-label="Toggle Menu" aria-expanded="false" aria-controls="drawerStarter">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -145,12 +145,12 @@
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 mb-8">
-          <a href="#plans" class="py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs sm:text-sm tracking-wide transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3.5 mb-8">
+          <a href="#plans" class="py-3.5 px-5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:brightness-110 active:scale-[0.98] text-black font-black text-xs sm:text-sm tracking-wide transition-all shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 flex items-center justify-center gap-2.5 group">
             <span>View Membership Plans (₹1,200)</span>
-            <i class="fa-solid fa-arrow-down text-xs"></i>
+            <i class="fa-solid fa-arrow-down text-xs transition-transform group-hover:translate-y-0.5"></i>
           </a>
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-3.5 px-5 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-3.5 px-5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-emerald-500/40 active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5">
             <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
             <span>Book Free 1-Day Trial</span>
           </a>
@@ -220,10 +220,10 @@
         <p class="text-xs text-zinc-400 mt-1">Zero hidden charges. Includes full gym access and cardio.</p>
 
         <!-- Mobile Plan Selector Segmented Buttons -->
-        <div class="inline-flex md:hidden items-center p-1 bg-zinc-900 rounded-xl border border-white/10 mt-4 text-xs font-bold" id="starterPlanTabs">
-          <button data-plan="s1m" class="s-plan-btn py-2.5 px-4 rounded-lg text-zinc-400">1 Month</button>
-          <button data-plan="s3m" class="s-plan-btn py-2.5 px-4 rounded-lg bg-amber-500 text-black shadow">3 Months 🔥</button>
-          <button data-plan="s1y" class="s-plan-btn py-2.5 px-4 rounded-lg text-zinc-400">1 Year</button>
+        <div class="inline-flex md:hidden items-center p-1.5 bg-zinc-900/90 backdrop-blur-md rounded-2xl border border-white/10 mt-4 text-xs font-bold shadow-inner" id="starterPlanTabs">
+          <button data-plan="s1m" class="s-plan-btn py-2.5 px-4 rounded-xl text-zinc-400 transition-all">1 Month</button>
+          <button data-plan="s3m" class="s-plan-btn py-2.5 px-4 rounded-xl bg-amber-500 text-black shadow-md shadow-amber-500/20 transition-all">3 Months 🔥</button>
+          <button data-plan="s1y" class="s-plan-btn py-2.5 px-4 rounded-xl text-zinc-400 transition-all">1 Year</button>
         </div>
       </div>
 
@@ -249,7 +249,7 @@
         </div>
 
         <!-- 3 MONTHS (MOST POPULAR) -->
-        <div class="s-plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-amber-500/50 shadow-xl shadow-amber-500/10 md:-translate-y-2" id="scard-s3m">
+        <div class="s-plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-2 border-amber-500/80 shadow-[0_0_40px_rgba(245,158,11,0.18)] bg-gradient-to-b from-amber-500/[0.06] via-zinc-900/80 to-zinc-900/90 md:-translate-y-2" id="scard-s3m">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-red-500 text-black font-extrabold text-[11px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
             🔥 Most Popular
           </div>
@@ -403,12 +403,12 @@
   </section>
 
   <!-- FIXED MOBILE BOTTOM QUICK-DOCK -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#0b0d11]/95 backdrop-blur-md border-t border-white/10 px-3 py-2.5 flex items-center gap-2 md:hidden safe-bottom">
-    <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 text-center active:scale-95 transition">
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b0e]/90 backdrop-blur-xl border-t border-white/10 px-3.5 py-2.5 flex items-center gap-2.5 md:hidden safe-bottom shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
+    <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 text-center active:scale-[0.97] transition-all shadow-sm">
       <i class="fa-solid fa-phone text-amber-400"></i>
       <span>Call Gym</span>
     </a>
-    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 text-center shadow-lg shadow-emerald-900/40 active:scale-95 transition">
+    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-xs flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-950/60 active:scale-[0.97] transition-all border border-emerald-400/20">
       <i class="fa-brands fa-whatsapp text-base"></i>
       <span>WhatsApp Chat</span>
     </a>
