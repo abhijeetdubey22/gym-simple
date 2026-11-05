@@ -22,21 +22,23 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #0b0d11;
-      color: #f3f4f6;
+      font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #090B0E;
+      color: #F8FAFC;
       overflow-x: hidden;
     }
     .heading-font {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
     .gold-gradient-text {
-      background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+      background: linear-gradient(135deg, #fb923c 0%, #f97316 50%, #ef4444 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .glass-card {
-      background: rgba(22, 27, 34, 0.90);
+      background: rgba(19, 23, 31, 0.90);
       backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -48,7 +50,7 @@
 <body class="antialiased pb-24 md:pb-0 select-none sm:select-auto">
 
   <!-- TOP PROMO BAR -->
-  <div class="bg-gradient-to-r from-amber-600 to-red-600 text-black text-[11px] sm:text-xs font-bold text-center py-2 px-3 flex items-center justify-center gap-1.5 shadow-sm">
+  <div class="bg-gradient-to-r from-orange-600 to-red-600 text-black text-[11px] sm:text-xs font-bold text-center py-2 px-3 flex items-center justify-center gap-1.5 shadow-sm">
     <span>🔥 SPECIAL OFFER: Free 1-Day Trial + 25% OFF Annual Plans!</span>
     <a href="#plans" class="underline font-extrabold ml-1">View Plans &rarr;</a>
   </div>
@@ -57,30 +59,30 @@
   <header class="sticky top-0 z-40 bg-[#0b0d11]/95 backdrop-blur-md border-b border-white/10">
     <div class="max-w-6xl mx-auto px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2.5">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-base sm:text-lg shadow-sm">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-orange-400 text-base sm:text-lg shadow-sm">
           <i class="fa-solid fa-dumbbell"></i>
         </div>
         <div>
           <span class="heading-font text-base sm:text-xl font-bold tracking-tight text-white block leading-none">
-            DRAGON <span class="text-amber-500">SLAYER</span>
+            DRAGON <span class="text-orange-500">SLAYER</span>
           </span>
-          <span class="text-[10px] sm:text-[11px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 • Naigaon</span>
+          <span class="text-[11px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 • Naigaon</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
-        <a href="#about" class="hover:text-amber-400 transition">Why Us</a>
-        <a href="#plans" class="hover:text-amber-400 transition">Plans & Pricing</a>
-        <a href="#timings" class="hover:text-amber-400 transition">Timings</a>
-        <a href="#gallery" class="hover:text-amber-400 transition">Facility Tour</a>
-        <a href="#contact" class="hover:text-amber-400 transition">Location</a>
+        <a href="#about" class="hover:text-orange-400 transition">Why Us</a>
+        <a href="#plans" class="hover:text-orange-400 transition">Plans & Pricing</a>
+        <a href="#timings" class="hover:text-orange-400 transition">Timings</a>
+        <a href="#gallery" class="hover:text-orange-400 transition">Facility Tour</a>
+        <a href="#contact" class="hover:text-orange-400 transition">Location</a>
       </nav>
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-2">
         <a href="tel:917709339959" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-xs font-semibold transition">
-          <i class="fa-solid fa-phone text-amber-400"></i>
+          <i class="fa-solid fa-phone text-orange-400"></i>
           <span>7709339959</span>
         </a>
         <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20inquire%20about%20Dragon%20Slayer%20Gym%202" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition shadow-md shadow-emerald-900/30">
@@ -88,7 +90,7 @@
           <span class="hidden xs:inline">WhatsApp</span>
         </a>
         <!-- Mobile Toggle -->
-        <button id="menuToggleStarter" class="md:hidden w-9 h-9 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm" aria-label="Toggle Menu" aria-expanded="false" aria-controls="drawerStarter">
+        <button id="menuToggleStarter" class="md:hidden w-11 h-11 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-base" aria-label="Toggle Menu" aria-expanded="false" aria-controls="drawerStarter">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -98,24 +100,24 @@
     <div id="drawerStarter" class="hidden md:hidden bg-[#0e1218] border-b border-white/10 px-4 py-3 space-y-2 text-xs">
       <div class="grid grid-cols-2 gap-2 pb-2 border-b border-white/10">
         <a href="#about" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
-          <i class="fa-solid fa-shield text-amber-400"></i> Why Us
+          <i class="fa-solid fa-shield text-orange-400"></i> Why Us
         </a>
         <a href="#plans" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
-          <i class="fa-solid fa-indian-rupee-sign text-amber-400"></i> Plans
+          <i class="fa-solid fa-indian-rupee-sign text-orange-400"></i> Plans
         </a>
         <a href="#timings" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
-          <i class="fa-solid fa-clock text-amber-400"></i> Timings
+          <i class="fa-solid fa-clock text-orange-400"></i> Timings
         </a>
         <a href="#gallery" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2">
-          <i class="fa-solid fa-camera text-amber-400"></i> Tour
+          <i class="fa-solid fa-camera text-orange-400"></i> Tour
         </a>
         <a href="#contact" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 col-span-2">
-          <i class="fa-solid fa-location-dot text-amber-400"></i> Location & Contact
+          <i class="fa-solid fa-location-dot text-orange-400"></i> Location & Contact
         </a>
       </div>
       <div class="flex items-center gap-2 pt-1">
         <a href="tel:917709339959" class="flex-1 py-2 text-center rounded-lg bg-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-1.5">
-          <i class="fa-solid fa-phone text-amber-400"></i> Call
+          <i class="fa-solid fa-phone text-orange-400"></i> Call
         </a>
         <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-2 text-center rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
@@ -126,11 +128,11 @@
 
   <!-- HERO SECTION -->
   <section class="relative pt-6 pb-12 sm:pt-12 sm:pb-20 overflow-hidden">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] h-[250px] sm:h-[350px] bg-amber-500/15 blur-[90px] sm:blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] h-[250px] sm:h-[350px] bg-orange-500/15 blur-[90px] sm:blur-[120px] rounded-full pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 relative z-10">
       <div class="text-left sm:text-center max-w-2xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700 text-amber-400 text-[11px] font-semibold mb-3.5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700 text-orange-400 text-[11px] font-semibold mb-3.5">
           <i class="fa-solid fa-location-dot text-xs"></i>
           <span>Naigaon East's Biggest 2-Floor Gym</span>
         </div>
@@ -146,7 +148,7 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 mb-8">
-          <a href="#plans" class="py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs sm:text-sm tracking-wide transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+          <a href="#plans" class="py-3.5 px-5 rounded-xl bg-orange-500 hover:bg-orange-400 active:scale-95 text-black font-extrabold text-xs sm:text-sm tracking-wide transition shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2">
             <span>View Membership Plans (₹1,200)</span>
             <i class="fa-solid fa-arrow-down text-xs"></i>
           </a>
@@ -160,15 +162,15 @@
         <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-zinc-900/80 border border-white/5 text-center">
           <div>
             <div class="text-base sm:text-2xl font-extrabold text-white heading-font">2 FLOORS</div>
-            <div class="text-[10px] sm:text-xs text-zinc-400">Cardio + Heavy Iron</div>
+            <div class="text-[11px] sm:text-xs text-zinc-400">Cardio + Heavy Iron</div>
           </div>
           <div class="border-x border-white/10">
-            <div class="text-base sm:text-2xl font-extrabold text-amber-400 heading-font">50+ UNITS</div>
-            <div class="text-[10px] sm:text-xs text-zinc-400">Modern Equipment</div>
+            <div class="text-base sm:text-2xl font-extrabold text-orange-400 heading-font">50+ UNITS</div>
+            <div class="text-[11px] sm:text-xs text-zinc-400">Modern Equipment</div>
           </div>
           <div>
             <div class="text-base sm:text-2xl font-extrabold text-white heading-font">★ 4.9 / 5</div>
-            <div class="text-[10px] sm:text-xs text-zinc-400">Member Rating</div>
+            <div class="text-[11px] sm:text-xs text-zinc-400">Member Rating</div>
           </div>
         </div>
       </div>
@@ -179,25 +181,25 @@
   <section id="about" class="py-12 bg-zinc-950/70 border-y border-white/5">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center max-w-xl mx-auto mb-8">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Features</span>
+        <span class="text-orange-500 text-[11px] font-bold uppercase tracking-wider">Features</span>
         <h2 class="heading-font text-xl sm:text-3xl font-bold text-white mt-0.5">Why Train At Dragon Slayer Gym 2?</h2>
       </div>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <div class="glass-card rounded-xl p-4">
-          <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-layer-group"></i></div>
           <h3 class="font-bold text-white text-xs sm:text-sm mb-1">2 Big Floors</h3>
           <p class="text-[11px] text-zinc-400 leading-relaxed">Dedicated heavy iron area & separate cardio/functional floor.</p>
         </div>
 
         <div class="glass-card rounded-xl p-4">
-          <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-snowflake"></i></div>
+          <div class="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-snowflake"></i></div>
           <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Full AC Floor</h3>
           <p class="text-[11px] text-zinc-400 leading-relaxed">Powerful cooling keeps you fresh through intense workouts.</p>
         </div>
 
         <div class="glass-card rounded-xl p-4">
-          <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-certificate"></i></div>
+          <div class="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center text-base mb-3"><i class="fa-solid fa-certificate"></i></div>
           <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Floor Trainers</h3>
           <p class="text-[11px] text-zinc-400 leading-relaxed">Certified coaches to correct posture and guide your lifts.</p>
         </div>
@@ -215,15 +217,15 @@
   <section id="plans" class="py-12">
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Affordable Plans</span>
+        <span class="text-orange-500 text-[11px] font-bold uppercase tracking-wider">Affordable Plans</span>
         <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Membership Plans</h2>
         <p class="text-xs text-zinc-400 mt-1">Zero hidden charges. Includes full gym access and cardio.</p>
 
         <!-- Mobile Plan Selector Segmented Buttons -->
         <div class="inline-flex md:hidden items-center p-1 bg-zinc-900 rounded-xl border border-white/10 mt-4 text-xs font-bold" id="starterPlanTabs">
-          <button data-plan="s1m" class="s-plan-btn py-2 px-3 rounded-lg text-zinc-400">1 Month</button>
-          <button data-plan="s3m" class="s-plan-btn py-2 px-3 rounded-lg bg-amber-500 text-black shadow">3 Months 🔥</button>
-          <button data-plan="s1y" class="s-plan-btn py-2 px-3 rounded-lg text-zinc-400">1 Year</button>
+          <button data-plan="s1m" class="s-plan-btn py-2.5 px-4 rounded-lg text-zinc-400">1 Month</button>
+          <button data-plan="s3m" class="s-plan-btn py-2.5 px-4 rounded-lg bg-orange-500 text-black shadow">3 Months 🔥</button>
+          <button data-plan="s1y" class="s-plan-btn py-2.5 px-4 rounded-lg text-zinc-400">1 Year</button>
         </div>
       </div>
 
@@ -238,9 +240,9 @@
               <span class="text-xs text-zinc-400">/ 1 Month</span>
             </div>
             <ul class="space-y-2 text-xs text-zinc-300 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Complete 2-Floor Gym Access</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Free Weights & Cardio Area</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> General Trainer Support</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Complete 2-Floor Gym Access</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Free Weights & Cardio Area</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> General Trainer Support</li>
             </ul>
           </div>
           <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%201-Month%20Plan%20(Rs.%201200)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
@@ -249,24 +251,24 @@
         </div>
 
         <!-- 3 MONTHS (MOST POPULAR) -->
-        <div class="s-plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-amber-500/50 shadow-xl shadow-amber-500/10 md:-translate-y-2" id="scard-s3m">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-red-500 text-black font-extrabold text-[10px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
+        <div class="s-plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-orange-500/50 shadow-xl shadow-orange-500/10 md:-translate-y-2" id="scard-s3m">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-black font-extrabold text-[11px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
             🔥 Most Popular
           </div>
           <div>
-            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider mt-1">Quarterly Pass</div>
+            <div class="text-[11px] font-bold text-orange-400 uppercase tracking-wider mt-1">Quarterly Pass</div>
             <h3 class="heading-font text-lg font-bold text-white mt-1">Pro Transformation</h3>
             <div class="my-3">
-              <span class="text-3xl font-extrabold text-amber-400 heading-font">₹3,000</span>
+              <span class="text-3xl font-extrabold text-orange-400 heading-font">₹3,000</span>
               <span class="text-xs text-zinc-400">/ 3 Months <span class="text-emerald-400 font-bold">(Save ₹600)</span></span>
             </div>
             <ul class="space-y-2 text-xs text-zinc-200 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> All 1-Month Plan Features</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <strong class="text-white">Free Diet & Workout Chart</strong></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Bi-Weekly Body Measurement</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> All 1-Month Plan Features</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> <strong class="text-white">Free Diet & Workout Chart</strong></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Bi-Weekly Body Measurement</li>
             </ul>
           </div>
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%203-Month%20Plan%20(Rs.%203000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-black font-extrabold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%203-Month%20Plan%20(Rs.%203000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl bg-orange-500 hover:bg-orange-400 active:scale-95 text-black font-extrabold text-xs uppercase tracking-wider transition shadow-lg shadow-orange-500/20">
             Get Pro Membership
           </a>
         </div>
@@ -281,9 +283,9 @@
               <span class="text-xs text-zinc-400">/ 12 Months <span class="text-emerald-400 font-bold">(₹750/mo)</span></span>
             </div>
             <ul class="space-y-2 text-xs text-zinc-300 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Unlimited 365 Days Access</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Custom Nutrition & Macro Plan</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Free 1-Month Freeze Option</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Unlimited 365 Days Access</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Custom Nutrition & Macro Plan</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> Free 1-Month Freeze Option</li>
             </ul>
           </div>
           <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%20Annual%20Plan%20(Rs.%208999)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
@@ -298,23 +300,23 @@
   <section id="timings" class="py-12 bg-zinc-950/70 border-y border-white/5">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Schedule</span>
+        <span class="text-orange-500 text-[11px] font-bold uppercase tracking-wider">Schedule</span>
         <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Gym Timings & Batches</h2>
       </div>
 
       <div class="glass-card rounded-2xl overflow-hidden divide-y divide-white/10 text-xs sm:text-sm">
         <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
           <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
-            <div><span class="font-bold text-white block">Morning Batch</span><span class="text-[10px] text-zinc-400">Mon to Sat</span></div>
+            <span class="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
+            <div><span class="font-bold text-white block">Morning Batch</span><span class="text-[11px] text-zinc-400">Mon to Sat</span></div>
           </div>
-          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM – 11:00 AM</span>
+          <span class="font-bold text-orange-400 bg-orange-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM – 11:00 AM</span>
         </div>
 
         <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2 bg-pink-500/10">
           <div class="flex items-center gap-2.5">
             <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-venus"></i></span>
-            <div><span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span><span class="text-[10px] text-pink-300">Female Coach & Private Floor</span></div>
+            <div><span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span><span class="text-[11px] text-pink-300">Female Coach & Private Floor</span></div>
           </div>
           <span class="font-bold text-pink-300 bg-pink-500/20 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">11:30 AM – 1:00 PM</span>
         </div>
@@ -322,15 +324,15 @@
         <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
           <div class="flex items-center gap-2.5">
             <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-moon"></i></span>
-            <div><span class="font-bold text-white block">Evening Peak Batch</span><span class="text-[10px] text-zinc-400">Mon to Sat</span></div>
+            <div><span class="font-bold text-white block">Evening Peak Batch</span><span class="text-[11px] text-zinc-400">Mon to Sat</span></div>
           </div>
-          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM – 10:30 PM</span>
+          <span class="font-bold text-orange-400 bg-orange-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM – 10:30 PM</span>
         </div>
 
         <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
           <div class="flex items-center gap-2.5">
             <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-day"></i></span>
-            <div><span class="font-bold text-white block">Sunday Special</span><span class="text-[10px] text-zinc-400">Evening Closed</span></div>
+            <div><span class="font-bold text-white block">Sunday Special</span><span class="text-[11px] text-zinc-400">Evening Closed</span></div>
           </div>
           <span class="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">7:00 AM – 1:00 PM</span>
         </div>
@@ -342,7 +344,7 @@
   <section id="gallery" class="py-12 border-t border-white/5 bg-zinc-950/60">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Facility Tour</span>
+        <span class="text-orange-500 text-[11px] font-bold uppercase tracking-wider">Facility Tour</span>
         <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Explore Dragon Slayer Gym 2</h2>
         <p class="text-xs text-zinc-400 mt-1">2 spacious floors equipped with commercial bio-mechanic machines & heavy dumbbells.</p>
       </div>
@@ -380,17 +382,17 @@
   <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Visit Us</span>
+        <span class="text-orange-500 text-[11px] font-bold uppercase tracking-wider">Visit Us</span>
         <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Dragon Slayer Gym 2</h2>
         <p class="text-xs text-zinc-400 mt-1">Near Railway Station, Naigaon East, Maharashtra 401208</p>
       </div>
 
       <div class="grid grid-cols-2 gap-2.5 max-w-sm mx-auto mb-6">
         <a href="tel:917709339959" class="py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition">
-          <i class="fa-solid fa-phone text-amber-400"></i>
+          <i class="fa-solid fa-phone text-orange-400"></i>
           <span>7709339959</span>
         </a>
-        <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 rounded-xl bg-amber-500 text-black font-extrabold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm">
+        <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 rounded-xl bg-orange-500 text-black font-extrabold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm">
           <i class="fa-solid fa-location-arrow"></i>
           <span>Google Maps</span>
         </a>
@@ -405,7 +407,7 @@
   <!-- FIXED MOBILE BOTTOM QUICK-DOCK -->
   <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#0b0d11]/95 backdrop-blur-md border-t border-white/10 px-3 py-2.5 flex items-center gap-2 md:hidden safe-bottom">
     <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 text-center active:scale-95 transition">
-      <i class="fa-solid fa-phone text-amber-400"></i>
+      <i class="fa-solid fa-phone text-orange-400"></i>
       <span>Call Gym</span>
     </a>
     <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 text-center shadow-lg shadow-emerald-900/40 active:scale-95 transition">
@@ -448,7 +450,7 @@
       if (window.innerWidth >= 768) {
         sCards.forEach(c => c.classList.remove('hidden'));
       } else {
-        const activeBtn = document.querySelector('.s-plan-btn.bg-amber-500');
+        const activeBtn = document.querySelector('.s-plan-btn.bg-orange-500');
         const p = activeBtn ? activeBtn.dataset.plan : 's3m';
         sCards.forEach(c => {
           if (c.id === `scard-${p}`) c.classList.remove('hidden');
@@ -461,10 +463,10 @@
       btn.addEventListener('click', () => {
         const p = btn.dataset.plan;
         sBtns.forEach(b => {
-          b.classList.remove('bg-amber-500', 'text-black', 'shadow');
+          b.classList.remove('bg-orange-500', 'text-black', 'shadow');
           b.classList.add('text-zinc-400');
         });
-        btn.classList.add('bg-amber-500', 'text-black', 'shadow');
+        btn.classList.add('bg-orange-500', 'text-black', 'shadow');
         btn.classList.remove('text-zinc-400');
         syncPlanCards();
       });
