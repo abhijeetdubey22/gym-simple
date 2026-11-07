@@ -74,6 +74,23 @@
       }
     }
   
+    
+    /* Anti-Gravity Physics Floating Animation */
+    @keyframes antigravityFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes antigravityFloatReverse {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(7px); }
+    }
+    .antigravity-float {
+      animation: antigravityFloat 4.5s ease-in-out infinite;
+    }
+    .antigravity-float-delay {
+      animation: antigravityFloatReverse 5.2s ease-in-out infinite;
+    }
+
     /* Custom Glowing Athletic Cursor */
     @media (hover: none) and (pointer: coarse) {
       .custom-cursor-dot, .custom-cursor-ring {
@@ -254,21 +271,22 @@
     </div>
   </section>
 
-  <!-- HERO SECTION (CINEMATIC ATHLETIC REVAMP) -->
-  <section class="relative min-h-[580px] sm:min-h-[660px] flex items-center justify-center pt-8 pb-16 sm:py-24 overflow-hidden border-b border-white/10">
-    <!-- Cinematic Background Image with Gradient Overlay -->
-    <div class="absolute inset-0 z-0">
-      <img src="assets/hero_bg.jpg" alt="Dragon Slayer Gym Floor" class="w-full h-full object-cover object-center scale-105 filter brightness-[0.38] contrast-[1.2]">
-      <!-- Deep Cinematic Gradients for Contrast & Readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/85 to-[#090b0e]/60"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#090b0e]/90 via-transparent to-[#090b0e]/90"></div>
-      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[550px] sm:w-[900px] h-[400px] bg-amber-500/20 blur-[140px] rounded-full pointer-events-none"></div>
+  <!-- HERO SECTION (ANTI-GRAVITY ATHLETIC ARCHITECTURE) -->
+  <section class="relative min-h-[600px] sm:min-h-[680px] flex items-center justify-center pt-8 pb-16 sm:py-24 overflow-hidden border-b border-white/10">
+    <!-- Cinematic High-Contrast Gym Background (Zero Blurry Smoke / Clouds) -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img src="assets/hero_bg.jpg" alt="Dragon Slayer Gym 2 Workout Floor" class="w-full h-full object-cover object-center filter brightness-[0.32] contrast-[1.25]">
+      <!-- Sharp Linear Vignette Gradients for Absolute Legibility -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/80 to-[#090b0e]/50"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#090b0e]/95 via-transparent to-[#090b0e]/95"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,11,14,0.85)_100%)]"></div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center w-full">
+    <div class="max-w-6xl mx-auto px-4 relative z-10 w-full text-center">
       <div class="max-w-3xl mx-auto flex flex-col items-center">
-        <!-- Glowing Location Pill Badge -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/70 backdrop-blur-xl border border-amber-500/40 text-amber-300 text-xs font-bold mb-4 shadow-[0_0_25px_rgba(245,158,11,0.25)]">
+        
+        <!-- Anti-Gravity Floating Status Badge -->
+        <div class="antigravity-float inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-amber-400/40 text-amber-300 text-xs font-bold mb-4 shadow-[0_4px_20px_rgba(245,158,11,0.2)]">
           <span class="flex h-2.5 w-2.5 relative">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
@@ -276,44 +294,66 @@
           <span class="tracking-wider uppercase text-[11px] sm:text-xs">Naigaon East's Biggest 2-Floor Gym</span>
         </div>
 
-        <!-- Bold High-Impact Headline -->
+        <!-- High-Impact Commercial Headline -->
         <h1 class="heading-font text-3xl xs:text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-4">
           FORGE YOUR BODY AT <br>
-          <span class="gold-gradient-text drop-shadow-[0_4px_28px_rgba(245,158,11,0.4)]">DRAGON SLAYER GYM 2</span>
+          <span class="gold-gradient-text drop-shadow-[0_2px_20px_rgba(245,158,11,0.35)]">DRAGON SLAYER GYM 2</span>
         </h1>
 
-        <p class="text-zinc-200 text-xs sm:text-base max-w-2xl leading-relaxed mb-7 font-normal drop-shadow-sm">
-          Naigaon’s premier powerhouse. Heavy bio-mechanic machines, dumbbells up to 50KG, certified coaches, dual AC floors, and exclusive female batches.
+        <!-- Concrete Value Proposition for Gym Owner & Members -->
+        <p class="text-zinc-200 text-xs sm:text-base max-w-2xl leading-relaxed mb-6 font-medium">
+          Naigaon East's premier commercial gym. 2 massive AC floors, heavy dumbbells up to 50KG, certified floor coaches, and dedicated female-only hours.
         </p>
 
-        <!-- Primary Action Buttons with Ambient Shadows -->
+        <!-- 4 Real Anti-Gravity Feature Chips (What the Gym Actually Delivers) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full max-w-2xl mb-8">
+          <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-layer-group text-amber-400"></i>
+            <span>2 AC Floors</span>
+          </div>
+          <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-dumbbell text-amber-400"></i>
+            <span>50KG Weights</span>
+          </div>
+          <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/80 border border-pink-500/30 text-pink-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-venus text-pink-400"></i>
+            <span>Ladies Batch</span>
+          </div>
+          <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-certificate text-amber-400"></i>
+            <span>Certified PT</span>
+          </div>
+        </div>
+
+        <!-- Primary Call To Actions (Zero Gimmicks - Direct WhatsApp Admission) -->
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full sm:w-auto mb-10">
-          <a href="#equipment" class="py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:brightness-110 active:scale-[0.98] text-black font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_35px_rgba(245,158,11,0.4)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] flex items-center justify-center gap-2.5 group">
-            <i class="fa-solid fa-dumbbell text-base transition-transform group-hover:rotate-12"></i>
-            <span>Tap to View Equipment Arsenal</span>
+          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:brightness-110 active:scale-[0.98] text-black font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(245,158,11,0.35)] flex items-center justify-center gap-2.5 group">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Claim Free 1-Day Trial</span>
             <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
           </a>
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-4 px-6 rounded-2xl bg-black/60 hover:bg-black/80 backdrop-blur-xl border border-white/20 hover:border-emerald-500/60 active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all shadow-xl flex items-center justify-center gap-2.5 group">
-            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg group-hover:scale-110 transition-transform"></i>
-            <span>Book Free 1-Day Trial</span>
+          <a href="#equipment" class="py-4 px-6 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/15 hover:border-amber-400/50 active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-dumbbell text-amber-400"></i>
+            <span>View Equipment Arsenal</span>
           </a>
         </div>
 
-        <!-- 3 Floating Glowing Stat Tiles -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-3.5 w-full max-w-xl p-2 sm:p-2.5 rounded-2xl bg-black/60 backdrop-blur-2xl border border-white/10 shadow-2xl">
-          <div class="p-3 sm:p-4 rounded-xl bg-white/[0.03] border border-white/5">
+        <!-- 3 Quick Live Metrics (Clean Inset Borders) -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-3.5 w-full max-w-xl p-2 sm:p-2.5 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-2xl">
+          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5">
             <div class="text-lg sm:text-2xl font-black text-white heading-font">2 FLOORS</div>
             <div class="text-[11px] sm:text-xs text-zinc-400 font-medium mt-0.5">Heavy + Cardio</div>
           </div>
-          <div class="p-3 sm:p-4 rounded-xl bg-amber-500/[0.08] border border-amber-500/25 shadow-[0_0_20px_rgba(245,158,11,0.1)_inset]">
+          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-amber-500/20">
             <div class="text-lg sm:text-2xl font-black text-amber-400 heading-font">50+ UNITS</div>
             <div class="text-[11px] sm:text-xs text-amber-200 font-semibold mt-0.5">Tap for Specs</div>
           </div>
-          <div class="p-3 sm:p-4 rounded-xl bg-emerald-500/[0.08] border border-emerald-500/25 shadow-[0_0_20px_rgba(16,185,129,0.1)_inset]">
+          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-emerald-500/20">
             <div class="text-lg sm:text-2xl font-black text-emerald-400 heading-font">★ 4.9 / 5</div>
             <div class="text-[11px] sm:text-xs text-emerald-200 font-semibold mt-0.5">Naigaon Rating</div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -795,24 +835,37 @@
     </div>
   </section>
 
-  <!-- LOCATION & CONTACT (1-TAP BUTTONS) -->
+  <!-- LOCATION & CONTACT (CLEAN 1-TAP ACTION - NO MAP ZOOM CONFUSION) -->
   <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Visit Us</span>
-        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Dragon Slayer Gym 2</h2>
-        <p class="text-xs text-zinc-400 mt-1">Station Road, Near Railway Platform, Naigaon East, Maharashtra 401208</p>
+        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Gym Location</span>
+        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Visit Dragon Slayer Gym 2</h2>
+        <p class="text-xs text-zinc-400 mt-1 max-w-md mx-auto">Station Road, Near Railway Platform, Naigaon East, Maharashtra 401208</p>
       </div>
 
-      <div class="grid grid-cols-2 gap-2.5 max-w-sm mx-auto mb-6">
-        <a href="tel:917709339959" class="py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition">
-          <i class="fa-solid fa-phone text-amber-400"></i>
-          <span>7709339959</span>
-        </a>
-        <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 rounded-xl bg-amber-500 text-black font-extrabold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm">
-          <i class="fa-solid fa-location-arrow"></i>
-          <span>Google Maps</span>
-        </a>
+      <!-- Clean Direct Action Cards -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 max-w-lg mx-auto border border-white/10 shadow-xl mb-6">
+        <div class="flex items-start gap-3.5 mb-4 pb-4 border-b border-white/10">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm">Naigaon East Station Branch</h3>
+            <p class="text-xs text-zinc-400 mt-0.5">2-minute walk from Naigaon railway station platform. Easy landmark for all members.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <a href="tel:917709339959" class="py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
+            <i class="fa-solid fa-phone text-amber-400"></i>
+            <span>Call: 7709339959</span>
+          </a>
+          <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs flex items-center justify-center gap-2 active:scale-95 transition shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-location-arrow"></i>
+            <span>Open in Google Maps</span>
+          </a>
+        </div>
       </div>
 
       <div class="text-center text-[11px] text-zinc-500 pt-6 border-t border-white/10">
