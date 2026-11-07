@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Branded Favicon (B10 Ship Requirement) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23090b0e'/%3E%3Cpath d='M30 70 L50 25 L70 70 Z' fill='%23f59e0b'/%3E%3C/svg%3E">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Dragon Slayer Gym 2 | Naigaon East</title>
-  <meta name="description" content="Naigaon East's premier 2-floor fitness club. Certified trainers, AC workout floor, heavy weights up to 50kg, and dedicated ladies batch.">
+  <title>Dragon Slayer Gym 2 | Kaneri Square, Naigaon East | Pre Sale 50% OFF</title>
+  <meta name="description" content="Dragon Slayer Gym 2 at Kaneri Square, Sunteck Tivri Phata Road, Naigaon East. Two massive floors: Lower Floor HYROX, CrossFit, Zumba & Yoga; Upper Floor Heavy Strength & Deadlift. Pre Sale Flat 50% OFF at ₹9,000/yr.">
   <meta name="theme-color" content="#090b0e">
 
-  <!-- Tailwind CSS -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dragon Slayer Gym 2 | Kaneri Square, Naigaon East">
+  <meta property="og:description" content="Pre Sale Flat 50% OFF! Two massive AC floors: HYROX, CrossFit, Kickboxing, Heavy Strength & Steam Rooms. Join now at ₹9,000/year.">
+  <meta property="og:image" content="assets/kaneri_square_exterior.jpg">
+
+  <!-- Tailwind CSS (Console Advisory Filtered for Clean Production) -->
+  <script>
+    (function(){
+      const origWarn = console.warn;
+      console.warn = function(...args) {
+        if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com')) {
+          return;
+        }
+        origWarn.apply(console, args);
+      };
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
+  <!-- Font Awesome 6.5.1 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Barlow Condensed & Barlow & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "Dragon Slayer Gym 2",
+    "telephone": "+917709339959",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kaneri Square, Sunteck Tivri Phata Road, Near Ornet Galaxy",
+      "addressLocality": "Naigaon East, Vasai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401208",
+      "addressCountry": "IN"
+    },
+    "priceRange": "INR 1200 - 9000",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "06:00",
+        "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "07:00",
+        "closes": "13:00"
+      }
+    ]
+  }
+  </script>
 
   <style>
-    /* Mobile-first base styles */
     * {
       -webkit-tap-highlight-color: transparent;
       box-sizing: border-box;
@@ -29,9 +81,13 @@
       overflow-x: hidden;
     }
     .heading-font {
-      font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif;
+      font-family: 'Barlow Condensed', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+      text-wrap: balance;
+    }
+    p, span, li, a {
+      text-wrap: pretty;
     }
     .gold-gradient-text {
       background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
@@ -39,21 +95,14 @@
       -webkit-text-fill-color: transparent;
     }
     .glass-card {
-      background: rgba(14, 18, 26, 0.88);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: rgba(16, 20, 28, 0.90);
+      backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
     }
-    .glass-card-glow {
-      box-shadow: 0 0 45px rgba(245, 158, 11, 0.18), 0 10px 35px -10px rgba(0, 0, 0, 0.9);
+    .safe-bottom {
+      padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
     }
-    .bg-grid-pattern {
-      background-image: radial-gradient(rgba(245, 158, 11, 0.09) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 32px 32px;
-      background-position: 0 0, 16px 16px;
-    }
-    /* Hide scrollbars for app-like horizontal scrolls */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -61,11 +110,30 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-    /* Safe padding for modern iPhone / Android gesture bars */
-    .safe-bottom {
-      padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+    @keyframes antigravityFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
     }
-    /* Bottom Sheet Modal Animation on Mobile */
+    @keyframes antigravityFloatReverse {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    .antigravity-float {
+      animation: antigravityFloat 4.5s ease-in-out infinite;
+    }
+    .antigravity-float-delay {
+      animation: antigravityFloatReverse 5.2s ease-in-out infinite;
+    }
+    .reveal-word {
+      transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0.3;
+      color: #71717a;
+    }
+    .reveal-word.active {
+      opacity: 1;
+      color: #ffffff;
+    }
+    /* Mobile Modal Bottom Sheet */
     @media (max-width: 639px) {
       .modal-sheet {
         transform: translateY(100%);
@@ -75,25 +143,6 @@
         transform: translateY(0);
       }
     }
-  
-    
-    /* Anti-Gravity Physics Floating Animation */
-    @keyframes antigravityFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-    @keyframes antigravityFloatReverse {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(7px); }
-    }
-    .antigravity-float {
-      animation: antigravityFloat 4.5s ease-in-out infinite;
-    }
-    .antigravity-float-delay {
-      animation: antigravityFloatReverse 5.2s ease-in-out infinite;
-    }
-
-    /* Custom Glowing Athletic Cursor */
     @media (hover: none) and (pointer: coarse) {
       .custom-cursor-dot, .custom-cursor-ring {
         display: none !important;
@@ -110,773 +159,1340 @@
         transform: translate(-50%, -50%) scale(0.6) !important;
       }
     }
+  
+    /* ==========================================================================
+       INTERACTIVE EQUIPMENT HOTSPOTS & MOBILE CARDS
+       ========================================================================== */
+    .hotspot-wrapper {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 25;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .hotspot-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(9, 11, 14, 0.92);
+      border: 2px solid #f59e0b;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.65);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: 2;
+    }
+    .hotspot-ping-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: #f59e0b;
+      opacity: 0.5;
+      animation: hotspotPingAnim 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes hotspotPingAnim {
+      0% { transform: scale(0.8); opacity: 0.85; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+    .hotspot-wrapper:hover .hotspot-btn,
+    .hotspot-wrapper.active .hotspot-btn {
+      background: #f59e0b;
+      color: #000000;
+      transform: scale(1.15);
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.95);
+    }
+    .hotspot-wrapper.active .hotspot-btn i {
+      transform: rotate(45deg);
+      transition: transform 0.2s ease;
+    }
+
+    /* Desktop Tooltip (Revealed on Hover or Active) */
+    .hotspot-tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: rgba(9, 11, 14, 0.96);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      padding: 6px 12px;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+      z-index: 30;
+    }
+    @media (min-width: 769px) {
+      .hotspot-wrapper:hover .hotspot-tooltip,
+      .hotspot-wrapper.active .hotspot-tooltip {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+      }
+    }
+
+    /* Floating Dock Card Inside Photo (Mobile Optimized) */
+    .hotspot-dock-card {
+      transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
   </style>
 </head>
-<body class="antialiased pb-24 md:pb-0 select-none sm:select-auto bg-grid-pattern">
+<body class="antialiased pb-24 md:pb-0 select-none sm:select-auto">
+  <!-- SKIP TO CONTENT LINK (B10 SHIP REQUIREMENT) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[9999] focus:px-4 focus:py-2.5 focus:bg-amber-500 focus:text-black focus:font-bold focus:rounded-xl focus:shadow-xl focus:outline-none">
+    Skip to main content
+  </a>
 
-  <!-- TOP PROMO BANNER (COMPACT ON MOBILE) -->
-  <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-black text-[11px] sm:text-xs font-bold text-center py-2 px-3 flex items-center justify-center gap-1.5 shadow-sm">
-    <span>🔥 OPENING OFFER: Free 1-Day Trial + 25% OFF Annual Plans!</span>
-    <a href="#plans" class="underline font-extrabold ml-1">Claim &rarr;</a>
+
+  <!-- TOP PRE SALE ANNOUNCEMENT BAR (STRICT ZERO EMOJIS) -->
+  <div class="bg-gradient-to-r from-amber-500 via-orange-600 to-amber-600 text-black text-[11px] sm:text-xs font-black text-center py-2 px-3 flex items-center justify-center gap-2 shadow-lg tracking-wide uppercase">
+    <i class="fa-solid fa-bolt text-black text-xs"></i>
+    <span>PRE SALE OFFER &bull; FLAT 50% OFF &bull; FULL YEAR AT ₹9,000 (REGULAR ₹18,000)!</span>
+    <a href="#presale" class="underline font-extrabold ml-1 hover:text-white transition">Claim 50% OFF &rarr;</a>
   </div>
 
-  <!-- MOBILE-FIRST APP HEADER -->
+  <!-- NAVIGATION -->
   <header class="sticky top-0 z-40 bg-[#090b0e]/95 backdrop-blur-md border-b border-white/10">
     <div class="max-w-6xl mx-auto px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-2.5">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-base sm:text-lg shadow-sm">
+      <a href="#hero" class="flex items-center gap-2.5" aria-label="Dragon Slayer Gym 2 Home">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-base sm:text-lg shadow-sm">
           <i class="fa-solid fa-dragon"></i>
         </div>
         <div>
           <span class="heading-font text-base sm:text-xl font-bold tracking-tight text-white block leading-none">
             DRAGON <span class="text-amber-500">SLAYER</span>
           </span>
-          <span class="text-[11px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 • Naigaon East</span>
+          <span class="text-[10px] text-zinc-400 tracking-wider font-semibold uppercase">Gym 2 &bull; Kaneri Square</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
-        <a href="#stories" class="hover:text-amber-400 transition">Highlights</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300" aria-label="Main Navigation">
+        <a href="#floors" class="hover:text-amber-400 transition">2 Floor Concept</a>
         <a href="#equipment" class="hover:text-amber-400 transition flex items-center gap-1">
           <span>Equipment</span>
-          <span class="text-[11px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">Tap Specs</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold uppercase">8 Units</span>
         </a>
-        <a href="#plans" class="hover:text-amber-400 transition">Plans & Pricing</a>
+        <a href="#presale" class="hover:text-amber-400 transition text-amber-400 font-bold">Pre Sale (₹9,000)</a>
+        <a href="#amenities" class="hover:text-amber-400 transition">Amenities</a>
         <a href="#timings" class="hover:text-amber-400 transition">Timings</a>
-        <a href="#reviews" class="hover:text-amber-400 transition">Reviews</a>
         <a href="#contact" class="hover:text-amber-400 transition">Location</a>
       </nav>
 
-      <!-- Action buttons -->
+      <!-- Action Buttons -->
       <div class="flex items-center gap-2">
-        <a href="tel:917709339959" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-xs font-semibold transition">
+        <a href="tel:7709339959" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-xs font-semibold min-h-[44px] transition" aria-label="Call Dragon Slayer Gym 2">
           <i class="fa-solid fa-phone text-amber-400"></i>
           <span>7709339959</span>
         </a>
-        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20inquire%20about%20Dragon%20Slayer%20Gym%202" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition shadow-md shadow-emerald-900/30">
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20lock%20in%20the%20Pre Sale%20Flat%2050%25%20OFF%20Annual%20Membership%20(Rs%209000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold min-h-[44px] transition shadow-md shadow-emerald-950/40">
           <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span class="hidden xs:inline">WhatsApp</span>
+          <span>Lock Pre Sale</span>
         </a>
-        <!-- Mobile Menu Toggle Button -->
-        <button id="menuToggleBtn" class="md:hidden w-11 h-11 rounded-xl bg-zinc-900/90 border border-white/10 text-zinc-200 hover:text-amber-400 active:scale-95 flex items-center justify-center text-base transition-all shadow-sm" aria-label="Open Menu">
+        <button id="menuToggleStarter" class="md:hidden w-11 h-11 rounded-xl bg-zinc-900/90 border border-white/10 text-zinc-200 hover:text-amber-400 active:scale-95 flex items-center justify-center text-base transition-all shadow-sm" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <!-- MOBILE SLIDE-DOWN DRAWER -->
-    <div id="mobileDrawer" class="hidden md:hidden bg-[#0a0d12]/95 backdrop-blur-2xl border-b border-white/10 px-4 py-3.5 space-y-3 text-xs font-medium shadow-2xl">
-      <div class="grid grid-cols-2 gap-2 pb-2.5 border-b border-white/10">
-        <a href="#stories" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-layer-group"></i></span>
-          <span class="font-semibold">Highlights</span>
+    <!-- Mobile Drawer -->
+    <div id="drawerStarter" class="hidden md:hidden bg-[#0a0d12]/98 border-b border-white/10 px-4 py-3 space-y-2 text-xs">
+      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-white/10">
+        <a href="#floors" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-layer-group text-amber-400"></i> 2 Floor Concept
         </a>
-        <a href="#equipment" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-dumbbell"></i></span>
-          <span class="font-semibold">Equipment</span>
+        <a href="#equipment" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-dumbbell text-amber-400"></i> Equipment
         </a>
-        <a href="#plans" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-indian-rupee-sign"></i></span>
-          <span class="font-semibold">Plans</span>
+        <a href="#presale" class="starter-nav-link p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 font-bold flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-tag text-amber-400"></i> 50% Pre Sale
         </a>
-        <a href="#timings" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-clock"></i></span>
-          <span class="font-semibold">Timings</span>
+        <a href="#amenities" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-hot-tub-person text-amber-400"></i> Steam & Amenities
         </a>
-        <a href="#booking" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-check"></i></span>
-          <span class="font-semibold">Free Trial</span>
+        <a href="#timings" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-clock text-amber-400"></i> Timings
         </a>
-        <a href="#contact" class="mobile-nav-link p-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/5 hover:border-amber-500/30 text-zinc-200 flex items-center gap-2.5 active:scale-[0.98] transition-all">
-          <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-location-dot"></i></span>
-          <span class="font-semibold">Location</span>
+        <a href="#contact" class="starter-nav-link p-2.5 rounded-lg bg-zinc-900 text-zinc-300 flex items-center gap-2 min-h-[44px]">
+          <i class="fa-solid fa-location-dot text-amber-400"></i> Kaneri Square
         </a>
       </div>
       <div class="flex items-center gap-2 pt-1">
-        <a href="tel:917709339959" class="flex-1 py-3 text-center rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
-          <i class="fa-solid fa-phone text-amber-400"></i> Call Gym
+        <a href="tel:7709339959" class="flex-1 py-2 text-center rounded-lg bg-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-1.5 min-h-[44px]">
+          <i class="fa-solid fa-phone text-amber-400"></i> 7709339959
         </a>
-        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 text-center rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 active:scale-[0.98] transition-all">
-          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20claim%20the%20Rs%209000%20Pre Sale%20Offer" target="_blank" class="flex-1 py-2 text-center rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 min-h-[44px]">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Pre Sale
         </a>
       </div>
     </div>
   </header>
 
   <!-- INSTAGRAM-STYLE STORY HIGHLIGHTS (NATIVE MOBILE TOUCH) -->
-  <section id="stories" class="py-3 px-3.5 bg-zinc-950/60 border-b border-white/5 overflow-hidden">
+  <section id="stories" class="py-3 px-3.5 bg-zinc-950/70 border-b border-white/10 overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3.5 overflow-x-auto no-scrollbar py-1 text-center">
-        <!-- Story 1: 2 Floors -->
-        <a href="#facilities" class="flex flex-col items-center gap-1 shrink-0 group">
-          <div class="w-14 h-14 rounded-full p-[2.5px] bg-gradient-to-tr from-amber-500 via-orange-500 to-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+        <!-- Story 1: Pre Sale -->
+        <a href="#presale" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2.5px] bg-gradient-to-tr from-amber-500 via-orange-500 to-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.35)]">
             <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
-              <i class="fa-solid fa-layer-group"></i>
+              <i class="fa-solid fa-fire"></i>
             </div>
           </div>
-          <span class="text-[11px] font-semibold text-zinc-300">2 Floors</span>
+          <span class="text-[11px] font-bold text-amber-400">50% Pre Sale</span>
         </a>
 
-        <!-- Story 2: Machines / Arsenal -->
-        <a href="#equipment" class="flex flex-col items-center gap-1 shrink-0 group">
+        <!-- Story 2: Lower Floor -->
+        <a href="#lower-floor" class="flex flex-col items-center gap-1 shrink-0 group">
           <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-person-running"></i>
+            </div>
+          </div>
+          <span class="text-[11px] font-semibold text-zinc-300">HYROX & Cardio</span>
+        </a>
+
+        <!-- Story 3: Upper Floor -->
+        <a href="#upper-floor" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-orange-500 to-amber-300 shadow-md">
             <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
               <i class="fa-solid fa-dumbbell"></i>
             </div>
           </div>
-          <span class="text-[11px] font-semibold text-zinc-300">Arsenal</span>
+          <span class="text-[11px] font-semibold text-zinc-300">Heavy Strength</span>
         </a>
 
-        <!-- Story 3: Ladies Batch -->
-        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+        <!-- Story 4: Studio -->
+        <a href="#lower-floor" class="flex flex-col items-center gap-1 shrink-0 group">
           <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-pink-500 via-purple-500 to-rose-400 shadow-md">
             <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-pink-400 text-lg group-active:scale-90 transition">
-              <i class="fa-solid fa-venus"></i>
+              <i class="fa-solid fa-music"></i>
             </div>
           </div>
-          <span class="text-[11px] font-semibold text-zinc-300">Ladies Batch</span>
+          <span class="text-[11px] font-semibold text-pink-300">Zumba & Yoga</span>
         </a>
 
-        <!-- Story 4: ₹ Plans -->
-        <a href="#plans" class="flex flex-col items-center gap-1 shrink-0 group">
-          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-emerald-500 via-teal-500 to-amber-400 shadow-md">
-            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-emerald-400 text-lg group-active:scale-90 transition">
-              <i class="fa-solid fa-tag"></i>
-            </div>
-          </div>
-          <span class="text-[11px] font-semibold text-zinc-300">Plans (₹)</span>
-        </a>
-
-        <!-- Story 5: Batches -->
-        <a href="#timings" class="flex flex-col items-center gap-1 shrink-0 group">
+        <!-- Story 5: Steam Rooms -->
+        <a href="#amenities" class="flex flex-col items-center gap-1 shrink-0 group">
           <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-blue-500 via-indigo-500 to-amber-400 shadow-md">
             <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-blue-400 text-lg group-active:scale-90 transition">
-              <i class="fa-solid fa-clock"></i>
+              <i class="fa-solid fa-bath"></i>
             </div>
           </div>
-          <span class="text-[11px] font-semibold text-zinc-300">Timings</span>
+          <span class="text-[11px] font-semibold text-blue-300">Steam & Locker</span>
         </a>
 
-        <!-- Story 6: Location -->
-        <a href="#contact" class="flex flex-col items-center gap-1 shrink-0 group">
+        <!-- Story 6: Equipment Arsenal -->
+        <a href="#equipment" class="flex flex-col items-center gap-1 shrink-0 group">
           <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 to-red-600 shadow-md">
             <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-amber-400 text-lg group-active:scale-90 transition">
-              <i class="fa-solid fa-map-pin"></i>
+              <i class="fa-solid fa-gear"></i>
             </div>
           </div>
-          <span class="text-[11px] font-semibold text-zinc-300">Location</span>
+          <span class="text-[11px] font-semibold text-zinc-300">Equipment</span>
+        </a>
+
+        <!-- Story 7: Kaneri Square Location -->
+        <a href="#contact" class="flex flex-col items-center gap-1 shrink-0 group">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md">
+            <div class="w-full h-full rounded-full bg-[#12161d] flex items-center justify-center text-emerald-400 text-lg group-active:scale-90 transition">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <span class="text-[11px] font-semibold text-zinc-300">Kaneri Square</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- HERO SECTION (ANTI-GRAVITY ATHLETIC ARCHITECTURE) -->
-  <section class="relative min-h-[600px] sm:min-h-[680px] flex items-center justify-center pt-8 pb-16 sm:py-24 overflow-hidden border-b border-white/10">
-    <!-- Cinematic High-Contrast Gym Background (Zero Blurry Smoke / Clouds) -->
-    <div class="absolute inset-0 z-0 overflow-hidden">
-      <img src="assets/hero.jpg" onerror="this.onerror=null; this.src='assets/hero_bg.jpg';" alt="Dragon Slayer Gym 2 Workout Floor" class="w-full h-full object-cover object-center filter brightness-[0.35] contrast-[1.25]">
-      <!-- Sharp Linear Vignette Gradients for Absolute Legibility -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/80 to-[#090b0e]/50"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#090b0e]/95 via-transparent to-[#090b0e]/95"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,11,14,0.85)_100%)]"></div>
-    </div>
+  <!-- MAIN WRAPPER -->
+  <main id="main-content">
 
-    <div class="max-w-6xl mx-auto px-4 relative z-10 w-full text-center">
-      <div class="max-w-3xl mx-auto flex flex-col items-center">
+    <!-- HERO SECTION WITH REAL KANERI SQUARE EXTERIOR -->
+    <section id="hero" class="relative min-h-[620px] sm:min-h-[700px] flex items-center justify-center pt-8 pb-16 sm:py-24 overflow-hidden border-b border-white/10">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <img src="assets/kaneri_square_exterior.jpg" alt="Dragon Slayer Gym 2 Kaneri Square" class="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.20]">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/75 to-[#090b0e]/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#090b0e]/95 via-transparent to-[#090b0e]/95"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,11,14,0.85)_100%)]"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 relative z-10 w-full text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          
+          <!-- Anti-Gravity Floating Pre Sale Badge -->
+          <div class="antigravity-float inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 backdrop-blur-xl border border-amber-400/50 text-amber-300 text-xs font-bold mb-4 shadow-[0_4px_25px_rgba(245,158,11,0.25)]">
+            <span class="flex h-2.5 w-2.5 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="tracking-wider uppercase text-[11px] sm:text-xs">PRE SALE LIVE &bull; FLAT 50% OFF &bull; KANERI SQUARE</span>
+          </div>
+
+          <h1 class="heading-font text-3xl xs:text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
+            DRAGON SLAYER <span class="gold-gradient-text">GYM 2</span>
+          </h1>
+
+          <p class="heading-font text-base sm:text-2xl text-amber-400 font-extrabold tracking-wide uppercase mb-3">
+            STRENGTH. DISCIPLINE. VICTORY. STRONGER EVERY DAY.
+          </p>
+
+          <p class="text-zinc-200 text-xs sm:text-base max-w-[680px] leading-relaxed mb-6 font-medium">
+            Kaneri Square, Sunteck Tivri Phata Road, Naigaon East. Two massive floors uniting Strength, Cardio, Functional Fitness, HYROX, CrossFit, Kickboxing, Zumba, Yoga, and luxury recovery Steam Rooms under one roof.
+          </p>
+
+          <!-- 4 Feature Chips (Anti-Gravity Floating) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full max-w-2xl mb-8">
+            <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/90 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm min-h-[44px]">
+              <i class="fa-solid fa-building text-amber-400"></i>
+              <span>Kaneri Square</span>
+            </div>
+            <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/90 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm min-h-[44px]">
+              <i class="fa-solid fa-person-running text-amber-400"></i>
+              <span>HYROX Zone</span>
+            </div>
+            <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/90 border border-amber-500/40 text-amber-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm min-h-[44px]">
+              <i class="fa-solid fa-dumbbell text-amber-400"></i>
+              <span>50KG Strength</span>
+            </div>
+            <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/90 border border-blue-500/40 text-blue-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm min-h-[44px]">
+              <i class="fa-solid fa-bath text-blue-400"></i>
+              <span>Steam Rooms</span>
+            </div>
+          </div>
+
+          <!-- Hero CTA Actions -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full sm:w-auto mb-8">
+            <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20claim%20the%20Flat%2050%25%20OFF%20Annual%20Pre Sale%20(Rs%209000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="py-4 px-7 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 hover:brightness-110 active:scale-[0.98] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(16,185,129,0.35)] flex items-center justify-center gap-2.5 min-h-[44px] group">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Lock Pre Sale Offer (₹9,000)</span>
+              <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="tel:7709339959" class="py-4 px-6 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/15 hover:border-amber-400/50 active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5 min-h-[44px]">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>Call: 7709339959 / 8767844769</span>
+            </a>
+          </div>
+
+          <!-- 3 Quick Trust Badges -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-3.5 w-full max-w-xl p-2 sm:p-2.5 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-2xl">
+            <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-amber-500/20">
+              <div class="text-lg sm:text-2xl font-black text-amber-400 heading-font">FLAT 50%</div>
+              <div class="text-[11px] sm:text-xs text-amber-200 font-semibold mt-0.5">Pre Sale Deal</div>
+            </div>
+            <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5">
+              <div class="text-lg sm:text-2xl font-black text-white heading-font">2 FLOORS</div>
+              <div class="text-[11px] sm:text-xs text-zinc-400 font-medium mt-0.5">Performance + Strength</div>
+            </div>
+            <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-emerald-500/20">
+              <div class="text-lg sm:text-2xl font-black text-emerald-400 heading-font flex items-center justify-center gap-1">
+                <i class="fa-solid fa-shield-halved text-amber-400 text-sm"></i>
+                <span>₹9,000</span>
+              </div>
+              <div class="text-[11px] sm:text-xs text-emerald-200 font-semibold mt-0.5">1 Year Pass</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRE SALE OFFER SHOWCASE SECTION -->
+    <section id="presale" class="py-16 bg-gradient-to-b from-[#090b0e] via-zinc-950 to-[#090b0e] border-b border-white/10 relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4">
         
-        <!-- Anti-Gravity Floating Status Badge -->
-        <div class="antigravity-float inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-amber-400/40 text-amber-300 text-xs font-bold mb-4 shadow-[0_4px_20px_rgba(245,158,11,0.2)]">
-          <span class="flex h-2.5 w-2.5 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-amber-500/80 shadow-[0_0_50px_rgba(245,158,11,0.25)] relative overflow-hidden text-center">
+          <div class="absolute top-0 right-0 bg-amber-500 text-black font-extrabold text-[11px] sm:text-xs uppercase tracking-wider py-1.5 px-5 rounded-bl-2xl shadow-md flex items-center gap-1.5">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <span>Limited Pre Sale Offer &bull; Limited Slots Only</span>
+          </div>
+
+          <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2 mt-4 sm:mt-0">Pre Sale Launch Event</span>
+          <h2 class="heading-font text-3xl sm:text-5xl font-extrabold text-white mb-2">
+            PRE SALE OFFER &bull; <span class="gold-gradient-text">FLAT 50% OFF!</span>
+          </h2>
+          <p class="text-zinc-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-6 font-medium">
+            Lock in your 1 year membership at just ₹9,000 and be part of Dragon Slayer Gym 2 from the very beginning. Full access to both floors, HYROX, CrossFit, Zumba, Yoga, and steam rooms included.
+          </p>
+
+          <!-- Pricing Pill Box -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 my-6 p-4 rounded-2xl bg-black/60 border border-white/10 max-w-lg mx-auto">
+            <div>
+              <span class="text-zinc-400 text-xs block uppercase font-semibold">Regular Price</span>
+              <span class="text-xl sm:text-2xl font-bold text-zinc-500 line-through">₹18,000</span>
+            </div>
+            <div class="hidden sm:block w-px h-12 bg-white/10"></div>
+            <div>
+              <span class="text-amber-400 text-xs block uppercase font-extrabold">Pre Sale Price (50% OFF)</span>
+              <span class="text-3xl sm:text-5xl font-black text-amber-400 heading-font">₹9,000</span>
+              <span class="text-xs text-zinc-400 block font-medium">Full 1 Year Membership (Just ₹750/mo)</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+            <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20lock%20the%20Rs%209000%20Pre Sale%20Annual%20Membership%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="w-full sm:w-auto flex-1 py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:brightness-110 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/50 min-h-[44px]">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Claim ₹9,000 Pre Sale on WhatsApp</span>
+            </a>
+            <a href="tel:7709339959" class="w-full sm:w-auto py-4 px-6 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 text-white font-bold text-xs flex items-center justify-center gap-2 border border-zinc-600 min-h-[44px] transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>7709339959</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MANDATORY B11 TAGLINE REVEAL SECTION -->
+    <section class="py-16 sm:py-20 bg-black/60 border-b border-white/5 relative overflow-hidden" id="taglineStarter">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest block mb-3">Our Core Philosophy</span>
+        <h2 class="heading-font text-2xl sm:text-4xl md:text-5xl font-extrabold text-zinc-500 leading-snug tracking-tight max-w-3xl mx-auto">
+          <span class="reveal-word">More</span>
+          <span class="reveal-word">than</span>
+          <span class="reveal-word">just</span>
+          <span class="reveal-word">a</span>
+          <span class="reveal-word">gym.</span>
+          <span class="reveal-word">Dragon</span>
+          <span class="reveal-word">Slayer</span>
+          <span class="reveal-word">brings</span>
+          <span class="reveal-word">strength,</span>
+          <span class="reveal-word">HYROX,</span>
+          <span class="reveal-word">CrossFit,</span>
+          <span class="reveal-word">Zumba,</span>
+          <span class="reveal-word">Yoga,</span>
+          <span class="reveal-word">and</span>
+          <span class="reveal-word">recovery</span>
+          <span class="reveal-word">together.</span>
+        </h2>
+        <div class="mt-6 flex items-center justify-center gap-2 text-xs text-zinc-400">
+          <i class="fa-solid fa-shield-halved text-amber-400"></i>
+          <span>Kaneri Square &bull; Naigaon East premier 2 floor athletic destination.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO-FLOOR CONCEPT & FACILITIES (WITH REAL RENDERS) -->
+    <section id="floors" class="py-16 bg-zinc-950/80 border-b border-white/5">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Architectural Blueprint</span>
+          <h2 class="heading-font text-2xl sm:text-4xl font-bold text-white mt-1">Floor Concept & Facilities</h2>
+          <p class="text-xs sm:text-sm text-zinc-400 mt-1">Two purpose built floors separating high intensity functional conditioning from heavy strength training.</p>
+        </div>
+
+        <div class="space-y-12">
+          
+          <!-- FLOOR 1: LOWER FLOOR -->
+          <div id="lower-floor" class="glass-card rounded-3xl overflow-hidden border border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <!-- Image Side with Interactive Mobile Hotspots -->
+            <div class="lg:col-span-7 relative min-h-[320px] sm:min-h-[420px] bg-zinc-900 overflow-hidden group/photo" id="lowerFloorPhotoContainer">
+              <img src="assets/lower_floor_hyrox_zumba.jpg" alt="Lower Floor HYROX, Cardio and Zumba" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/80 pointer-events-none"></div>
+              
+              <!-- Badges -->
+              <div class="absolute top-3.5 left-3.5 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+                <i class="fa-solid fa-layer-group text-amber-400"></i>
+                <span>Lower Floor</span>
+              </div>
+              <div class="absolute top-3.5 right-3.5 bg-black/85 backdrop-blur-md px-2.5 py-1 rounded-xl border border-amber-500/30 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 z-10 shadow-lg">
+                <i class="fa-solid fa-hand-pointer text-amber-400 animate-pulse text-[10px]"></i>
+                <span>Tap + to Inspect</span>
+              </div>
+
+              <!-- Interactive Hotspots -->
+              <div class="hotspot-wrapper" style="top: 76%; left: 50%;"
+                   data-title="HYROX Official 40M Turf Track"
+                   data-category="Conditioning & Sled"
+                   data-desc="Shock-absorbing competition turf engineered for heavy sled push/pull, walking lunges, and sprint intervals."
+                   data-equip-id="sled_track">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect HYROX Sled Track">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Conditioning & Sled</div>
+                  <div class="font-bold text-white text-xs">HYROX Official 40M Turf Track</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 54%; left: 16%;"
+                   data-title="Motorless Curved Slat Treadmills"
+                   data-category="Cardio Suite"
+                   data-desc="Human-powered slatted curved belt demanding 30% more caloric burn with natural joint-cushioned stride."
+                   data-equip-id="slat_treadmill">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Slat Treadmills">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Cardio Suite</div>
+                  <div class="font-bold text-white text-xs">Motorless Curved Slat Treadmill</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 40%; left: 86%;"
+                   data-title="Zumba & Mind-Body Dance Studio"
+                   data-category="Dance & Aerobics"
+                   data-desc="Floating shock-absorbent hardwood dance floor with surrounding acoustic sound and ambient halo lighting."
+                   data-equip-id="zumba_studio">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Zumba Studio">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Dance & Aerobics</div>
+                  <div class="font-bold text-white text-xs">Zumba & Dance Studio</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 48%; left: 36%;"
+                   data-title="CrossFit & Functional Rig Zone"
+                   data-category="Functional Training"
+                   data-desc="Heavy structural steel rig for gymnastics rings, kipping pull-ups, wall ball targets, and rope climbs."
+                   data-equip-id="power_rack">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Functional Rig">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Functional Training</div>
+                  <div class="font-bold text-white text-xs">CrossFit & Functional Rig</div>
+                </div>
+              </div>
+
+              <!-- Mobile Docked Equipment Info Card -->
+              <div class="hotspot-dock-card absolute bottom-3 left-3 right-3 z-30 bg-black/95 backdrop-blur-xl border border-amber-500/40 rounded-2xl p-3 sm:p-3.5 shadow-2xl opacity-0 translate-y-3 pointer-events-none">
+                <div class="flex items-start justify-between gap-2">
+                  <div class="pr-2">
+                    <span class="hotspot-card-category inline-block text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 mb-1">Equipment Specs</span>
+                    <h4 class="hotspot-card-title font-bold text-white text-xs sm:text-sm">HYROX Official 40M Turf Track</h4>
+                    <p class="hotspot-card-desc text-[11px] sm:text-xs text-zinc-300 mt-0.5 leading-snug">Shock-absorbing competition turf for heavy sled push/pull.</p>
+                  </div>
+                  <button class="hotspot-card-close w-7 h-7 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center shrink-0 transition" aria-label="Close card">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                  </button>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between">
+                  <span class="text-[11px] text-amber-400 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-bolt text-[10px]"></i> Floor Blueprint
+                  </span>
+                  <button class="hotspot-card-action text-xs font-bold text-black bg-amber-500 hover:bg-amber-400 px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-md active:scale-95 transition">
+                    <span>Inspect Specs</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+              <div>
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block">Performance & Fitness Zone</span>
+                <h3 class="heading-font text-xl sm:text-3xl font-extrabold text-white mt-1 mb-4">LOWER FLOOR</h3>
+                
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5 text-xs text-zinc-300">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-desktop text-[11px]"></i></span>
+                    <span>Front Desk & Reception</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-door-open text-[11px]"></i></span>
+                    <span>Consulting Room</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-person-running text-[11px]"></i></span>
+                    <span>Cardio Zone (Treadmills & Slat Bikes)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center shrink-0"><i class="fa-solid fa-stopwatch text-[11px]"></i></span>
+                    <strong class="text-amber-300">HYROX Official Training Zone</strong>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-dumbbell text-[11px]"></i></span>
+                    <span>CrossFit & Functional Training Arena</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-hand-fist text-[11px]"></i></span>
+                    <span>Kickboxing Ring Area</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-pink-500/20 text-pink-300 border border-pink-500/30 flex items-center justify-center shrink-0"><i class="fa-solid fa-music text-[11px]"></i></span>
+                    <strong class="text-pink-300">Zumba & Dance Studio</strong>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-pink-500/20 text-pink-300 border border-pink-500/30 flex items-center justify-center shrink-0"><i class="fa-solid fa-spa text-[11px]"></i></span>
+                    <span>Yoga & Mind and Body Studio</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-mug-hot text-[11px]"></i></span>
+                    <span>Healthy Café & Protein Bar</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-pink-500/20 text-pink-300 border border-pink-500/30 flex items-center justify-center shrink-0"><i class="fa-solid fa-hot-tub-person text-[11px]"></i></span>
+                    <strong class="text-pink-300">Women’s Dedicated Steam Room</strong>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20know%20more%20about%20the%20Lower%20Floor%20HYROX%20and%20Zumba%20Zone" target="_blank" class="mt-6 py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 min-h-[44px] transition">
+                <span>Inquire About Lower Floor Programs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- FLOOR 2: UPPER FLOOR -->
+          <div id="upper-floor" class="glass-card rounded-3xl overflow-hidden border border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <!-- Content Side -->
+            <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between order-2 lg:order-1">
+              <div>
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block">Strength & Weight Training Zone</span>
+                <h3 class="heading-font text-xl sm:text-3xl font-extrabold text-white mt-1 mb-4">UPPER FLOOR</h3>
+                
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5 text-xs text-zinc-300">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-dumbbell text-[11px]"></i></span>
+                    <span>Complete Heavy Strength Training Equipment</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center shrink-0"><i class="fa-solid fa-weight-hanging text-[11px]"></i></span>
+                    <strong class="text-amber-300">Free Weights & Dumbbells up to 50KG</strong>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-gears text-[11px]"></i></span>
+                    <span>Plate Loaded Isolateral Machines</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-link text-[11px]"></i></span>
+                    <span>Multi-Station Cable Towers</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-shield text-[11px]"></i></span>
+                    <span>Chest, Back, Shoulder & Arm Systems</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center shrink-0"><i class="fa-solid fa-bars text-[11px]"></i></span>
+                    <strong class="text-amber-300">Dedicated Deadlift & Squat Platforms</strong>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-star text-[11px]"></i></span>
+                    <span>Premium Imported Equipment Throughout</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center justify-center shrink-0"><i class="fa-solid fa-hot-tub-person text-[11px]"></i></span>
+                    <strong class="text-blue-300">Men’s Dedicated Steam Room</strong>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-zinc-800 text-zinc-300 flex items-center justify-center shrink-0"><i class="fa-solid fa-shower text-[11px]"></i></span>
+                    <span>Men’s Changing & Locker Room</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-6 h-6 rounded-md bg-zinc-800 text-zinc-300 flex items-center justify-center shrink-0"><i class="fa-solid fa-user-tie text-[11px]"></i></span>
+                    <span>Staff & Coach Station</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20know%20more%20about%20the%20Upper%20Floor%20Strength%20Zone" target="_blank" class="mt-6 py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 min-h-[44px] transition">
+                <span>Inquire About Strength Zone</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Image Side with Interactive Mobile Hotspots -->
+            <div class="lg:col-span-7 relative min-h-[320px] sm:min-h-[420px] bg-zinc-900 order-1 lg:order-2 overflow-hidden group/photo" id="upperFloorPhotoContainer">
+              <img src="assets/upper_floor_strength.jpg" alt="Upper Floor Heavy Strength and Weights" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/80 pointer-events-none"></div>
+              
+              <!-- Badges -->
+              <div class="absolute top-3.5 left-3.5 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+                <i class="fa-solid fa-dumbbell text-amber-400"></i>
+                <span>Upper Floor</span>
+              </div>
+              <div class="absolute top-3.5 right-3.5 bg-black/85 backdrop-blur-md px-2.5 py-1 rounded-xl border border-amber-500/30 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 z-10 shadow-lg">
+                <i class="fa-solid fa-hand-pointer text-amber-400 animate-pulse text-[10px]"></i>
+                <span>Tap + to Inspect</span>
+              </div>
+
+              <!-- Interactive Hotspots -->
+              <div class="hotspot-wrapper" style="top: 68%; left: 15%;"
+                   data-title="Plate-Loaded Leg Curl & Extension"
+                   data-category="Legs & Hamstrings"
+                   data-desc="Isolateral pivoting plate-loaded dual units delivering continuous tension without knee shearing stress."
+                   data-equip-id="hack_squat">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Leg Curl Machine">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Legs & Hamstrings</div>
+                  <div class="font-bold text-white text-xs">Plate-Loaded Leg Curl & Extension</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 60%; left: 86%;"
+                   data-title="Iso-Lateral Incline Chest Press"
+                   data-category="Chest & Arms"
+                   data-desc="Independent converging arms mimicking optimal dumbbell trajectory for maximum clavicular chest hypertrophy."
+                   data-equip-id="incline_press">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Incline Chest Press">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Chest & Arms</div>
+                  <div class="font-bold text-white text-xs">Iso-Lateral Incline Chest Press</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 48%; left: 60%;"
+                   data-title="8-Stack Multi-Jungle Cable Suite"
+                   data-category="Cables & Functional"
+                   data-desc="Aircraft-grade steel cables, dual adjustable swivel pulleys, lat pulldowns, and tricep pushdown stations."
+                   data-equip-id="cable_crossover">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Cable Suite">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Cables & Functional</div>
+                  <div class="font-bold text-white text-xs">8-Stack Multi-Jungle Cable Suite</div>
+                </div>
+              </div>
+
+              <div class="hotspot-wrapper" style="top: 50%; left: 22%;"
+                   data-title="Heavy Pro Dumbbell Racks (Up to 50KG)"
+                   data-category="Free Weights"
+                   data-desc="Solid urethane encased dumbbells ranging from 2KG up to 50KG on heavy vibration-absorbing rubberized steel racks."
+                   data-equip-id="dumbbells">
+                <div class="hotspot-ping-ring"></div>
+                <button class="hotspot-btn" aria-label="Inspect Dumbbell Arsenal">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="hotspot-tooltip">
+                  <div class="text-[10px] text-amber-400 font-bold uppercase">Free Weights</div>
+                  <div class="font-bold text-white text-xs">Pro Dumbbells Up to 50KG</div>
+                </div>
+              </div>
+
+              <!-- Mobile Docked Equipment Info Card -->
+              <div class="hotspot-dock-card absolute bottom-3 left-3 right-3 z-30 bg-black/95 backdrop-blur-xl border border-amber-500/40 rounded-2xl p-3 sm:p-3.5 shadow-2xl opacity-0 translate-y-3 pointer-events-none">
+                <div class="flex items-start justify-between gap-2">
+                  <div class="pr-2">
+                    <span class="hotspot-card-category inline-block text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 mb-1">Equipment Specs</span>
+                    <h4 class="hotspot-card-title font-bold text-white text-xs sm:text-sm">Iso-Lateral Incline Chest Press</h4>
+                    <p class="hotspot-card-desc text-[11px] sm:text-xs text-zinc-300 mt-0.5 leading-snug">Independent converging arms with 350KG capacity.</p>
+                  </div>
+                  <button class="hotspot-card-close w-7 h-7 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center shrink-0 transition" aria-label="Close card">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                  </button>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between">
+                  <span class="text-[11px] text-amber-400 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-bolt text-[10px]"></i> Floor Blueprint
+                  </span>
+                  <button class="hotspot-card-action text-xs font-bold text-black bg-amber-500 hover:bg-amber-400 px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-md active:scale-95 transition">
+                    <span>Inspect Specs</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FACILITIES & AMENITIES SECTION -->
+    <section id="amenities" class="py-16 bg-black/70 border-b border-white/5">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Luxury & Recovery</span>
+          <h2 class="heading-font text-2xl sm:text-4xl font-bold text-white mt-1">Facilities & Amenities</h2>
+          <p class="text-xs sm:text-sm text-zinc-400 mt-1">Premium recovery and lifestyle amenities designed for comfort and privacy.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-lock"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Personal Lockers</h3>
+            <p class="text-[11px] text-zinc-400 mt-0.5">Secure storage</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-shower"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Shower Facilities</h3>
+            <p class="text-[11px] text-zinc-400 mt-0.5">Hot & high pressure</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-restroom"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Spacious Washrooms</h3>
+            <p class="text-[11px] text-zinc-400 mt-0.5">Hygienic & clean</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-shirt"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Changing Area</h3>
+            <p class="text-[11px] text-zinc-400 mt-0.5">Separate for men & women</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-bath"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Steam Rooms</h3>
+            <p class="text-[11px] text-blue-300 mt-0.5">Separate Men's & Women's</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 text-center">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mx-auto mb-2"><i class="fa-solid fa-couch"></i></div>
+            <h3 class="font-bold text-white text-xs sm:text-sm">Relaxed Lounge</h3>
+            <p class="text-[11px] text-zinc-400 mt-0.5">Seating & café area</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- INTERACTIVE FLOOR & SKYLINE HARDWARE VISUALIZER -->
+    <section class="py-12 bg-black border-b border-white/5" id="interactive-visualizer">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center sm:text-left mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+              <i class="fa-solid fa-crosshairs text-amber-400"></i> Interactive Floor Blueprint
+            </span>
+            <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-1">Explore Hardware On-Floor</h2>
+            <p class="text-xs text-zinc-400 mt-1">Tap any glowing + hotspot on the photo to reveal commercial specifications.</p>
+          </div>
+          
+          <!-- View Switch Tabs -->
+          <div class="flex items-center gap-1.5 bg-zinc-900/90 p-1.5 rounded-2xl border border-white/10 self-center sm:self-auto overflow-x-auto no-scrollbar max-w-full" id="visualizerTabs">
+            <button class="vis-tab-btn active px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-black shadow-md transition" data-view="skyline">
+              <i class="fa-solid fa-sun text-[10px]"></i> Skyline Rooftop
+            </button>
+            <button class="vis-tab-btn px-3 py-1.5 rounded-xl text-xs font-bold text-zinc-300 hover:text-white transition" data-view="lower">
+              <i class="fa-solid fa-layer-group text-[10px]"></i> Lower Floor
+            </button>
+            <button class="vis-tab-btn px-3 py-1.5 rounded-xl text-xs font-bold text-zinc-300 hover:text-white transition" data-view="upper">
+              <i class="fa-solid fa-dumbbell text-[10px]"></i> Upper Floor
+            </button>
+          </div>
+        </div>
+
+        <!-- Visualizer Frame Container -->
+        <div class="glass-card rounded-3xl overflow-hidden border border-white/10 relative min-h-[340px] sm:min-h-[460px] bg-zinc-950 group/vis" id="mainVisualizerContainer">
+          
+          <!-- View 1: Skyline Rooftop Arena (Matching User Screenshot) -->
+          <div class="vis-pane active absolute inset-0 transition-opacity duration-300" id="pane-skyline">
+            <img src="assets/outdoor_gym.jpg" alt="Skyline Rooftop Arena" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+              <i class="fa-solid fa-sun text-amber-400"></i>
+              <span>Skyline Rooftop Arena</span>
+            </div>
+            <div class="absolute top-4 right-4 bg-black/85 backdrop-blur-md px-2.5 py-1 rounded-xl border border-amber-500/30 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 z-10 shadow-lg">
+              <i class="fa-solid fa-hand-pointer text-amber-400 animate-pulse text-[10px]"></i>
+              <span>Tap + for Info</span>
+            </div>
+
+            <!-- Skyline Hotspots (Exact matches to user screenshot) -->
+            <div class="hotspot-wrapper" style="top: 45%; left: 75%;"
+                 data-title="Custom Rig with Flying Monkey Bars & Rings"
+                 data-category="Calisthenics & Rigs"
+                 data-desc="Heavy-duty outdoor calisthenics rig featuring multi-level pull up bars, flying monkey bars, and Olympic gymnastics rings."
+                 data-equip-id="calisthenics_rig">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn" aria-label="Inspect Custom Rig">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Calisthenics & Rigs</div>
+                <div class="font-bold text-white text-xs">Custom Rig with Flying Monkey Bars & Rings</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 65%; left: 12%;"
+                 data-title="All-Weather Rubber Coated Dumbbell Racks"
+                 data-category="Free Weights"
+                 data-desc="Commercial all-weather rubber hex dumbbells from 2.5KG to 40KG on heavy dual-tier angled steel racks."
+                 data-equip-id="outdoor_dumbbells">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn" aria-label="Inspect Outdoor Dumbbells">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Free Weights</div>
+                <div class="font-bold text-white text-xs">All-Weather Rubber Coated Dumbbell Racks</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 55%; left: 50%;"
+                 data-title="Heavy Battle Ropes & Sled Prowler Track"
+                 data-category="Conditioning Track"
+                 data-desc="50-foot 50mm poly-dacron battle ropes combined with dual-handle prowler sled on outdoor sprint turf."
+                 data-equip-id="battle_ropes">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn" aria-label="Inspect Battle Ropes Track">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Conditioning Track</div>
+                <div class="font-bold text-white text-xs">Heavy Battle Ropes & Sled Prowler Track</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2: Lower Floor View -->
+          <div class="vis-pane hidden opacity-0 absolute inset-0 transition-opacity duration-300" id="pane-lower">
+            <img src="assets/lower_floor_hyrox_zumba.jpg" alt="Lower Floor HYROX and Zumba" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+              <i class="fa-solid fa-layer-group text-amber-400"></i>
+              <span>Lower Floor: HYROX & Conditioning</span>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 76%; left: 50%;"
+                 data-title="HYROX Official 40M Turf Track"
+                 data-category="Conditioning & Sled"
+                 data-desc="Official competition turf for heavy sled push/pull, walking lunges, and sprint intervals."
+                 data-equip-id="sled_track">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Conditioning & Sled</div>
+                <div class="font-bold text-white text-xs">HYROX Official 40M Turf Track</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 54%; left: 16%;"
+                 data-title="Motorless Curved Slat Treadmills"
+                 data-category="Cardio Suite"
+                 data-desc="Human-powered slatted curved belt demanding 30% more caloric burn with natural joint-cushioned stride."
+                 data-equip-id="slat_treadmill">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Cardio Suite</div>
+                <div class="font-bold text-white text-xs">Motorless Curved Slat Treadmill</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 40%; left: 86%;"
+                 data-title="Zumba & Mind-Body Dance Studio"
+                 data-category="Dance & Aerobics"
+                 data-desc="Floating hardwood dance floor with surrounding acoustic sound and ambient halo lighting."
+                 data-equip-id="zumba_studio">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Dance & Aerobics</div>
+                <div class="font-bold text-white text-xs">Zumba & Dance Studio</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 3: Upper Floor View -->
+          <div class="vis-pane hidden opacity-0 absolute inset-0 transition-opacity duration-300" id="pane-upper">
+            <img src="assets/upper_floor_strength.jpg" alt="Upper Floor Heavy Strength" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+              <i class="fa-solid fa-dumbbell text-amber-400"></i>
+              <span>Upper Floor: Strength & Iron</span>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 68%; left: 15%;"
+                 data-title="Plate-Loaded Leg Curl & Extension"
+                 data-category="Legs & Hamstrings"
+                 data-desc="Isolateral pivoting plate-loaded dual units delivering continuous tension without knee shearing stress."
+                 data-equip-id="hack_squat">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Legs & Hamstrings</div>
+                <div class="font-bold text-white text-xs">Plate-Loaded Leg Curl & Extension</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 60%; left: 86%;"
+                 data-title="Iso-Lateral Incline Chest Press"
+                 data-category="Chest & Arms"
+                 data-desc="Independent converging arms mimicking optimal dumbbell trajectory for maximum clavicular chest hypertrophy."
+                 data-equip-id="incline_press">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Chest & Arms</div>
+                <div class="font-bold text-white text-xs">Iso-Lateral Incline Chest Press</div>
+              </div>
+            </div>
+
+            <div class="hotspot-wrapper" style="top: 48%; left: 60%;"
+                 data-title="8-Stack Multi-Jungle Cable Suite"
+                 data-category="Cables & Functional"
+                 data-desc="Aircraft-grade steel cables, dual adjustable swivel pulleys, lat pulldowns, and tricep pushdown stations."
+                 data-equip-id="cable_crossover">
+              <div class="hotspot-ping-ring"></div>
+              <button class="hotspot-btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="hotspot-tooltip">
+                <div class="text-[10px] text-amber-400 font-bold uppercase">Cables & Functional</div>
+                <div class="font-bold text-white text-xs">8-Stack Multi-Jungle Cable Suite</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shared Mobile Docked Equipment Info Card -->
+          <div class="hotspot-dock-card absolute bottom-3 left-3 right-3 z-30 bg-black/95 backdrop-blur-xl border border-amber-500/40 rounded-2xl p-3.5 shadow-2xl opacity-0 translate-y-3 pointer-events-none">
+            <div class="flex items-start justify-between gap-2">
+              <div class="pr-2">
+                <span class="hotspot-card-category inline-block text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 mb-1">Equipment Specs</span>
+                <h4 class="hotspot-card-title font-bold text-white text-xs sm:text-sm">Tap any + hotspot to inspect</h4>
+                <p class="hotspot-card-desc text-[11px] sm:text-xs text-zinc-300 mt-0.5 leading-snug">Explore commercial hardware across this floor.</p>
+              </div>
+              <button class="hotspot-card-close w-7 h-7 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center shrink-0 transition" aria-label="Close card">
+                <i class="fa-solid fa-xmark text-xs"></i>
+              </button>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between">
+              <span class="text-[11px] text-amber-400 font-semibold flex items-center gap-1">
+                <i class="fa-solid fa-bolt text-[10px]"></i> Floor Blueprint
+              </span>
+              <button class="hotspot-card-action text-xs font-bold text-black bg-amber-500 hover:bg-amber-400 px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-md active:scale-95 transition">
+                <span>Inspect Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EQUIPMENT ARSENAL (INTERACTIVE WITH MODAL) -->
+    <section id="equipment" class="py-16 bg-zinc-950/80 border-b border-white/5">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center sm:text-left mb-5">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+            <i class="fa-solid fa-bolt"></i> Interactive Showcase
           </span>
-          <span class="tracking-wider uppercase text-[11px] sm:text-xs">Naigaon East's Biggest 2-Floor Gym</span>
+          <h2 class="heading-font text-xl sm:text-3xl font-bold text-white mt-0.5">Equipment Arsenal</h2>
+          <p class="text-xs text-zinc-400 mt-1">Tap any machine below to inspect weight limits, target muscles, and biomechanics.</p>
         </div>
 
-        <!-- High-Impact Commercial Headline -->
-        <h1 class="heading-font text-3xl xs:text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-4">
-          FORGE YOUR BODY AT <br>
-          <span class="gold-gradient-text drop-shadow-[0_2px_20px_rgba(245,158,11,0.35)]">DRAGON SLAYER GYM 2</span>
-        </h1>
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1.5 mb-6" id="filterTabs">
+          <button data-cat="all" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-amber-500 text-black shadow-md shadow-amber-500/20 active:scale-[0.98] transition-all">All Units (8)</button>
+          <button data-cat="chest" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Chest & Arms</button>
+          <button data-cat="legs" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Legs & Squats</button>
+          <button data-cat="back" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Back & Core</button>
+          <button data-cat="cardio" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Cardio & HYROX</button>
+        </div>
 
-        <!-- Concrete Value Proposition for Gym Owner & Members -->
-        <p class="text-zinc-200 text-xs sm:text-base max-w-2xl leading-relaxed mb-6 font-medium">
-          Naigaon East's premier commercial gym. 2 massive AC floors, heavy dumbbells up to 50KG, certified floor coaches, and dedicated female-only hours.
-        </p>
-
-        <!-- 4 Real Anti-Gravity Feature Chips (What the Gym Actually Delivers) -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full max-w-2xl mb-8">
-          <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
-            <i class="fa-solid fa-layer-group text-amber-400"></i>
-            <span>2 AC Floors</span>
+        <!-- Carousel Navigation Header -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-zinc-400">Swipe or use arrows to browse</span>
+            <span class="text-[10px] bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full font-bold">8 Featured Units</span>
           </div>
-          <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
-            <i class="fa-solid fa-dumbbell text-amber-400"></i>
-            <span>50KG Weights</span>
-          </div>
-          <div class="antigravity-float py-2 px-3 rounded-xl bg-zinc-900/80 border border-pink-500/30 text-pink-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
-            <i class="fa-solid fa-venus text-pink-400"></i>
-            <span>Ladies Batch</span>
-          </div>
-          <div class="antigravity-float-delay py-2 px-3 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-[11px] font-bold flex items-center justify-center gap-2 shadow-sm">
-            <i class="fa-solid fa-certificate text-amber-400"></i>
-            <span>Certified PT</span>
+          <div class="flex items-center gap-2">
+            <button id="equipPrevBtn" class="w-10 h-10 rounded-full bg-zinc-900/90 border border-white/10 hover:border-amber-400 text-zinc-300 hover:text-amber-400 flex items-center justify-center transition-all shadow-md active:scale-95" aria-label="Previous Slide">
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button id="equipNextBtn" class="w-10 h-10 rounded-full bg-zinc-900/90 border border-white/10 hover:border-amber-400 text-zinc-300 hover:text-amber-400 flex items-center justify-center transition-all shadow-md active:scale-95" aria-label="Next Slide">
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Primary Call To Actions (Zero Gimmicks - Direct WhatsApp Admission) -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full sm:w-auto mb-10">
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20can%20I%20book%20a%20free%201-day%20trial%20workout%20at%20Dragon%20Slayer%20Gym%202%3F" target="_blank" class="py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:brightness-110 active:scale-[0.98] text-black font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(245,158,11,0.35)] flex items-center justify-center gap-2.5 group">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>Claim Free 1-Day Trial</span>
-            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </a>
-          <a href="#equipment" class="py-4 px-6 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/15 hover:border-amber-400/50 active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5">
-            <i class="fa-solid fa-dumbbell text-amber-400"></i>
-            <span>View Equipment Arsenal</span>
-          </a>
-        </div>
+        <!-- Equipment Carousel Track -->
+        <div class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2 pb-5" id="equipGrid">
+          <!-- 1: Incline Press -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="incline_press">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=500&q=80" alt="Iso Incline Chest Press">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Upper Chest</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Incline Chest Press</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Max: <strong class="text-white">350 KG</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
+          </div>
 
-        <!-- 3 Quick Live Metrics (Clean Inset Borders) -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-3.5 w-full max-w-xl p-2 sm:p-2.5 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-2xl">
-          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5">
-            <div class="text-lg sm:text-2xl font-black text-white heading-font">2 FLOORS</div>
-            <div class="text-[11px] sm:text-xs text-zinc-400 font-medium mt-0.5">Heavy + Cardio</div>
+          <!-- 2: Hack Squat -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="hack_squat">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="45° Linear Hack Squat">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Quads</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">45° Heavy Hack Squat</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Max: <strong class="text-white">600 KG</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
           </div>
-          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-amber-500/20">
-            <div class="text-lg sm:text-2xl font-black text-amber-400 heading-font">50+ UNITS</div>
-            <div class="text-[11px] sm:text-xs text-amber-200 font-semibold mt-0.5">Tap for Specs</div>
+
+          <!-- 3: Power Squat Cage -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="power_rack">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Olympic Power Squat Rack">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Powerlifting</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Olympic Power Cage</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Max: <strong class="text-white">500 KG</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
           </div>
-          <div class="p-3 sm:p-4 rounded-xl bg-black/40 border border-emerald-500/20">
-            <div class="text-lg sm:text-2xl font-black text-emerald-400 heading-font">★ 4.9 / 5</div>
-            <div class="text-[11px] sm:text-xs text-emerald-200 font-semibold mt-0.5">Naigaon Rating</div>
+
+          <!-- 4: Lat Pulldown -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="back" data-id="lat_pulldown">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=500&q=80" alt="Dual Lat Pulldown">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Lats & Back</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Lat Pulldown & Row</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Stack: <strong class="text-white">120 KG x2</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: Dumbbells up to 50KG -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="dumbbells">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=500&q=80" alt="Pro Dumbbell Set">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Free Weights</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Hex Dumbbells (2.5 – 50KG)</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Pairs: <strong class="text-white">20 Pairs</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: Cable Crossover -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="cable_crossover">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Cable Crossover">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Flyes & Arms</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Cable Crossover</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Stack: <strong class="text-white">100 KG x2</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7: Curved Slat Treadmill -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="cardio" data-id="slat_treadmill">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80" alt="Slat Treadmill">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">HYROX & Cardio</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Curved Slat Treadmill</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Drive: <strong class="text-white">Kinetic</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8: Smith Machine -->
+          <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="smith_machine">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Counterbalanced Smith">
+              <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Safe Solo</span>
+              <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
+                <span>Tap Specs</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Pro Smith Machine</h3>
+              <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
+                <span>Max: <strong class="text-white">400 KG</strong></span>
+                <span class="text-amber-400 font-semibold">&rarr;</span>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- INTERACTIVE EQUIPMENT ARSENAL (TAP TO INSPECT) -->
-  <section id="equipment" class="py-12 bg-zinc-950/80 border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center sm:text-left mb-5">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
-          <i class="fa-solid fa-bolt"></i> Interactive Feature
-        </span>
-        <h2 class="heading-font text-xl sm:text-3xl font-bold text-white mt-0.5">Equipment Arsenal</h2>
-        <p class="text-xs text-zinc-400 mt-1">Tap any machine below to inspect weight limits, target muscles, and biomechanics.</p>
-      </div>
-
-      <!-- Mobile Scrollable Category Tabs (Segmented Control Style) -->
-      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1.5 mb-6" id="filterTabs">
-        <button data-cat="all" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-amber-500 text-black shadow-md shadow-amber-500/20 active:scale-[0.98] transition-all">All Units (8)</button>
-        <button data-cat="chest" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Chest & Arms</button>
-        <button data-cat="legs" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Legs & Squats</button>
-        <button data-cat="back" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Back & Core</button>
-        <button data-cat="cardio" class="cat-btn shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900/90 text-zinc-300 border border-white/10 hover:border-amber-500/40 hover:text-white active:scale-[0.98] transition-all">Cardio & Slat</button>
-      </div>
-
-      <!-- Equipment Cards Grid (2-Column on Mobile, 4-Column on Desktop) -->
-            <!-- Carousel Controls Header -->
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-semibold text-zinc-400">Swipe or use arrows to browse</span>
-          <span class="text-[10px] bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full font-bold">8 Machines</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <button id="equipPrevBtn" class="w-10 h-10 rounded-full bg-zinc-900/90 border border-white/10 hover:border-amber-400 text-zinc-300 hover:text-amber-400 flex items-center justify-center transition-all shadow-md active:scale-95" aria-label="Previous Slide">
-            <i class="fa-solid fa-chevron-left text-xs"></i>
-          </button>
-          <button id="equipNextBtn" class="w-10 h-10 rounded-full bg-zinc-900/90 border border-white/10 hover:border-amber-400 text-zinc-300 hover:text-amber-400 flex items-center justify-center transition-all shadow-md active:scale-95" aria-label="Next Slide">
-            <i class="fa-solid fa-chevron-right text-xs"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Equipment Carousel Track (Smooth Swipe & Snap) -->
-      <div class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2 pb-5" id="equipGrid">
-        <!-- Machine 1: Incline Chest Press -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="incline_press">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=500&q=80" alt="Iso Incline Chest Press" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Upper Chest</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </div>
-          </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Incline Chest Press</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Max: <strong class="text-white">350 KG</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
+    <!-- TIMINGS & SCHEDULE -->
+    <section id="timings" class="py-16 bg-black/60 border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-6">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Schedule</span>
+          <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Gym Timings & Batches</h2>
         </div>
 
-        <!-- Machine 2: Hack Squat -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="hack_squat">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="45° Linear Hack Squat" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Quads</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        <div class="glass-card rounded-2xl overflow-hidden divide-y divide-white/10 text-xs sm:text-sm">
+          <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
+              <div><span class="font-bold text-white block">Morning Batch</span><span class="text-[11px] text-zinc-400">Monday to Saturday</span></div>
             </div>
+            <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM to 1:00 PM</span>
           </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">45° Heavy Hack Squat</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Max: <strong class="text-white">600 KG</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Machine 3: Power Squat Rack -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="power_rack">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Olympic Power Squat Rack" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Powerlifting</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2 bg-pink-500/10">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-venus"></i></span>
+              <div><span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span><span class="text-[11px] text-pink-300">Female Coach & Dedicated Floor</span></div>
             </div>
+            <span class="font-bold text-pink-300 bg-pink-500/20 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">11:30 AM to 1:00 PM</span>
           </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Olympic Power Cage</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Max: <strong class="text-white">500 KG</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Machine 4: Lat Pulldown & Row -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="back" data-id="lat_pulldown">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=500&q=80" alt="Dual Lat Pulldown" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Lats & Back</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-moon"></i></span>
+              <div><span class="font-bold text-white block">Evening Peak Batch</span><span class="text-[11px] text-zinc-400">Monday to Saturday</span></div>
             </div>
+            <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM to 10:30 PM</span>
           </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Lat Pulldown & Row</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Stack: <strong class="text-white">120 KG x2</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Machine 5: Heavy Dumbbells up to 50KG -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="dumbbells">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=500&q=80" alt="Pro Dumbbell Set" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Free Weights</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-day"></i></span>
+              <div><span class="font-bold text-white block">Sunday Special</span><span class="text-[11px] text-zinc-400">Morning Session</span></div>
             </div>
-          </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Hex Dumbbells (2.5 – 50KG)</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Pairs: <strong class="text-white">20 Pairs</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Machine 6: Cable Crossover -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="chest" data-id="cable_crossover">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Cable Crossover" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Flyes & Arms</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </div>
-          </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Dual Cable Crossover</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Stack: <strong class="text-white">100 KG x2</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Machine 7: Curved Slat Treadmill -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="cardio" data-id="slat_treadmill">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80" alt="Slat Treadmill" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Cardio</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </div>
-          </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Curved Slat Treadmill</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Drive: <strong class="text-white">Kinetic</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Machine 8: Smith Machine -->
-        <div class="equip-card glass-card rounded-2xl overflow-hidden cursor-pointer snap-start shrink-0 w-[78vw] xs:w-[270px] sm:w-[290px] lg:w-[calc(25%-12px)] active:scale-[0.98] hover:border-amber-500/50 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.25)] transition-all duration-300 group" data-cat="legs" data-id="smith_machine">
-          <div class="relative aspect-square sm:aspect-[4/3] bg-zinc-900 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=500&q=80" alt="Counterbalanced Smith" class="w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-black/80 backdrop-blur-md text-[11px] uppercase font-bold text-amber-400 px-1.5 py-0.5 rounded border border-white/10">Safe Solo</span>
-            <div class="absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1 group-hover:scale-105 transition-transform">
-              <span>Tap Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </div>
-          </div>
-          <div class="p-3">
-            <h3 class="font-bold text-white text-xs sm:text-sm line-clamp-1">Pro Smith Machine</h3>
-            <div class="text-[11px] sm:text-xs text-zinc-400 mt-1 flex justify-between">
-              <span>Max: <strong class="text-white">400 KG</strong></span>
-              <span class="text-amber-400 font-semibold">&rarr;</span>
-            </div>
+            <span class="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">7:00 AM to 1:00 PM</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MEMBERSHIP PLANS & PRICING (MOBILE TABBED / SWIPE VIEW) -->
-  <section id="plans" class="py-12">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Zero Admission Fee</span>
-        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Membership Plans</h2>
-        <p class="text-xs text-zinc-400 mt-1">Includes access to both floors, AC workout zone, and general floor training.</p>
-
-        <!-- Mobile Plan Selector Segmented Buttons -->
-        <div class="inline-flex md:hidden items-center p-1.5 bg-zinc-900/90 backdrop-blur-md rounded-2xl border border-white/10 mt-4 text-xs font-bold shadow-inner" id="mobilePlanTabs">
-          <button data-plan="1month" class="plan-tab-btn py-2.5 px-4 rounded-xl text-zinc-400 transition-all">1 Month</button>
-          <button data-plan="3months" class="plan-tab-btn py-2.5 px-4 rounded-xl bg-amber-500 text-black shadow-md shadow-amber-500/20 transition-all">3 Months 🔥</button>
-          <button data-plan="1year" class="plan-tab-btn py-2.5 px-4 rounded-xl text-zinc-400 transition-all">1 Year</button>
+    <!-- LOCATION & CONTACT (KANERI SQUARE) -->
+    <section id="contact" class="py-16 bg-zinc-950/90 border-t border-white/10">
+      <div class="max-w-4xl mx-auto px-4">
+        
+        <div class="text-center mb-6">
+          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Prime Location</span>
+          <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Visit Dragon Slayer Gym 2</h2>
+          <p class="text-xs text-zinc-400 mt-1 max-w-md mx-auto">Kaneri Square, Sunteck Tivri Phata Road, Near Ornet Galaxy, Naigaon East, Vasai</p>
         </div>
-      </div>
 
-      <!-- Plan Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" id="plansContainer">
-        <!-- 1 MONTH PLAN -->
-        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1month">
-          <div>
-            <div class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Starter Pass</div>
-            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">1 Month Membership</h3>
-            
-            <div class="my-3 sm:my-4">
-              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹1,200</span>
-              <span class="text-xs text-zinc-400">/ 1 Month</span>
+        <div class="glass-card rounded-2xl p-5 sm:p-6 max-w-lg mx-auto border border-white/10 shadow-xl mb-6">
+          <div class="flex items-start gap-3.5 mb-4 pb-4 border-b border-white/10">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
             </div>
-
-            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Complete 2-Floor Gym Access</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Heavy Free Weights + Cardio</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>General Floor Coach Guidance</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Locker & Shower Facility</span>
-              </li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%201-Month%20Plan%20(Rs.%201200)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
-            Join 1 Month Plan
-          </a>
-        </div>
-
-        <!-- 3 MONTHS (MOST POPULAR) -->
-        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative border-2 border-amber-500/80 shadow-[0_0_40px_rgba(245,158,11,0.18)] bg-gradient-to-b from-amber-500/[0.06] via-zinc-900/80 to-zinc-900/90 md:-translate-y-2" id="card-3months">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider py-1 px-4 rounded-full shadow-lg shadow-amber-500/30 whitespace-nowrap">
-            🔥 Most Popular Choice
-          </div>
-
-          <div>
-            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider mt-1">Quarterly Pass</div>
-            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Transformation Pack</h3>
-            
-            <div class="my-3 sm:my-4">
-              <span class="text-3xl sm:text-4xl font-extrabold text-amber-400 heading-font">₹3,000</span>
-              <span class="text-xs text-zinc-400">/ 3 Months <span class="text-emerald-400 font-bold">(Save ₹600)</span></span>
-            </div>
-
-            <ul class="space-y-2.5 text-xs text-zinc-200 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>All 1-Month Plan Features</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span class="font-bold text-white">Free Custom Workout & Diet Chart</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Bi-Weekly Body Measurement</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>CrossFit & Functional Rig Access</span>
-              </li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%203-Month%20Plan%20(Rs.%203000)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:brightness-110 active:scale-[0.98] text-black font-black text-xs uppercase tracking-wider transition-all shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40">
-            Get Pro Membership
-          </a>
-        </div>
-
-        <!-- 1 YEAR (BEST VALUE) -->
-        <div class="plan-card glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between" id="card-1year">
-          <div>
-            <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Annual Pass</div>
-            <h3 class="heading-font text-lg sm:text-xl font-bold text-white mt-1">Yearly Beast Pass</h3>
-            
-            <div class="my-3 sm:my-4">
-              <span class="text-3xl sm:text-4xl font-extrabold text-white heading-font">₹8,999</span>
-              <span class="text-xs text-zinc-400">/ 12 Months <span class="text-emerald-400 font-bold">(Just ₹750/mo)</span></span>
-            </div>
-
-            <ul class="space-y-2.5 text-xs text-zinc-300 border-t border-white/10 pt-4">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Unlimited 365 Days Access</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Custom Nutrition & Supplement Guide</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Free 1-Month Freeze on Holidays</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-amber-400"></i>
-                <span>Free Personal Gym Bag & Shaker</span>
-              </li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20join%20the%20Annual%20Plan%20(Rs.%208999)%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 active:scale-95 border border-zinc-700 text-white font-bold text-xs transition">
-            Join Yearly Plan
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIMINGS & BATCHES (MOBILE COMPACT CARDS) -->
-  <section id="timings" class="py-12 bg-zinc-950/70 border-y border-white/5">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Workout Schedule</span>
-        <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mt-0.5">Gym Timings & Batches</h2>
-      </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden divide-y divide-white/10 text-xs sm:text-sm">
-        <!-- Morning -->
-        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
-          <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-sun"></i></span>
             <div>
-              <span class="font-bold text-white block">Morning Batch</span>
-              <span class="text-[11px] text-zinc-400">Mon to Sat</span>
+              <h3 class="font-bold text-white text-sm">Kaneri Square Branch</h3>
+              <p class="text-xs text-zinc-300 mt-0.5 font-medium">Sunteck Tivri Phata Road, Near Ornet Galaxy, Naigaon East, Vasai, Maharashtra 401208</p>
+              <p class="text-[11px] text-zinc-400 mt-1">Directly accessible from railway station and Sunteck city.</p>
             </div>
           </div>
-          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">6:00 AM – 11:00 AM</span>
-        </div>
 
-        <!-- Ladies Special -->
-        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2 bg-pink-500/10">
-          <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-venus"></i></span>
-            <div>
-              <span class="font-bold text-pink-200 block">Ladies Exclusive Batch</span>
-              <span class="text-[11px] text-pink-300">Female Trainer & Private Floor</span>
-            </div>
-          </div>
-          <span class="font-bold text-pink-300 bg-pink-500/20 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">11:30 AM – 1:00 PM</span>
-        </div>
-
-        <!-- Evening -->
-        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
-          <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-moon"></i></span>
-            <div>
-              <span class="font-bold text-white block">Evening Peak Batch</span>
-              <span class="text-[11px] text-zinc-400">Mon to Sat</span>
-            </div>
-          </div>
-          <span class="font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">5:00 PM – 10:30 PM</span>
-        </div>
-
-        <!-- Sunday -->
-        <div class="p-3.5 sm:p-4 flex items-center justify-between gap-2">
-          <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-calendar-day"></i></span>
-            <div>
-              <span class="font-bold text-white block">Sunday Special</span>
-              <span class="text-[11px] text-zinc-400">Evening Closed</span>
-            </div>
-          </div>
-          <span class="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md text-[11px] sm:text-xs">7:00 AM – 1:00 PM</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK TRIAL BOOKING VIA WHATSAPP (THUMB-FRIENDLY) -->
-  <section id="booking" class="py-12">
-    <div class="max-w-2xl mx-auto px-4">
-      <div class="glass-card rounded-2xl p-5 sm:p-7 border border-amber-500/40 shadow-[0_0_50px_rgba(245,158,11,0.12)] relative overflow-hidden">
-        <div class="text-center mb-5">
-          <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Fast Admission</span>
-          <h2 class="heading-font text-xl sm:text-2xl font-bold text-white mt-0.5">Book Free 1-Day Trial</h2>
-          <p class="text-xs text-zinc-400 mt-1">Connect directly with the gym owner on WhatsApp in 10 seconds.</p>
-        </div>
-
-        <form id="mobileAdmissionForm" class="space-y-3.5 text-xs">
-          <div>
-            <label class="block font-semibold text-zinc-300 mb-1 flex items-center gap-1.5">
-              <i class="fa-solid fa-user text-amber-400 text-[11px]"></i>
-              <span>Your Full Name</span>
-            </label>
-            <input type="text" id="mName" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 focus:border-amber-400 focus:ring-4 focus:ring-amber-500/20 focus:bg-black/60 focus:outline-none transition-all duration-200">
-          </div>
-          <div>
-            <label class="block font-semibold text-zinc-300 mb-1 flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-emerald-400 text-[11px]"></i>
-              <span>WhatsApp Phone Number</span>
-            </label>
-            <input type="tel" id="mPhone" required placeholder="e.g. 98XXXXXXXX" class="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 focus:border-amber-400 focus:ring-4 focus:ring-amber-500/20 focus:bg-black/60 focus:outline-none transition-all duration-200">
-          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <div>
-              <label class="block font-semibold text-zinc-300 mb-1 flex items-center gap-1.5">
-                <i class="fa-solid fa-bullseye text-amber-400 text-[11px]"></i>
-                <span>Primary Goal</span>
-              </label>
-              <select id="mGoal" class="w-full px-3.5 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-white focus:border-amber-400 focus:ring-4 focus:ring-amber-500/20 focus:outline-none transition-all duration-200">
-                <option value="Fat Loss & Toning">Fat Loss</option>
-                <option value="Muscle Building">Muscle Gain</option>
-                <option value="Powerlifting">Powerlifting</option>
-                <option value="General Fitness">General</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-semibold text-zinc-300 mb-1 flex items-center gap-1.5">
-                <i class="fa-solid fa-clock text-amber-400 text-[11px]"></i>
-                <span>Preferred Batch</span>
-              </label>
-              <select id="mBatch" class="w-full px-3.5 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-white focus:border-amber-400 focus:ring-4 focus:ring-amber-500/20 focus:outline-none transition-all duration-200">
-                <option value="Morning Batch">Morning</option>
-                <option value="Ladies Batch">Ladies Exclusive</option>
-                <option value="Evening Batch">Evening Peak</option>
-              </select>
-            </div>
+            <a href="tel:7709339959" class="py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 min-h-[44px] active:scale-95 transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>7709339959</span>
+            </a>
+            <a href="tel:8767844769" class="py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 min-h-[44px] active:scale-95 transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>8767844769</span>
+            </a>
           </div>
 
-          <button type="submit" class="w-full mt-4 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 hover:brightness-110 active:scale-[0.98] text-white font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-xl shadow-emerald-950/60 border border-emerald-400/30">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>Send Details on WhatsApp &rarr;</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEMBER REVIEWS (HORIZONTAL SWIPE ON MOBILE) -->
-  <section id="reviews" class="py-12 bg-zinc-950/70 border-t border-white/5">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Member Feedback</span>
-        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">★ 4.9 on Google Reviews</h2>
-      </div>
-
-      <div class="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto no-scrollbar pb-2">
-        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
-          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
-          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Hands down best gym in Naigaon. 2 floors mean zero waiting for bench or dumbbells. AC is always on and trainers are friendly."</p>
-          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Rohan S. • Naigaon East</div>
-        </div>
-
-        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
-          <div class="text-pink-400 text-xs mb-2">★★★★★</div>
-          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"The ladies batch (11:30 AM) is very safe and comfortable. The female trainer personally guides and corrects form."</p>
-          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Pooja K. • Ladies Batch</div>
-        </div>
-
-        <div class="glass-card rounded-xl p-4 shrink-0 w-[280px] sm:w-auto">
-          <div class="text-amber-400 text-xs mb-2">★★★★★</div>
-          <p class="text-xs text-zinc-300 leading-relaxed mb-3">"Dumbbells go all the way to 50KG, and the linear hack squat is amazing. Serious place for serious lifters."</p>
-          <div class="text-[11px] font-bold text-white pt-2 border-t border-white/10">Aniket M. • Powerlifter</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCATION & CONTACT (CLEAN 1-TAP ACTION - NO MAP ZOOM CONFUSION) -->
-  <section id="contact" class="py-12 bg-zinc-950/90 border-t border-white/10">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-6">
-        <span class="text-amber-500 text-[11px] font-bold uppercase tracking-wider">Gym Location</span>
-        <h2 class="heading-font text-2xl font-bold text-white mt-0.5">Visit Dragon Slayer Gym 2</h2>
-        <p class="text-xs text-zinc-400 mt-1 max-w-md mx-auto">Station Road, Near Railway Platform, Naigaon East, Maharashtra 401208</p>
-      </div>
-
-      <!-- Clean Direct Action Cards -->
-      <div class="glass-card rounded-2xl p-5 sm:p-6 max-w-lg mx-auto border border-white/10 shadow-xl mb-6">
-        <div class="flex items-start gap-3.5 mb-4 pb-4 border-b border-white/10">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-lg shrink-0">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-white text-sm">Naigaon East Station Branch</h3>
-            <p class="text-xs text-zinc-400 mt-0.5">2-minute walk from Naigaon railway station platform. Easy landmark for all members.</p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-2.5">
-          <a href="tel:917709339959" class="py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
-            <i class="fa-solid fa-phone text-amber-400"></i>
-            <span>Call: 7709339959</span>
-          </a>
-          <a href="https://maps.google.com/?q=Dragon+Slayer+Gym+Naigaon" target="_blank" class="py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs flex items-center justify-center gap-2 active:scale-95 transition shadow-md shadow-amber-500/20">
+          <a href="https://maps.google.com/?q=Kaneri+Square+Naigaon+East" target="_blank" class="mt-2.5 w-full py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs flex items-center justify-center gap-2 min-h-[44px] active:scale-95 transition shadow-md shadow-amber-500/20">
             <i class="fa-solid fa-location-arrow"></i>
-            <span>Open in Google Maps</span>
+            <span>Open Kaneri Square in Google Maps</span>
           </a>
         </div>
-      </div>
 
-      <div class="text-center text-[11px] text-zinc-500 pt-6 border-t border-white/10">
-        © 2026 Dragon Slayer Gym 2 • Naigaon East
+        <div class="text-center text-[11px] text-zinc-500 pt-6 border-t border-white/10 space-y-2">
+          <p class="font-bold text-zinc-400">DRAGON SLAYER GYM 2 &bull; STRENGTH. DISCIPLINE. VICTORY. STRONGER EVERY DAY.</p>
+          <p>&copy; 2026 Dragon Slayer Gym 2 &bull; Kaneri Square, Naigaon East, Vasai, Maharashtra 401208</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LEGAL MODAL (B10 SHIP REQUIREMENT) -->
+  <div id="starterLegalModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="starterLegalTitle">
+    <div class="bg-[#0e1218] border border-white/20 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto no-scrollbar shadow-2xl p-6 relative">
+      <button id="starterLegalCloseBtn" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center transition" aria-label="Close Legal Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 class="heading-font text-xl font-bold text-white mb-3" id="starterLegalTitle">Terms and Privacy</h3>
+      <div class="text-xs text-zinc-300 space-y-3 leading-relaxed">
+        <p><strong>Dragon Slayer Gym 2 Privacy Commitment:</strong> We respect your privacy. Any personal information provided via our WhatsApp contact links or registration is used exclusively for membership onboarding, trial pass scheduling, and direct gym communication. We never sell or share your information with external parties.</p>
+        <p><strong>Membership Terms:</strong> Members must adhere to gym safety rules and footwear guidelines. Complimentary freeze options are honored as described with advance notice. Zero admission fee applies to all standard tiers.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- MOBILE BOTTOM SHEET MODAL (TAP-TO-INSPECT EQUIPMENT) -->
+
+  <!-- EQUIPMENT SPECS MODAL -->
   <div id="equipModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center sm:p-4">
     <div class="modal-sheet bg-[#0e1218] border-t sm:border border-white/20 rounded-t-3xl sm:rounded-2xl max-w-lg w-full max-h-[85vh] sm:max-h-[90vh] overflow-y-auto no-scrollbar shadow-[0_-20px_50px_rgba(0,0,0,0.9)] relative" id="modalCard">
       <!-- Mobile Pull Bar Handle -->
@@ -923,29 +1539,81 @@
     </div>
   </div>
 
-  <!-- FIXED MOBILE BOTTOM QUICK-DOCK (PHONE FIRST) -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b0e]/90 backdrop-blur-xl border-t border-white/10 px-3.5 py-2.5 flex items-center gap-2.5 md:hidden safe-bottom shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
-    <a href="tel:917709339959" class="flex-1 py-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 text-center active:scale-[0.97] transition-all shadow-sm">
+  <!-- FIXED MOBILE BOTTOM QUICK-DOCK -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b0e]/95 backdrop-blur-xl border-t border-white/10 px-3.5 py-2.5 flex items-center gap-2.5 md:hidden safe-bottom shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
+    <a href="tel:7709339959" class="flex-1 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 text-center min-h-[44px] active:scale-[0.97] transition-all shadow-sm">
       <i class="fa-solid fa-phone text-amber-400"></i>
       <span>Call Gym</span>
     </a>
-    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-xs flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-950/60 active:scale-[0.97] transition-all border border-emerald-400/20">
+    <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20lock%20the%20Rs%209000%20Pre Sale%20Flat%2050%25%20OFF%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-xs flex items-center justify-center gap-2 text-center min-h-[44px] shadow-lg shadow-emerald-950/60 active:scale-[0.97] transition-all border border-emerald-400/20">
       <i class="fa-brands fa-whatsapp text-base"></i>
-      <span>WhatsApp Chat</span>
+      <span>Pre Sale ₹9,000</span>
     </a>
   </div>
 
   <!-- FLOATING WHATSAPP BUTTON (DESKTOP ONLY) -->
-  <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20am%20interested%20in%20Dragon%20Slayer%20Gym%202" target="_blank" class="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white items-center justify-center text-2xl shadow-xl shadow-emerald-900/50 hover:scale-105 transition">
+  <a href="https://wa.me/917709339959?text=Hello%20Sir%2C%20I%20want%20to%20lock%20the%20Rs%209000%20Pre Sale%20Flat%2050%25%20OFF%20at%20Dragon%20Slayer%20Gym%202" target="_blank" class="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white items-center justify-center text-2xl shadow-xl shadow-emerald-950/50 hover:scale-105 transition" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- SCRIPT -->
+  <!-- SCRIPTS -->
   <script>
-    // Equipment Data
+    // Mobile Drawer
+    const toggle = document.getElementById('menuToggleStarter');
+    const drawer = document.getElementById('drawerStarter');
+    if (toggle && drawer) {
+      function setStarterDrawer(open) {
+        if (open) {
+          drawer.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+          const icon = toggle.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-xmark';
+        } else {
+          drawer.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          const icon = toggle.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-bars';
+        }
+      }
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !drawer.classList.contains('hidden');
+        setStarterDrawer(!isOpen);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!drawer.contains(e.target) && !toggle.contains(e.target)) {
+          setStarterDrawer(false);
+        }
+      });
+
+      document.querySelectorAll('.starter-nav-link').forEach(l => {
+        l.addEventListener('click', () => setStarterDrawer(false));
+      });
+    }
+
+    // Tagline Reveal Animation
+    const taglineStarter = document.getElementById('taglineStarter');
+    if (taglineStarter && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const words = taglineStarter.querySelectorAll('.reveal-word');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            words.forEach((w, idx) => {
+              setTimeout(() => w.classList.add('active'), idx * 65);
+            });
+            obs.unobserve(taglineStarter);
+          }
+        });
+      }, { threshold: 0.35 });
+      obs.observe(taglineStarter);
+    }
+
+    // Equipment Arsenal Data & Modal
     const equipData = {
       incline_press: {
-        title: "Iso-Lateral Incline Chest Press",
+        title: "Iso Lateral Incline Chest Press",
         category: "Chest & Arms",
         img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
         desc: "Converging isolateral independent arms mimic natural dumbbell path without requiring a spotter. Isolates upper clavicular pectorals.",
@@ -999,16 +1667,16 @@
         bestFor: "Continuous Muscle Tension & Muscle Definition"
       },
       slat_treadmill: {
-        title: "Curved Non-Motorized Slat Treadmill",
-        category: "Cardio & Conditioning",
+        title: "Curved Non Motorized Slat Treadmill",
+        category: "Cardio & HYROX",
         img: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80",
         desc: "100% human kinetic drive. The curved rubber slats absorb heel strike impact and burn up to 30% more calories.",
-        target: "Cardiovascular Stamina & Fat Loss",
+        target: "Cardiovascular Stamina & HYROX Sprints",
         capacity: "Self-Propelled Kinetic Speed",
         bestFor: "HIIT Sprints & Zero Knee-Impact Cardio"
       },
       smith_machine: {
-        title: "Counter-Balanced Pro Smith Machine",
+        title: "Counterbalanced Pro Smith Machine",
         category: "Multi-Purpose & Safe Lifting",
         img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80",
         desc: "Counterbalanced vertical guide rods with 14 safety lockout notches for solo bench pressing, lunges, and upright rows.",
@@ -1018,66 +1686,62 @@
       }
     };
 
-    // Mobile Drawer Toggle
-    const menuBtn = document.getElementById('menuToggleBtn');
-    const mobileDrawer = document.getElementById('mobileDrawer');
-    if (menuBtn && mobileDrawer) {
-      menuBtn.addEventListener('click', () => {
-        mobileDrawer.classList.toggle('hidden');
+    const equipModal = document.getElementById('equipModal');
+    const equipModalCard = document.getElementById('modalCard');
+    const equipModalCloseBtn = document.getElementById('modalCloseBtn');
+    const equipModalTitle = document.getElementById('modalTitle');
+    const equipModalCategory = document.getElementById('modalCategory');
+    const equipModalImg = document.getElementById('modalImg');
+    const equipModalDesc = document.getElementById('modalDesc');
+    const equipModalTarget = document.getElementById('modalTarget');
+    const equipModalCapacity = document.getElementById('modalCapacity');
+    const equipModalBestFor = document.getElementById('modalBestFor');
+    const equipModalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
+
+    if (equipModal && equipModalCard) {
+      document.querySelectorAll('.equip-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.dataset.id;
+          const item = equipData[id];
+          if (!item) return;
+
+          if (equipModalTitle) equipModalTitle.textContent = item.title;
+          if (equipModalCategory) equipModalCategory.textContent = item.category;
+          if (equipModalImg) equipModalImg.src = item.img;
+          if (equipModalDesc) equipModalDesc.textContent = item.desc;
+          if (equipModalTarget) equipModalTarget.textContent = item.target;
+          if (equipModalCapacity) equipModalCapacity.textContent = item.capacity;
+          if (equipModalBestFor) equipModalBestFor.textContent = item.bestFor;
+
+          if (equipModalWhatsAppBtn) {
+            const msg = encodeURIComponent(`Hello Sir, I saw the ${item.title} on Dragon Slayer Gym 2 website and want to know more.`);
+            equipModalWhatsAppBtn.href = `https://wa.me/917709339959?text=${msg}`;
+          }
+
+          equipModal.classList.remove('hidden');
+          equipModal.classList.add('flex');
+          setTimeout(() => equipModalCard.classList.add('open'), 10);
+        });
       });
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+
+      function closeEquipModal() {
+        equipModalCard.classList.remove('open');
+        setTimeout(() => {
+          equipModal.classList.remove('flex');
+          equipModal.classList.add('hidden');
+        }, 200);
+      }
+
+      if (equipModalCloseBtn) equipModalCloseBtn.addEventListener('click', closeEquipModal);
+      equipModal.addEventListener('click', (e) => {
+        if (e.target === equipModal) closeEquipModal();
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && equipModal && !equipModal.classList.contains('hidden')) {
+          closeEquipModal();
+        }
       });
     }
-
-    // Modal Bottom-Sheet Logic
-    const modal = document.getElementById('equipModal');
-    const modalCard = document.getElementById('modalCard');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalCategory = document.getElementById('modalCategory');
-    const modalImg = document.getElementById('modalImg');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalTarget = document.getElementById('modalTarget');
-    const modalCapacity = document.getElementById('modalCapacity');
-    const modalBestFor = document.getElementById('modalBestFor');
-    const modalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
-
-    document.querySelectorAll('.equip-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const id = card.dataset.id;
-        const item = equipData[id];
-        if (!item) return;
-
-        modalTitle.textContent = item.title;
-        modalCategory.textContent = item.category;
-        modalImg.src = item.img;
-        modalDesc.textContent = item.desc;
-        modalTarget.textContent = item.target;
-        modalCapacity.textContent = item.capacity;
-        modalBestFor.textContent = item.bestFor;
-
-        const msg = encodeURIComponent(`Hello Sir, I saw the ${item.title} on Dragon Slayer Gym 2 website and want to know more.`);
-        modalWhatsAppBtn.href = `https://wa.me/917709339959?text=${msg}`;
-
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        setTimeout(() => modalCard.classList.add('open'), 10);
-      });
-    });
-
-    function closeModal() {
-      modalCard.classList.remove('open');
-      setTimeout(() => {
-        modal.classList.remove('flex');
-        modal.classList.add('hidden');
-      }, 200);
-    }
-
-    modalCloseBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
 
     // Category Filter Pills
     const catBtns = document.querySelectorAll('.cat-btn');
@@ -1086,11 +1750,11 @@
       btn.addEventListener('click', () => {
         const cat = btn.dataset.cat;
         catBtns.forEach(b => {
-          b.classList.remove('bg-amber-500', 'text-black');
-          b.classList.add('bg-zinc-900', 'text-zinc-300');
+          b.classList.remove('bg-amber-500', 'text-black', 'shadow-md');
+          b.classList.add('bg-zinc-900/90', 'text-zinc-300');
         });
-        btn.classList.add('bg-amber-500', 'text-black');
-        btn.classList.remove('bg-zinc-900', 'text-zinc-300');
+        btn.classList.add('bg-amber-500', 'text-black', 'shadow-md');
+        btn.classList.remove('bg-zinc-900/90', 'text-zinc-300');
 
         equipCards.forEach(card => {
           if (cat === 'all' || card.dataset.cat === cat) {
@@ -1102,58 +1766,173 @@
       });
     });
 
-    // Mobile Plan Tabs (1 Month, 3 Months, 1 Year)
-    const planTabBtns = document.querySelectorAll('.plan-tab-btn');
-    const planCards = document.querySelectorAll('.plan-card');
-    if (window.innerWidth < 768) {
-      // By default show 3 Months (card-3months) on mobile
-      planCards.forEach(c => {
-        if (c.id !== 'card-3months') c.classList.add('hidden');
-      });
-    }
+    
+    // ==========================================================================
+    // INTERACTIVE HOTSPOTS ENGINE (MOBILE & DESKTOP)
+    // ==========================================================================
+    function initHotspots() {
+      // Setup each container with its hotspots and dock card
+      const containers = document.querySelectorAll('#lowerFloorPhotoContainer, #upperFloorPhotoContainer, #mainVisualizerContainer');
+      
+      containers.forEach(container => {
+        const hotspots = container.querySelectorAll('.hotspot-wrapper');
+        const dockCard = container.querySelector('.hotspot-dock-card');
+        if (!dockCard) return;
 
-    planTabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const plan = btn.dataset.plan;
-        planTabBtns.forEach(b => {
-          b.classList.remove('bg-amber-500', 'text-black', 'shadow');
-          b.classList.add('text-zinc-400');
+        const cardCategory = dockCard.querySelector('.hotspot-card-category');
+        const cardTitle = dockCard.querySelector('.hotspot-card-title');
+        const cardDesc = dockCard.querySelector('.hotspot-card-desc');
+        const cardAction = dockCard.querySelector('.hotspot-card-action');
+        const cardClose = dockCard.querySelector('.hotspot-card-close');
+
+        function openCardForHotspot(spot) {
+          const title = spot.dataset.title;
+          const category = spot.dataset.category;
+          const desc = spot.dataset.desc;
+          const equipId = spot.dataset.equipId;
+
+          if (cardCategory) cardCategory.textContent = category;
+          if (cardTitle) cardTitle.textContent = title;
+          if (cardDesc) cardDesc.textContent = desc;
+          if (cardAction) cardAction.dataset.equipId = equipId;
+
+          // Highlight active hotspot
+          hotspots.forEach(h => h.classList.remove('active'));
+          spot.classList.add('active');
+
+          // Reveal dock card smoothly
+          dockCard.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
+          dockCard.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        }
+
+        function closeCard() {
+          hotspots.forEach(h => h.classList.remove('active'));
+          dockCard.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+          dockCard.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+        }
+
+        hotspots.forEach(spot => {
+          spot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (spot.classList.contains('active')) {
+              closeCard();
+            } else {
+              openCardForHotspot(spot);
+            }
+          });
         });
-        btn.classList.add('bg-amber-500', 'text-black', 'shadow');
-        btn.classList.remove('text-zinc-400');
 
-        planCards.forEach(c => {
-          if (c.id === `card-${plan}`) {
-            c.classList.remove('hidden');
-          } else {
-            c.classList.add('hidden');
+        if (cardClose) {
+          cardClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeCard();
+          });
+        }
+
+        if (cardAction) {
+          cardAction.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const equipId = cardAction.dataset.equipId;
+            if (equipId && typeof openEquipmentById === 'function') {
+              openEquipmentById(equipId);
+            }
+          });
+        }
+
+        // Tap outside to dismiss
+        document.addEventListener('click', (e) => {
+          if (!container.contains(e.target)) {
+            closeCard();
           }
         });
       });
-    });
 
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        planCards.forEach(c => c.classList.remove('hidden'));
-      }
-    });
+      // Visualizer Tab Switching
+      const tabBtns = document.querySelectorAll('.vis-tab-btn');
+      const panes = document.querySelectorAll('.vis-pane');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetView = btn.dataset.view;
+          tabBtns.forEach(b => {
+            b.classList.remove('active', 'bg-amber-500', 'text-black', 'shadow-md');
+            b.classList.add('text-zinc-300');
+          });
+          btn.classList.add('active', 'bg-amber-500', 'text-black', 'shadow-md');
+          btn.classList.remove('text-zinc-300');
 
-    // Mobile WhatsApp Admission Form
-    const mForm = document.getElementById('mobileAdmissionForm');
-    if (mForm) {
-      mForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('mName').value.trim();
-        const phone = document.getElementById('mPhone').value.trim();
-        const goal = document.getElementById('mGoal').value;
-        const batch = document.getElementById('mBatch').value;
+          panes.forEach(pane => {
+            pane.classList.remove('active');
+            pane.classList.add('hidden', 'opacity-0');
+          });
 
-        const text = `Hello Sir, my name is ${name}. I want to book a free 1-Day Trial at Dragon Slayer Gym 2.\n- WhatsApp: ${phone}\n- Goal: ${goal}\n- Batch: ${batch}`;
-        window.open(`https://wa.me/917709339959?text=${encodeURIComponent(text)}`, '_blank');
+          const activePane = document.getElementById('pane-' + targetView);
+          if (activePane) {
+            activePane.classList.remove('hidden');
+            setTimeout(() => {
+              activePane.classList.add('active');
+              activePane.classList.remove('opacity-0');
+            }, 10);
+          }
+        });
       });
     }
-  
-    // CUSTOM ATHLETIC GLOWING MOUSE CURSOR
+
+    // Helper to open the full equipment modal from any hotspot button
+    function openEquipmentById(id) {
+      const item = equipData[id];
+      if (!item) return;
+
+      const equipModal = document.getElementById('equipModal');
+      const equipModalCard = document.getElementById('modalCard');
+      const equipModalTitle = document.getElementById('modalTitle');
+      const equipModalCategory = document.getElementById('modalCategory');
+      const equipModalImg = document.getElementById('modalImg');
+      const equipModalDesc = document.getElementById('modalDesc');
+      const equipModalTarget = document.getElementById('modalTarget');
+      const equipModalCapacity = document.getElementById('modalCapacity');
+      const equipModalBestFor = document.getElementById('modalBestFor');
+      const equipModalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
+
+      if (equipModalTitle) equipModalTitle.textContent = item.title;
+      if (equipModalCategory) equipModalCategory.textContent = item.category;
+      if (equipModalImg) equipModalImg.src = item.img;
+      if (equipModalDesc) equipModalDesc.textContent = item.desc;
+      if (equipModalTarget) equipModalTarget.textContent = item.target;
+      if (equipModalCapacity) equipModalCapacity.textContent = item.capacity;
+      if (equipModalBestFor) equipModalBestFor.textContent = item.bestFor;
+
+      if (equipModalWhatsAppBtn) {
+        const msg = encodeURIComponent(`Hello Sir, I saw the ${item.title} on Dragon Slayer Gym 2 and want to know more.`);
+        equipModalWhatsAppBtn.href = `https://wa.me/917709339959?text=${msg}`;
+      }
+
+      if (equipModal && equipModalCard) {
+        equipModal.classList.remove('hidden');
+        equipModal.classList.add('flex');
+        setTimeout(() => equipModalCard.classList.add('open'), 10);
+      }
+    }
+
+    initHotspots();
+
+    // Equipment Carousel Controls
+    const equipGrid = document.getElementById('equipGrid');
+    const equipPrevBtn = document.getElementById('equipPrevBtn');
+    const equipNextBtn = document.getElementById('equipNextBtn');
+    if (equipGrid && equipPrevBtn && equipNextBtn) {
+      equipPrevBtn.addEventListener('click', () => {
+        const card = equipGrid.querySelector('.equip-card:not([style*="display: none"])');
+        const cardWidth = card ? card.offsetWidth + 16 : 300;
+        equipGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      });
+      equipNextBtn.addEventListener('click', () => {
+        const card = equipGrid.querySelector('.equip-card:not([style*="display: none"])');
+        const cardWidth = card ? card.offsetWidth + 16 : 300;
+        equipGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+    }
+
+    // Custom Glowing Mouse Cursor (Desktop)
     const cursorDot = document.getElementById('cursorDot');
     const cursorRing = document.getElementById('cursorRing');
     if (cursorDot && cursorRing && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -1183,7 +1962,7 @@
       }
       requestAnimationFrame(renderRing);
 
-      const interactiveElements = document.querySelectorAll('a, button, input, select, .equip-card, .cat-btn, .plan-tab-btn, .s-plan-btn');
+      const interactiveElements = document.querySelectorAll('a, button, input, select, .equip-card, .cat-btn');
       interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
           cursorRing.classList.add('cursor-hover');
@@ -1195,25 +1974,8 @@
         });
       });
     }
-
-    // Equipment Carousel Controls
-    const equipGrid = document.getElementById('equipGrid');
-    const prevBtn = document.getElementById('equipPrevBtn');
-    const nextBtn = document.getElementById('equipNextBtn');
-    if (equipGrid && prevBtn && nextBtn) {
-      prevBtn.addEventListener('click', () => {
-        const card = equipGrid.querySelector('.equip-card:not([style*="display: none"])');
-        const cardWidth = card ? card.offsetWidth + 16 : 300;
-        equipGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      });
-      nextBtn.addEventListener('click', () => {
-        const card = equipGrid.querySelector('.equip-card:not([style*="display: none"])');
-        const cardWidth = card ? card.offsetWidth + 16 : 300;
-        equipGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      });
-    }
-
   </script>
+
   <!-- CUSTOM ATHLETIC GLOWING MOUSE CURSOR (DESKTOP ONLY) -->
   <div id="cursorDot" class="custom-cursor-dot fixed pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_14px_rgba(245,158,11,1)] opacity-0 transition-opacity duration-300"></div>
   <div id="cursorRing" class="custom-cursor-ring fixed pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full border-2 border-amber-400/60 shadow-[0_0_18px_rgba(245,158,11,0.3)] opacity-0 transition-all duration-150 ease-out"></div>

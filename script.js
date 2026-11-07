@@ -590,7 +590,7 @@ function initFormsAndButtons() {
       const emailInput = document.getElementById('newsletterEmail');
       if (emailInput && emailInput.value) {
         newsletterStatus.style.color = '#10b981';
-        newsletterStatus.textContent = '✓ Subscribed to Performance Intel briefings.';
+        newsletterStatus.textContent = 'Subscribed to Performance Intel briefings.';
         emailInput.value = '';
         showToast("Subscribed to Apex Iron Performance Intel briefings.");
       }
