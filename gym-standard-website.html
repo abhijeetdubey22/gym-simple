@@ -14,7 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* Mobile-first base styles */
@@ -23,13 +23,15 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Barlow', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #090b0e;
       color: #f3f4f6;
       overflow-x: hidden;
     }
     .heading-font {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
     .gold-gradient-text {
       background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
@@ -275,7 +277,7 @@
   <section class="relative min-h-[600px] sm:min-h-[680px] flex items-center justify-center pt-8 pb-16 sm:py-24 overflow-hidden border-b border-white/10">
     <!-- Cinematic High-Contrast Gym Background (Zero Blurry Smoke / Clouds) -->
     <div class="absolute inset-0 z-0 overflow-hidden">
-      <img src="assets/hero_bg.jpg" alt="Dragon Slayer Gym 2 Workout Floor" class="w-full h-full object-cover object-center filter brightness-[0.32] contrast-[1.25]">
+      <img src="assets/hero.jpg" onerror="this.onerror=null; this.src='assets/hero_bg.jpg';" alt="Dragon Slayer Gym 2 Workout Floor" class="w-full h-full object-cover object-center filter brightness-[0.35] contrast-[1.25]">
       <!-- Sharp Linear Vignette Gradients for Absolute Legibility -->
       <div class="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/80 to-[#090b0e]/50"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#090b0e]/95 via-transparent to-[#090b0e]/95"></div>
